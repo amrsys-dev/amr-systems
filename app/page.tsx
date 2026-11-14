@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-type Locale = "en" | "ar" | "ru";
+type Locale = "en" | "ar" | "ru" | "tg" | "uz";
 
 const copy = {
   en: {
@@ -47,6 +47,44 @@ const copy = {
     aboutDesc: "AMR Systems развивает портфель взаимосвязанных цифровых продуктов, опираясь на практический отраслевой опыт. Наши принципы — ясная архитектура, полезные инструменты и проверяемый результат.",
     footer: "Наверх", purpose: "ТЕХНОЛОГИИ С ЦЕЛЬЮ", modular: "МОДУЛЬНОСТЬ ПО ЗАМЫСЛУ /// СВЯЗНОСТЬ ПО АРХИТЕКТУРЕ", modules: ["КОНСТРУКТОР", "АНАЛИЗ", "РАСКРОЙ", "СЕРВИСЫ", "СЕРВИСЫ", "SELF", "SAFAR"]
   },
+
+  tg: {
+    nav: ["Экосистема", "Маҳсулот", "Меъморӣ", "Дар бораи", "Тамос"],
+    eyebrow: "ЭКОСИСТЕМАИ ТЕХНОЛОГИИ МУСТАҚИЛ", hero1: "Табдил додани идеяҳо", hero2: "ба системаҳои корӣ.",
+    lead: "AMR Systems маҳсулоти рақамии махсус, нармафзори зеҳнӣ ва ҳалли амалӣ барои соҳаҳои воқеиро муттаҳид мекунад.",
+    explore: "Маҳсулотҳо", architectureLink: "Меъмории мо", approach: "РАВИШИ МО",
+    statement: "Экосистемаи ягона.", statementStrong: "Маҳсулоти мустақил.", statementEnd: "Самти умумӣ.",
+    ecoLabel: "01 — ЭКОСИСТЕМА", ecoTitle1: "Асбобҳои гуногун.", ecoTitle2: "Мантиқи ягона.",
+    ecoDesc: "Мо оилаи маҳсулоти махсусро месозем. Ҳар яке вазифаи алоҳидаро ҳал мекунад.",
+    principles: [["Модулҳои мустақил", "Ҳар маҳсулот вазифаи худро дорад."], ["Меъмории пайваст", "Интерфейсҳои равшан модулҳоро мепайванданд."], ["Муҳандисии амалӣ", "Рушд ба равандҳои воқеӣ такя мекунад."]],
+    productsLabel: "02 — ПОРТФЕЛИ МАҲСУЛОТ", productsTitle1: "Ҳалли", productsTitle2: "вазифаҳои воқеӣ.",
+    productsDesc: "Шашу самти алоҳидаи экосистемаи AMR.",
+    categories: ["ДИЗАЙН", "ТАҲЛИЛ", "БУРИШ", "ХИЗМАТРАСОНӢ", "ШАХСИЯТ", "САФАР"],
+    descriptions: ["Муҳити визуалӣ барои конфигуратсияи мебел.", "Таҳлили моделҳои мебел.", "Оптимизатсияи буриши мавод.", "Платформаи ҷустуҷӯи хизматрасонӣ.", "Корти рақамии шахсӣ.", "Асбобҳо барои сафар."],
+    status: "ДАР ҲОЛИ РУШД", research: "ТАҲҚИҚОТ",
+    aboutLabel: "04 — ДАР БОРАИ", aboutTitle1: "Технология бояд", aboutTitle2: "вазифаҳои воқеиро ҳал кунад.",
+    aboutDesc: "AMR Systems портфели маҳсулоти рақамиро рушд медиҳад.",
+    footer: "Боло", purpose: "ТЕХНОЛОГИЯ БО МАҚСАД", modular: "МОДУЛИЯТ", modules: ["КОНСТРУКТОР", "ТАҲЛИЛ", "БУРИШ", "ХИЗМАТ", "SELF", "SAFAR"]
+  },
+  uz: {
+
+    nav: ["Ekotizim", "Mahsulotlar", "Arxitektura", "Haqida", "Aloqa"],
+    eyebrow: "MUSTAQIL TEXNOLOGIYA EKOTIZIMI", hero1: "G'oyalarni", hero2: "tizimlarga aylantirish.",
+    lead: "AMR Systems maxsus raqamli mahsulotlar, intellektual dasturiy ta'minot va amaliy yechimlarni birlashtiradi.",
+    explore: "Mahsulotlar", architectureLink: "Arxitekturamiz", approach: "YONDASHUVIMIZ",
+    statement: "Yagona ekotizim.", statementStrong: "Mustaqil mahsulotlar.", statementEnd: "Umumiy yo'nalish.",
+    ecoLabel: "01 — EKOTIZIM", ecoTitle1: "Turli asboblar.", ecoTitle2: "Yagona mantiq.",
+    ecoDesc: "Biz maxsus mahsulotlar oilasini yaratamiz. Har biri alohida vazifani hal qiladi.",
+    principles: [["Mustaqil modullar", "Har bir mahsulot o'z vazifasiga ega."], ["Bog'langan arxitektura", "Aniq interfeyslar modullarni bog'laydi."], ["Amaliy muhandislik", "Rivojlanish haqiqiy jarayonlarga tayanadi."]],
+    productsLabel: "02 — MAHSULOT PORTFELI", productsTitle1: "Yechimlar", productsTitle2: "haqiqiy vazifalar uchun.",
+    productsDesc: "AMR ekotizimining olti alohida yo'nalishi.",
+    categories: ["DIZAYN", "TAHLIL", "KESISH", "XIZMAT", "SHAXSIYAT", "SAFAR"],
+    descriptions: ["Mebel konfiguratsiyasi uchun vizual muhit.", "Mebel modellari tahlili.", "Material kesish optimizatsiyasi.", "Xizmat qidirish platformasi.", "Shaxsiy raqamli kartochka.", "Safar vositalari."],
+    status: "ISHLAB CHIQILMOQDA", research: "TADQIQOT",
+    aboutLabel: "04 — HAQIDA", aboutTitle1: "Texnologiya", aboutTitle2: "haqiqiy vazifalarni hal qilishi kerak.",
+    aboutDesc: "AMR Systems raqamli mahsulotlar portfelini rivojlantiradi.",
+    footer: "Yuqoriga", purpose: "MAQSADLI TEXNOLOGIYA", modular: "MODULLIK", modules: ["KONSTRUKTOR", "TAHLIL", "KESISH", "XIZMAT", "SELF", "SAFAR"]
+  },
   ar: {
     nav: ["المنظومة", "المنتجات", "البنية", "من نحن", "اتصل بنا"],
     eyebrow: "منظومة تقنية مستقلة", hero1: "نحوّل الأفكار", hero2: "إلى أنظمة متكاملة.",
@@ -82,7 +120,7 @@ export default function Home() {
       <div className="header-actions">
         <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} onClick={()=>setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
         <select aria-label="Select language" value={locale} onChange={e=>setLocale(e.target.value as Locale)}>
-          <option value="en">EN — English</option><option value="ar">AR — العربية</option><option value="ru">RU — Русский</option>
+          <option value="en">EN — English</option><option value="ar">AR — العربية</option><option value="ru">RU — Русский</option><option value="tg">TJ — Тоҷикӣ</option><option value="uz">UZ — O‘zbekcha</option>
         </select>
         <a className="contact" href="mailto:contact@amrsys.net">{t.nav[4]} ↗</a>
       </div>

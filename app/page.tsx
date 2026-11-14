@@ -112,13 +112,15 @@ const products = ["AMR 3D Constructor", "AMR Vision", "AMR Cutting", "AMR Servic
 
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("en");
+  const [menuOpen, setMenuOpen] = useState(false);
   const t = copy[locale];
   const rtl = locale === "ar";
   return <main dir={rtl ? "rtl" : "ltr"} lang={locale}>
     <header className="topbar">
       <a className="brand" href="#top" aria-label="AMR Systems"><b>AMR</b><span>SYSTEMS</span></a>
-      <nav>{t.nav.slice(0,4).map((label,i)=><a key={label} href={["#ecosystem","#products","#architecture","#about"][i]}>{label}</a>)}</nav>
+      <nav className={menuOpen ? "mobile-nav is-open" : "mobile-nav"}>{t.nav.slice(0,4).map((label,i)=><a key={label} href={["#ecosystem","#products","#architecture","#about"][i]} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav>
       <div className="header-actions">
+        <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} onClick={()=>setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
         <select aria-label="Select language" value={locale} onChange={e=>setLocale(e.target.value as Locale)}>
           <option value="en">EN — English</option><option value="ar">AR — العربية</option><option value="ru">RU — Русский</option><option value="tg">TJ — Тоҷикӣ</option><option value="uz">UZ — O‘zbekcha</option>
         </select>

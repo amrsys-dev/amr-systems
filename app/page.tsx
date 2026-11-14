@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-type Locale = "en" | "ar" | "ru" | "tg" | "uz";
+type Locale = "en" | "ar" | "ru";
 
 const copy = {
   en: {
@@ -24,8 +24,7 @@ const copy = {
       "A dedicated direction for optimizing the cutting of sheet materials and profiles.",
       "A platform concept for discovering services and matching requests with relevant providers."
     , "A personal digital identity and contact hub for presenting and sharing essential links.", "A travel utility direction with visa countdown, route and fuel calculations, and ride-request discovery."],
-    status: "IN DEVELOPMENT", research: "RESEARCH", osLabel: "03 — AMR OS", osTitle1: "A modular", osTitle2: "system of systems.",
-    osDesc: "AMR OS is the architectural direction behind the ecosystem: autonomous applications connected through explicit interfaces and shared navigation.",
+    status: "IN DEVELOPMENT", research: "RESEARCH",
     aboutLabel: "04 — ABOUT AMR", aboutTitle1: "Technology should", aboutTitle2: "solve something real.",
     aboutDesc: "AMR Systems is developing an interconnected portfolio of digital products shaped by practical industry experience. We value clear architecture, useful tools, and progress that can be demonstrated.",
     footer: "Back to top", purpose: "TECHNOLOGY WITH PURPOSE", modular: "MODULAR BY DESIGN /// BUILT TO CONNECT", modules: ["CONSTRUCTOR", "VISION", "CUTTING", "SERVICE HUB", "SERVICE HUB", "SELF", "SAFAR"]
@@ -43,49 +42,10 @@ const copy = {
     productsDesc: "Шесть отдельных направлений экосистемы AMR. Описания отражают текущий статус разработки, а не обещают готовые функции.",
     categories: ["ДИЗАЙН И КОНФИГУРАЦИЯ", "АНАЛИЗ МОДЕЛЕЙ", "ОПТИМИЗАЦИЯ РАСКРОЯ", "ПОИСК УСЛУГ", "ЦИФРОВАЯ ИДЕНТИЧНОСТЬ", "ПУТЕШЕСТВИЯ И МАРШРУТЫ"],
     descriptions: ["Визуальная среда для конфигурации мебели и создания её 3D-концепций.", "Анализ мебельных моделей, их структуры и декомпозиции на компоненты.", "Отдельное направление оптимизации раскроя листовых материалов и профилей.", "Концепция платформы поиска услуг и подбора исполнителей под запросы.", "Персональная цифровая визитка и единая точка доступа к контактам и ссылкам.", "Инструменты для поездок: отсчёт срока визы, расчёт маршрута и топлива, поиск попутных поездок."],
-    status: "В РАЗРАБОТКЕ", research: "ИССЛЕДОВАНИЯ", osLabel: "03 — AMR OS", osTitle1: "Модульная", osTitle2: "система систем.",
-    osDesc: "AMR OS — архитектурная основа экосистемы: автономные приложения, связанные понятными интерфейсами и общей навигацией.",
+    status: "В РАЗРАБОТКЕ", research: "ИССЛЕДОВАНИЯ",
     aboutLabel: "04 — О КОМПАНИИ", aboutTitle1: "Технологии должны", aboutTitle2: "решать реальные задачи.",
     aboutDesc: "AMR Systems развивает портфель взаимосвязанных цифровых продуктов, опираясь на практический отраслевой опыт. Наши принципы — ясная архитектура, полезные инструменты и проверяемый результат.",
     footer: "Наверх", purpose: "ТЕХНОЛОГИИ С ЦЕЛЬЮ", modular: "МОДУЛЬНОСТЬ ПО ЗАМЫСЛУ /// СВЯЗНОСТЬ ПО АРХИТЕКТУРЕ", modules: ["КОНСТРУКТОР", "АНАЛИЗ", "РАСКРОЙ", "СЕРВИСЫ", "СЕРВИСЫ", "SELF", "SAFAR"]
-  },
-  tg: {
-    nav: ["Экосистема", "Маҳсулотҳо", "Меъморӣ", "Дар бораи мо", "Тамос"],
-    eyebrow: "ЭКОСИСТЕМАИ МУСТАҚИЛИ ТЕХНОЛОГӢ", hero1: "Ғояҳоро ба", hero2: "низомҳо табдил медиҳем.",
-    lead: "AMR Systems маҳсулоти рақамии махсус, нармафзори зеҳнӣ ва роҳҳои ҳалли амалиро барои соҳаҳои воқеӣ муттаҳид мекунад.",
-    explore: "Маҳсулотҳо", architectureLink: "Меъмории мо", approach: "УСУЛИ МО",
-    statement: "Як экосистема.", statementStrong: "Маҳсулоти мустақил.", statementEnd: "Ҳадафи муштарак.",
-    ecoLabel: "01 — ЭКОСИСТЕМА", ecoTitle1: "Воситаҳои гуногун.", ecoTitle2: "Тафаккури пайваста.",
-    ecoDesc: "Мо маҷмӯи маҳсулоти махсусро месозем. Ҳар кадом вазифаи алоҳидаро ҳал мекунад ва ба меъмории умумӣ такя менамояд.",
-    principles: [["Модулҳои мустақил", "Ҳар маҳсулот мақсади худро дорад ва метавонад мустақилона рушд кунад."], ["Меъмории пайваст", "Интерфейсҳои равшан модулҳоро мепайванданд, бе он ки онҳоро ба як барнома табдил диҳанд."], ["Муҳандисии амалӣ", "Рушд ба равандҳои воқеӣ, натиҷаҳои ченшаванда ва имкониятҳои тасдиқшуда такя мекунад."]],
-    productsLabel: "02 — МАҲСУЛОТҲО", productsTitle1: "Барои", productsTitle2: "вазифаҳои воқеӣ.",
-    productsDesc: "Шаш самти мустақили экосистемаи AMR. Тавсифҳо ҳолати кунунии рушдро нишон медиҳанд, на ваъдаи вазифаҳои тайёрро.",
-    categories: ["ТАРҲРЕЗӢ ВА ТАНЗИМ", "ТАҲЛИЛИ МОДЕЛ", "БЕҲСОЗИИ БУРИШ", "ҶУСТУҶӮИ ХИЗМАТРАСОНӢ", "ШАХСИЯТИ РАҚАМӢ", "САФАР ВА МАСИР"],
-    descriptions: ["Муҳити визуалӣ барои танзими мебел ва сохтани консепсияҳои 3D.", "Таҳлили сохтори моделҳои мебел ва ҷудо кардани онҳо ба ҷузъҳо.", "Самти алоҳида барои беҳсозии буриши маводи варақӣ ва профилҳо.", "Консепсияи платформа барои ҷустуҷӯи хизматрасонӣ ва мувофиқ кардани дархостҳо бо иҷрокунандагон.", "Шиносномаи рақамии шахсӣ ва нуқтаи ягона барои мубодилаи тамосҳо ва пайвандҳо.", "Воситаҳои сафар: ҳисобкунии муҳлати раводид, масир ва сӯзишворӣ, ҷустуҷӯи сафарҳои муштарак."],
-    status: "ДАР ҲОЛИ РУШД", research: "ТАҲҚИҚОТ", osLabel: "03 — AMR OS", osTitle1: "Меъмории", osTitle2: "низомҳои модулӣ.",
-    osDesc: "AMR OS самти меъмории экосистема мебошад: барномаҳои мустақил бо интерфейсҳои равшан ва роҳнамоии муштарак пайваст мешаванд.",
-    aboutLabel: "04 — ДАР БОРАИ AMR", aboutTitle1: "Технология бояд", aboutTitle2: "масъалаи воқеиро ҳал кунад.",
-    aboutDesc: "AMR Systems портфели маҳсулоти рақамии ба ҳам алоқамандро бо такя ба таҷрибаи амалии соҳавӣ рушд медиҳад. Мо меъмории равшан, воситаҳои муфид ва натиҷаи санҷидашавандаро қадр мекунем.",
-    footer: "Ба боло", purpose: "ТЕХНОЛОГИЯ БО ҲАДАФ", modular: "МОДУЛӢ АЗ РӮИ ТАРҲ /// ПАЙВАСТ АЗ РӮИ МЕЪМОРӢ", modules: ["КОНСТРУКТОР", "ТАҲЛИЛ", "БУРРИШ", "ХИЗМАТРАСОНӢ", "ХИЗМАТРАСОНӢ", "SELF", "SAFAR"]
-  },
-  uz: {
-    nav: ["Ekotizim", "Mahsulotlar", "Arxitektura", "Biz haqimizda", "Aloqa"],
-    eyebrow: "MUSTAQIL TEXNOLOGIK EKOTIZIM", hero1: "G‘oyalarni", hero2: "tizimlarga aylantiramiz.",
-    lead: "AMR Systems ixtisoslashgan raqamli mahsulotlar, intellektual dasturiy ta’minot va real sohalar uchun amaliy yechimlarni birlashtiradi.",
-    explore: "Mahsulotlarni ko‘rish", architectureLink: "Arxitekturamiz", approach: "BIZNING YONDASHUV",
-    statement: "Yagona ekotizim.", statementStrong: "Mustaqil mahsulotlar.", statementEnd: "Umumiy yo‘nalish.",
-    ecoLabel: "01 — EKOTIZIM", ecoTitle1: "Turli vositalar.", ecoTitle2: "Yagona fikrlash.",
-    ecoDesc: "Biz ixtisoslashgan mahsulotlar oilasini yaratamiz. Har biri umumiy arxitektura tamoyiliga amal qilgan holda alohida muammoni hal qiladi.",
-    principles: [["Mustaqil modullar", "Har bir mahsulot o‘z maqsadiga ega va mustaqil rivojlanishi mumkin."], ["Bog‘langan arxitektura", "Aniq interfeyslar modullarni bitta ilovaga majburan birlashtirmasdan bog‘laydi."], ["Amaliy muhandislik", "Ishlab chiqish real jarayonlar, o‘lchanadigan natijalar va tasdiqlangan imkoniyatlarga asoslanadi."]],
-    productsLabel: "02 — MAHSULOTLAR", productsTitle1: "Haqiqiy", productsTitle2: "vazifalar uchun.",
-    productsDesc: "AMR ekotizimidagi yettita mustaqil yo‘nalish. Tavsiflar tayyor funksiyalar va’dasi emas, balki ishlab chiqishning hozirgi holatini aks ettiradi.",
-    categories: ["DIZAYN VA SOZLASH", "MODEL TAHLILI", "KESISHNI OPTIMALLASHTIRISH", "XIZMATLARNI TOPISH", "RAQAMLI SHAXSIYAT", "SAYOHAT VA YO‘NALISHLAR"],
-    descriptions: ["Mebelni sozlash va 3D konsepsiyalarini yaratish uchun vizual muhit.", "Mebel modellarining tuzilishini tahlil qilish va qismlarga ajratish.", "List materiallari va profillarni kesishni optimallashtirish bo‘yicha alohida yo‘nalish.", "Xizmatlarni topish va so‘rovlarni mos ijrochilar bilan bog‘lash platformasi konsepsiyasi.", "Shaxsiy raqamli profil, kontaktlar va havolalarni bir joyda taqdim etish vositasi.", "Safar vositalari: viza muddatini kuzatish, yo‘l va yoqilg‘i hisoblari, hamroh safarlarni izlash."],
-    status: "ISHLAB CHIQILMOQDA", research: "TADQIQOT", osLabel: "03 — AMR OS", osTitle1: "Modulli", osTitle2: "tizimlar tizimi.",
-    osDesc: "AMR OS ekotizimning arxitektura yo‘nalishidir: mustaqil ilovalar aniq interfeyslar va umumiy navigatsiya orqali bog‘lanadi.",
-    aboutLabel: "04 — AMR HAQIDA", aboutTitle1: "Texnologiya", aboutTitle2: "haqiqiy muammoni hal qilishi kerak.",
-    aboutDesc: "AMR Systems amaliy sanoat tajribasiga tayangan holda o‘zaro bog‘langan raqamli mahsulotlar portfelini rivojlantirmoqda. Biz aniq arxitektura, foydali vositalar va tekshiriladigan natijalarni qadrlaymiz.",
-    footer: "Yuqoriga", purpose: "MAQSADLI TEXNOLOGIYA", modular: "MODULLI TUZILMA /// O‘ZARO BOG‘LIQLIK", modules: ["KONSTRUKTOR", "TAHLIL", "KESISH", "XIZMATLAR", "MATERIALLAR", "XIZMATLAR", "MATERIALLAR", "SELF", "SAFAR"]
   },
   ar: {
     nav: ["المنظومة", "المنتجات", "البنية", "من نحن", "اتصل بنا"],
@@ -100,15 +60,14 @@ const copy = {
     productsDesc: "ستة مسارات مستقلة ضمن منظومة AMR. تعكس الأوصاف نطاق التطوير الحالي ولا تمثل وعوداً بوظائف مكتملة.",
     categories: ["التصميم والإعداد", "تحليل النماذج", "تحسين القص", "اكتشاف الخدمات", "الهوية الرقمية الشخصية", "أدوات السفر والمسارات"],
     descriptions: ["مساحة مرئية لإعداد الأثاث وتشكيل مفاهيم المنتجات ثلاثية الأبعاد.", "تحليل نماذج الأثاث لفهم بنيتها وتقسيم التصاميم إلى مكونات.", "مسار متخصص لتحسين قص الألواح والقطاعات.", "مفهوم منصة لاكتشاف الخدمات ومطابقة الطلبات مع مقدمي الخدمات المناسبين.", "هوية رقمية شخصية ومركز موحد لعرض جهات الاتصال والروابط ومشاركتها.", "أدوات سفر تشمل متابعة مدة التأشيرة وحساب المسار والوقود واكتشاف طلبات الرحلات المشتركة."],
-    status: "قيد التطوير", research: "بحث وتطوير", osLabel: "03 — AMR OS", osTitle1: "بنية", osTitle2: "منظومة من الأنظمة.",
-    osDesc: "AMR OS هو التوجه المعماري للمنظومة: تطبيقات مستقلة تتصل عبر واجهات واضحة وتنقل مشترك.",
+    status: "قيد التطوير", research: "بحث وتطوير",
     aboutLabel: "04 — عن AMR", aboutTitle1: "يجب أن", aboutTitle2: "تحل التقنية مشكلة حقيقية.",
     aboutDesc: "تعمل AMR Systems على تطوير مجموعة مترابطة من المنتجات الرقمية مستندة إلى الخبرة العملية في الصناعة. نؤمن بالبنية الواضحة والأدوات المفيدة والنتائج القابلة للتحقق.",
     footer: "العودة للأعلى", purpose: "تقنية لها هدف", modular: "تصميم معياري /// ترابط مدروس", modules: ["المُنشئ", "الرؤية", "القص", "الخدمات", "الخدمات", "SELF", "SAFAR"]
   }
 } as const;
 
-const products = ["AMR 3D Constructor", "AMR Vision", "AMR Cutting", "AMR Service Hub", "AMR SELF", "AMR SAFAR"];
+const products = ["AMR 3D Constructor", "AMR Cutting", "AMR Service Hub", "AMR SELF", "AMR SAFAR"];
 const productSlugs = ["3d-constructor", "vision", "cutting", "service-hub", "self", "safar"];
 
 export default function Home() {
@@ -123,7 +82,7 @@ export default function Home() {
       <div className="header-actions">
         <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} onClick={()=>setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
         <select aria-label="Select language" value={locale} onChange={e=>setLocale(e.target.value as Locale)}>
-          <option value="en">EN — English</option><option value="ar">AR — العربية</option><option value="ru">RU — Русский</option><option value="tg">TJ — Тоҷикӣ</option><option value="uz">UZ — O‘zbekcha</option>
+          <option value="en">EN — English</option><option value="ar">AR — العربية</option><option value="ru">RU — Русский</option>
         </select>
         <a className="contact" href="mailto:contact@amrsys.net">{t.nav[4]} ↗</a>
       </div>
@@ -144,9 +103,6 @@ export default function Home() {
     <section className="products" id="products"><div className="wrap section"><div className="section-head"><div><small>{t.productsLabel}</small><h2>{t.productsTitle1}<br/><em>{t.productsTitle2}</em></h2></div><p>{t.productsDesc}</p></div>
       <div className="product-list">{products.map((name,i)=><Link className="product" href={`/products/${productSlugs[i]}`} key={name}><span className="number">0{i+1}</span><div className="product-info"><small>{t.categories[i]}</small><h3>{name}</h3><p>{t.descriptions[i]}</p></div><span className="status">{t.status}</span><span className="arrow">↗</span></Link>)}</div>
     </div></section>
-    <section className="wrap section" id="architecture"><div className="section-head"><div><small>{t.osLabel}</small><h2>{t.osTitle1}<br/><em>{t.osTitle2}</em></h2></div><p>{t.osDesc}</p></div>
-      <div className="architecture"><div className="arch-core">AMR<small>ECOSYSTEM</small></div>{t.modules.map((m,i)=><span className={`module m${i+1}`} key={m}>{m}</span>)}</div>
-    </section>
     <section className="about" id="about"><div className="wrap about-inner"><div><small>{t.aboutLabel}</small><h2>{t.aboutTitle1}<br/><em>{t.aboutTitle2}</em></h2></div><p>{t.aboutDesc}</p></div></section>
     <footer className="wrap footer"><a className="brand" href="#top"><b>AMR</b><span>SYSTEMS</span></a><span>© {new Date().getFullYear()} AMR Systems</span><a href="#top">{t.footer} ↑</a></footer>
   </main>;

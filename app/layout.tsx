@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  icons: { icon: "/svg/favicon.svg" },
   title: "AMR Systems | Modular Technology Ecosystem",
   description: "AMR Systems develops independent digital products with a modular architecture for practical workflows and real-world industries.",
 };

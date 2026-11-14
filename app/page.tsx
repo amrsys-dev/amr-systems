@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main>
       <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
-        <Link href="/" className="logo"><img src="/logos/amr-systems.png" alt="AMR" /></Link>
+        <Link href="/" className="logo"><img src="/svg/amr-logo.svg" alt="AMR" /></Link>
         <div className="nav-links">
           <a href="#products">Продукты</a>
           <a href="#about">О нас</a>

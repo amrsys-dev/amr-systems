@@ -31,3 +31,18 @@ main[dir="rtl"] .principles article+article{padding-right:26px;padding-left:0}
 main[dir="rtl"] .principles article:last-child{border-left:0}
 @media(max-width:800px){.header-actions{gap:10px}.header-actions select{padding:8px 20px 8px 8px;font-size:9px}}
 @media(max-width:560px){.header-actions{gap:8px}.header-actions select{max-width:112px}.header-actions .contact{font-size:9px}.header-actions{direction:ltr}main[dir="rtl"] .principles article,main[dir="rtl"] .principles article+article{padding:22px 0;border-left:0}main[dir="rtl"] .product{grid-template-columns:25px 1fr 16px}}
+
+
+.menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:#d7e0e5;padding:9px 11px;font:9px 'DM Mono',monospace;letter-spacing:.1em;cursor:pointer}
+@media(max-width:800px){
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .topbar{position:sticky}
+  .topbar nav.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 6vw 22px;background:rgba(9,11,14,.98);border-bottom:1px solid var(--line);flex-direction:column;gap:0}
+  .topbar nav.mobile-nav.is-open{display:flex}
+  .topbar nav.mobile-nav a{padding:13px 0;border-bottom:1px solid var(--line);font-size:12px}
+  .topbar nav.mobile-nav a:last-child{border-bottom:0}
+}
+@media(max-width:560px){
+  .header-actions{gap:7px}
+  .menu-toggle{padding:8px 9px;font-size:8px}
+}

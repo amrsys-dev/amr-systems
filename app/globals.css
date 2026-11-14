@@ -41,3 +41,20 @@ footer { padding: 40px 32px; text-align: center; font-size: 14px; color: var(--t
   .hero h1 { font-size: 36px; }
   .products { padding: 80px 16px; }
 }
+
+.product { min-height: 100vh; }
+.product .nav { position: sticky; background: var(--bg); }
+.back { color: var(--t2); font-size: 15px; }
+.product-hero { padding: 80px 32px 40px; max-width: 700px; margin: 0 auto; }
+.product-hero h1 { font-size: 48px; margin: 16px 0 8px; }
+.product-hero p { font-size: 18px; color: var(--t2); }
+.product-points { padding: 0 32px 80px; max-width: 700px; margin: 0 auto; }
+.product-points h2 { font-size: 20px; margin-bottom: 16px; color: var(--t2); }
+.product-points ul { list-style: none; }
+.product-points li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 17px; }
+.product footer { padding: 40px 32px; text-align: center; color: var(--t2); }
+.logo img { height: 36px; width: auto; }
+.btn-sm { padding: 8px 16px; background: var(--acc); color: #000; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; }
+.btn-outline { display: inline-block; margin-top: 32px; margin-left: 12px; padding: 14px 28px; border: 1px solid rgba(255,255,255,.2); color: var(--t); font-weight: 600; border-radius: 980px; }
+.hero-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.card-logo { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; margin-bottom: 12px; }

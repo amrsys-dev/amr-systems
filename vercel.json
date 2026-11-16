@@ -30,67 +30,7 @@
   ],
   "rewrites": [
     {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "self.amrsys.net"
-        }
-      ],
-      "destination": "/p/self/:path"
-    },
-    {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "safar.amrsys.net"
-        }
-      ],
-      "destination": "/p/safar/:path"
-    },
-    {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "cutting.amrsys.net"
-        }
-      ],
-      "destination": "/p/cutting/:path"
-    },
-    {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "constructor.amrsys.net"
-        }
-      ],
-      "destination": "/p/constructor/:path"
-    },
-    {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "vision.amrsys.net"
-        }
-      ],
-      "destination": "/p/vision/:path"
-    },
-    {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "hub.amrsys.net"
-        }
-      ],
-      "destination": "/p/hub/:path"
-    },
-    {
-      "source": "/:path((?!assets/|p/|site/)[^.]*)",
+      "source": "/:path((?!assets/|site/)[^.]*)",
       "destination": "/site/:path"
     }
   ],

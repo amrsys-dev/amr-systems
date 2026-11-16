@@ -1,5 +1,5 @@
 {
-  "$comment": "Единый реестр продуктов AMR. Брендбук v1.2, раздел 26. slug = поддомен. Статусы: live, demo, dev, soon.",
+  "$comment": "Единый реестр продуктов AMR. Брендбук v1.2, разделы 25-26. slug = поддомен приложения и путь страницы /slug/. Статусы: live, demo, dev, soon.",
   "products": [
     {
       "slug": "self",
@@ -20,7 +20,14 @@
             "Планируйте задачи и тренировки, отмечайте обслуживание машины.",
             "Делитесь визиткой: QR-код, ссылка или контакт прямо в телефон."
           ],
-          "features": ["Финансы и отчёты", "Планер и тренировки", "Автомобиль", "Визитка AMR ID с QR", "Шифрование данных", "5 языков, светлая и тёмная тема"]
+          "features": [
+            "Финансы и отчёты",
+            "Планер и тренировки",
+            "Автомобиль",
+            "Визитка AMR ID с QR",
+            "Шифрование данных",
+            "5 языков, светлая и тёмная тема"
+          ]
         },
         "en": {
           "tagline": "Personal assistant: money, plans, health, car and the AMR ID card",
@@ -31,7 +38,14 @@
             "Plan tasks and workouts, log your car service.",
             "Share your card: QR code, link or a contact straight to the phone."
           ],
-          "features": ["Finance and reports", "Planner and workouts", "Car", "AMR ID card with QR", "Data encryption", "5 languages, light and dark theme"]
+          "features": [
+            "Finance and reports",
+            "Planner and workouts",
+            "Car",
+            "AMR ID card with QR",
+            "Data encryption",
+            "5 languages, light and dark theme"
+          ]
         },
         "ar": {
           "tagline": "مساعد شخصي: المال، الخطط، الصحة، السيارة وبطاقة AMR ID",
@@ -42,7 +56,14 @@
             "خطّط للمهام والتمارين وسجّل صيانة السيارة.",
             "شارك بطاقتك: رمز QR أو رابط أو جهة اتصال مباشرة إلى الهاتف."
           ],
-          "features": ["المالية والتقارير", "المخطِّط والتمارين", "السيارة", "بطاقة AMR ID مع QR", "تشفير البيانات", "5 لغات، وضع فاتح وداكن"]
+          "features": [
+            "المالية والتقارير",
+            "المخطِّط والتمارين",
+            "السيارة",
+            "بطاقة AMR ID مع QR",
+            "تشفير البيانات",
+            "5 لغات، وضع فاتح وداكن"
+          ]
         },
         "uz": {
           "tagline": "Shaxsiy yordamchi: pul, rejalar, salomatlik, mashina va AMR ID vizitkasi",
@@ -53,7 +74,14 @@
             "Vazifa va mashg‘ulotlarni rejalang, mashina xizmatini belgilang.",
             "Vizitkani ulashing: QR-kod, havola yoki telefonga kontakt."
           ],
-          "features": ["Moliya va hisobotlar", "Reja va mashg‘ulotlar", "Avtomobil", "QR bilan AMR ID vizitkasi", "Ma’lumotlarni shifrlash", "5 til, yorug‘ va qorong‘i mavzu"]
+          "features": [
+            "Moliya va hisobotlar",
+            "Reja va mashg‘ulotlar",
+            "Avtomobil",
+            "QR bilan AMR ID vizitkasi",
+            "Ma’lumotlarni shifrlash",
+            "5 til, yorug‘ va qorong‘i mavzu"
+          ]
         },
         "tg": {
           "tagline": "Ёрдамчии шахсӣ: пул, нақшаҳо, саломатӣ, мошин ва визиткаи AMR ID",
@@ -64,7 +92,14 @@
             "Вазифаҳо ва машқҳоро ба нақша гиред, хизматрасонии мошинро қайд кунед.",
             "Визиткаро фиристед: QR-код, пайванд ё контакт рост ба телефон."
           ],
-          "features": ["Молия ва ҳисобот", "Нақша ва машқҳо", "Мошин", "Визиткаи AMR ID бо QR", "Рамзгузории маълумот", "5 забон, мавзӯи равшан ва торик"]
+          "features": [
+            "Молия ва ҳисобот",
+            "Нақша ва машқҳо",
+            "Мошин",
+            "Визиткаи AMR ID бо QR",
+            "Рамзгузории маълумот",
+            "5 забон, мавзӯи равшан ва торик"
+          ]
         }
       }
     },
@@ -72,11 +107,11 @@
       "slug": "safar",
       "name": "Safar",
       "status": "live",
-      "app_url": "https://amr-safar.vercel.app",
+      "app_url": "https://t.me/amrservic",
       "demo_url": "",
       "icon": "/assets/icons/safar.webp",
       "accent": "#2BB3C0",
-      "pwa": true,
+      "pwa": false,
       "i18n": {
         "ru": {
           "tagline": "Помощник в поездках по Саудовской Аравии: попутки, жильё, виза",
@@ -86,7 +121,14 @@
             "Выберите, что нужно: поездка, жильё или визовый счётчик.",
             "Найдите подходящее предложение и свяжитесь напрямую."
           ],
-          "features": ["Попутки: пассажиры и водители", "Жильё", "Счётчик срока визы", "Маршрут и расход топлива", "Работает в Telegram"]
+          "features": [
+            "Попутки: пассажиры и водители",
+            "Жильё",
+            "Счётчик срока визы",
+            "Маршрут и расход топлива",
+            "Работает в Telegram"
+          ],
+          "note": "Сейчас Safar работает внутри Telegram — откройте через группу AMR SERVICE. Версия для установки на телефон готовится."
         },
         "en": {
           "tagline": "Travel helper for Saudi Arabia: rides, housing, visa",
@@ -96,7 +138,14 @@
             "Choose what you need: a ride, housing or the visa counter.",
             "Find a suitable offer and contact the person directly."
           ],
-          "features": ["Rides: passengers and drivers", "Housing", "Visa deadline counter", "Route and fuel use", "Works in Telegram"]
+          "features": [
+            "Rides: passengers and drivers",
+            "Housing",
+            "Visa deadline counter",
+            "Route and fuel use",
+            "Works in Telegram"
+          ],
+          "note": "Safar currently runs inside Telegram — open it via the AMR SERVICE group. An installable phone version is being prepared."
         },
         "ar": {
           "tagline": "مساعد السفر في السعودية: مشاوير، سكن، تأشيرة",
@@ -106,7 +155,14 @@
             "اختر ما تحتاجه: مشوار أو سكن أو عدّاد التأشيرة.",
             "اعثر على العرض المناسب وتواصل مباشرة."
           ],
-          "features": ["مشاوير: ركاب وسائقون", "سكن", "عدّاد مدة التأشيرة", "المسار واستهلاك الوقود", "يعمل في تيليجرام"]
+          "features": [
+            "مشاوير: ركاب وسائقون",
+            "سكن",
+            "عدّاد مدة التأشيرة",
+            "المسار واستهلاك الوقود",
+            "يعمل في تيليجرام"
+          ],
+          "note": "يعمل Safar حاليًا داخل تيليجرام — افتحه عبر مجموعة AMR SERVICE. نسخة قابلة للتثبيت على الهاتف قيد الإعداد."
         },
         "uz": {
           "tagline": "Saudiya Arabistonida safar yordamchisi: yo‘ldosh, uy-joy, viza",
@@ -116,7 +172,14 @@
             "Keraklisini tanlang: safar, uy-joy yoki viza hisoblagichi.",
             "Mos taklifni toping va to‘g‘ridan-to‘g‘ri bog‘laning."
           ],
-          "features": ["Yo‘ldoshlar: yo‘lovchi va haydovchi", "Uy-joy", "Viza muddati hisoblagichi", "Yo‘l va yoqilg‘i sarfi", "Telegram’da ishlaydi"]
+          "features": [
+            "Yo‘ldoshlar: yo‘lovchi va haydovchi",
+            "Uy-joy",
+            "Viza muddati hisoblagichi",
+            "Yo‘l va yoqilg‘i sarfi",
+            "Telegram’da ishlaydi"
+          ],
+          "note": "Hozir Safar Telegram ichida ishlaydi — AMR SERVICE guruhi orqali oching. Telefonga o‘rnatiladigan versiya tayyorlanmoqda."
         },
         "tg": {
           "tagline": "Ёрдамчии сафар дар Арабистони Саудӣ: ҳамроҳ, манзил, виза",
@@ -126,7 +189,14 @@
             "Лозимиро интихоб кунед: сафар, манзил ё ҳисобкунаки виза.",
             "Пешниҳоди мувофиқро ёбед ва бевосита тамос гиред."
           ],
-          "features": ["Ҳамроҳон: мусофир ва ронанда", "Манзил", "Ҳисобкунаки мӯҳлати виза", "Роҳ ва сарфи сӯзишворӣ", "Дар Telegram кор мекунад"]
+          "features": [
+            "Ҳамроҳон: мусофир ва ронанда",
+            "Манзил",
+            "Ҳисобкунаки мӯҳлати виза",
+            "Роҳ ва сарфи сӯзишворӣ",
+            "Дар Telegram кор мекунад"
+          ],
+          "note": "Ҳоло Safar дар дохили Telegram кор мекунад — тавассути гурӯҳи AMR SERVICE кушоед. Версияи насбшаванда барои телефон омода мешавад."
         }
       }
     },
@@ -134,7 +204,7 @@
       "slug": "cutting",
       "name": "Cutting",
       "status": "live",
-      "app_url": "https://amr-cutting.grok.me",
+      "app_url": "https://amr-cutting.vercel.app",
       "demo_url": "",
       "icon": "/assets/icons/cutting.svg",
       "accent": "#C9A44C",
@@ -148,7 +218,12 @@
             "Нажмите «Рассчитать» — программа разложит детали на листах.",
             "Проверьте карту раскроя и отправьте её в цех."
           ],
-          "features": ["Раскрой листов 2D", "Раскрой профиля 1D", "Учёт пропила", "Карты для цеха"]
+          "features": [
+            "Раскрой листов 2D",
+            "Раскрой профиля 1D",
+            "Учёт пропила",
+            "Карты для цеха"
+          ]
         },
         "en": {
           "tagline": "Sheet and profile cutting with minimum waste",
@@ -158,7 +233,12 @@
             "Press “Calculate” — the program lays the parts out on sheets.",
             "Check the cutting map and send it to the workshop."
           ],
-          "features": ["2D sheet cutting", "1D profile cutting", "Saw kerf included", "Maps for the workshop"]
+          "features": [
+            "2D sheet cutting",
+            "1D profile cutting",
+            "Saw kerf included",
+            "Maps for the workshop"
+          ]
         },
         "ar": {
           "tagline": "تقطيع الألواح والبروفيلات بأقل هدر",
@@ -168,7 +248,12 @@
             "اضغط «احسب» — يوزّع البرنامج القطع على الألواح.",
             "راجع خريطة التقطيع وأرسلها إلى الورشة."
           ],
-          "features": ["تقطيع الألواح ثنائي الأبعاد", "تقطيع البروفيل أحادي البعد", "احتساب سماكة المنشار", "خرائط للورشة"]
+          "features": [
+            "تقطيع الألواح ثنائي الأبعاد",
+            "تقطيع البروفيل أحادي البعد",
+            "احتساب سماكة المنشار",
+            "خرائط للورشة"
+          ]
         },
         "uz": {
           "tagline": "List va profilni minimal chiqindi bilan kesish",
@@ -178,7 +263,12 @@
             "«Hisoblash»ni bosing — dastur detallarni listlarga joylaydi.",
             "Kesish xaritasini tekshiring va sexga yuboring."
           ],
-          "features": ["2D list kesish", "1D profil kesish", "Arra qalinligi hisobga olinadi", "Sex uchun xaritalar"]
+          "features": [
+            "2D list kesish",
+            "1D profil kesish",
+            "Arra qalinligi hisobga olinadi",
+            "Sex uchun xaritalar"
+          ]
         },
         "tg": {
           "tagline": "Буриши варақ ва профил бо камтарин партов",
@@ -188,7 +278,12 @@
             "«Ҳисоб кардан»-ро пахш кунед — барнома қисмҳоро дар варақҳо ҷой медиҳад.",
             "Харитаи буришро санҷед ва ба сех фиристед."
           ],
-          "features": ["Буриши варақ 2D", "Буриши профил 1D", "Ғафсии арра ба ҳисоб гирифта мешавад", "Харитаҳо барои сех"]
+          "features": [
+            "Буриши варақ 2D",
+            "Буриши профил 1D",
+            "Ғафсии арра ба ҳисоб гирифта мешавад",
+            "Харитаҳо барои сех"
+          ]
         }
       }
     },
@@ -206,31 +301,56 @@
           "tagline": "Мебель в 3D прямо в шоуруме: нарисовать, посчитать, передать дизайнеру",
           "description": "Конструктор для шоурума: быстро собрать кухню или шкаф в 3D вместе с клиентом, сразу увидеть стоимость и отправить проект дизайнеру для чертежей и раскроя.",
           "steps": [],
-          "features": ["3D-модель за минуты", "Расчёт стоимости", "Передача проекта дизайнеру", "Ссылка для клиента"]
+          "features": [
+            "3D-модель за минуты",
+            "Расчёт стоимости",
+            "Передача проекта дизайнеру",
+            "Ссылка для клиента"
+          ]
         },
         "en": {
           "tagline": "Furniture in 3D right in the showroom: draw, price, hand over",
           "description": "A showroom configurator: build a kitchen or wardrobe in 3D together with the client, see the price at once and send the project to the designer for drawings and cutting.",
           "steps": [],
-          "features": ["3D model in minutes", "Price calculation", "Hand-over to the designer", "Link for the client"]
+          "features": [
+            "3D model in minutes",
+            "Price calculation",
+            "Hand-over to the designer",
+            "Link for the client"
+          ]
         },
         "ar": {
           "tagline": "الأثاث ثلاثي الأبعاد في صالة العرض: ارسم، احسب، سلّم للمصمم",
           "description": "مصمِّم لصالات العرض: صمّم مطبخًا أو خزانة بالأبعاد الثلاثية مع العميل، واعرف السعر فورًا، وأرسل المشروع إلى المصمم للرسومات والتقطيع.",
           "steps": [],
-          "features": ["نموذج ثلاثي الأبعاد في دقائق", "حساب السعر", "تسليم المشروع للمصمم", "رابط للعميل"]
+          "features": [
+            "نموذج ثلاثي الأبعاد في دقائق",
+            "حساب السعر",
+            "تسليم المشروع للمصمم",
+            "رابط للعميل"
+          ]
         },
         "uz": {
           "tagline": "Shou-rumda 3D mebel: chizish, hisoblash, dizaynerga berish",
           "description": "Shou-rum uchun konstruktor: mijoz bilan birga oshxona yoki shkafni 3D’da yig‘ing, narxni darhol ko‘ring va loyihani chizmalar va kesish uchun dizaynerga yuboring.",
           "steps": [],
-          "features": ["Bir necha daqiqada 3D model", "Narx hisobi", "Loyihani dizaynerga berish", "Mijoz uchun havola"]
+          "features": [
+            "Bir necha daqiqada 3D model",
+            "Narx hisobi",
+            "Loyihani dizaynerga berish",
+            "Mijoz uchun havola"
+          ]
         },
         "tg": {
           "tagline": "Мебел дар 3D рост дар шоурум: кашидан, ҳисоб кардан, ба дизайнер додан",
           "description": "Конструктор барои шоурум: ошхона ё ҷевонро бо мизоҷ дар 3D ҷамъ кунед, нархро фавран бинед ва лоиҳаро барои нақшаҳо ва буриш ба дизайнер фиристед.",
           "steps": [],
-          "features": ["Модели 3D дар чанд дақиқа", "Ҳисоби нарх", "Супоридани лоиҳа ба дизайнер", "Пайванд барои мизоҷ"]
+          "features": [
+            "Модели 3D дар чанд дақиқа",
+            "Ҳисоби нарх",
+            "Супоридани лоиҳа ба дизайнер",
+            "Пайванд барои мизоҷ"
+          ]
         }
       }
     },
@@ -248,31 +368,56 @@
           "tagline": "Разбор 3D-модели мебели на детали и порядок сборки",
           "description": "Vision анализирует готовую 3D-модель, раскладывает её на детали и восстанавливает порядок сборки. Работает отдельно или вместе с 3D Constructor.",
           "steps": [],
-          "features": ["Детали из 3D-модели", "Порядок сборки", "Отдельно или с конструктором", "Открытое подключение для других программ"]
+          "features": [
+            "Детали из 3D-модели",
+            "Порядок сборки",
+            "Отдельно или с конструктором",
+            "Открытое подключение для других программ"
+          ]
         },
         "en": {
           "tagline": "Breaks a furniture 3D model into parts and assembly order",
           "description": "Vision analyses a finished 3D model, splits it into parts and rebuilds the assembly order. Works on its own or together with 3D Constructor.",
           "steps": [],
-          "features": ["Parts from a 3D model", "Assembly order", "Standalone or with the constructor", "Open integration for other programs"]
+          "features": [
+            "Parts from a 3D model",
+            "Assembly order",
+            "Standalone or with the constructor",
+            "Open integration for other programs"
+          ]
         },
         "ar": {
           "tagline": "تفكيك نموذج الأثاث ثلاثي الأبعاد إلى قطع وترتيب التجميع",
           "description": "يحلّل Vision النموذج ثلاثي الأبعاد الجاهز، ويقسّمه إلى قطع، ويعيد بناء ترتيب التجميع. يعمل منفردًا أو مع 3D Constructor.",
           "steps": [],
-          "features": ["قطع من النموذج ثلاثي الأبعاد", "ترتيب التجميع", "منفردًا أو مع المصمِّم", "ربط مفتوح لبرامج أخرى"]
+          "features": [
+            "قطع من النموذج ثلاثي الأبعاد",
+            "ترتيب التجميع",
+            "منفردًا أو مع المصمِّم",
+            "ربط مفتوح لبرامج أخرى"
+          ]
         },
         "uz": {
           "tagline": "Mebelning 3D modelini detallarga va yig‘ish tartibiga ajratish",
           "description": "Vision tayyor 3D modelni tahlil qiladi, uni detallarga ajratadi va yig‘ish tartibini tiklaydi. Alohida yoki 3D Constructor bilan ishlaydi.",
           "steps": [],
-          "features": ["3D modeldan detallar", "Yig‘ish tartibi", "Alohida yoki konstruktor bilan", "Boshqa dasturlar uchun ochiq ulanish"]
+          "features": [
+            "3D modeldan detallar",
+            "Yig‘ish tartibi",
+            "Alohida yoki konstruktor bilan",
+            "Boshqa dasturlar uchun ochiq ulanish"
+          ]
         },
         "tg": {
           "tagline": "Ҷудо кардани модели 3D-и мебел ба қисмҳо ва тартиби васл",
           "description": "Vision модели тайёри 3D-ро таҳлил мекунад, онро ба қисмҳо ҷудо мекунад ва тартиби васлро барқарор менамояд. Алоҳида ё якҷоя бо 3D Constructor кор мекунад.",
           "steps": [],
-          "features": ["Қисмҳо аз модели 3D", "Тартиби васл", "Алоҳида ё бо конструктор", "Пайвасти кушода барои барномаҳои дигар"]
+          "features": [
+            "Қисмҳо аз модели 3D",
+            "Тартиби васл",
+            "Алоҳида ё бо конструктор",
+            "Пайвасти кушода барои барномаҳои дигар"
+          ]
         }
       }
     },
@@ -290,31 +435,56 @@
           "tagline": "Заявки и услуги через Telegram и WhatsApp",
           "description": "Service Hub собирает заявки из Telegram и WhatsApp в одном месте и помогает быстро найти исполнителя. AMR только площадка: не посредник и не принимает оплату.",
           "steps": [],
-          "features": ["Заявки из Telegram и WhatsApp", "Боты и группы", "Поиск исполнителя", "Без посредничества в оплате"]
+          "features": [
+            "Заявки из Telegram и WhatsApp",
+            "Боты и группы",
+            "Поиск исполнителя",
+            "Без посредничества в оплате"
+          ]
         },
         "en": {
           "tagline": "Requests and services via Telegram and WhatsApp",
           "description": "Service Hub gathers requests from Telegram and WhatsApp in one place and helps find a provider quickly. AMR is only a platform: not an intermediary and does not take payments.",
           "steps": [],
-          "features": ["Requests from Telegram and WhatsApp", "Bots and groups", "Find a provider", "No payment intermediation"]
+          "features": [
+            "Requests from Telegram and WhatsApp",
+            "Bots and groups",
+            "Find a provider",
+            "No payment intermediation"
+          ]
         },
         "ar": {
           "tagline": "الطلبات والخدمات عبر تيليجرام وواتساب",
           "description": "يجمع Service Hub الطلبات من تيليجرام وواتساب في مكان واحد ويساعد على إيجاد مقدّم الخدمة بسرعة. AMR منصة فقط: ليست وسيطًا ولا تستلم المدفوعات.",
           "steps": [],
-          "features": ["طلبات من تيليجرام وواتساب", "بوتات ومجموعات", "إيجاد مقدّم الخدمة", "دون وساطة في الدفع"]
+          "features": [
+            "طلبات من تيليجرام وواتساب",
+            "بوتات ومجموعات",
+            "إيجاد مقدّم الخدمة",
+            "دون وساطة في الدفع"
+          ]
         },
         "uz": {
           "tagline": "Telegram va WhatsApp orqali buyurtmalar va xizmatlar",
           "description": "Service Hub Telegram va WhatsApp’dagi buyurtmalarni bir joyga to‘playdi va ijrochini tez topishga yordam beradi. AMR faqat maydoncha: vositachi emas va to‘lov qabul qilmaydi.",
           "steps": [],
-          "features": ["Telegram va WhatsApp’dan buyurtmalar", "Botlar va guruhlar", "Ijrochi qidirish", "To‘lovda vositachiliksiz"]
+          "features": [
+            "Telegram va WhatsApp’dan buyurtmalar",
+            "Botlar va guruhlar",
+            "Ijrochi qidirish",
+            "To‘lovda vositachiliksiz"
+          ]
         },
         "tg": {
           "tagline": "Дархостҳо ва хизматҳо тавассути Telegram ва WhatsApp",
           "description": "Service Hub дархостҳоро аз Telegram ва WhatsApp дар як ҷо ҷамъ мекунад ва ба зудӣ ёфтани иҷрокунанда кӯмак мекунад. AMR танҳо майдонча аст: миёнарав нест ва пардохт қабул намекунад.",
           "steps": [],
-          "features": ["Дархостҳо аз Telegram ва WhatsApp", "Ботҳо ва гурӯҳҳо", "Ҷустуҷӯи иҷрокунанда", "Бе миёнаравӣ дар пардохт"]
+          "features": [
+            "Дархостҳо аз Telegram ва WhatsApp",
+            "Ботҳо ва гурӯҳҳо",
+            "Ҷустуҷӯи иҷрокунанда",
+            "Бе миёнаравӣ дар пардохт"
+          ]
         }
       }
     }

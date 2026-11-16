@@ -37,11 +37,11 @@ const chevron = `<svg class="go" width="20" height="20" viewBox="0 0 24 24" fill
 
 // Пути. Русский — корень, остальные — /xx/.
 const langPath = (l) => (l === "ru" ? "" : l + "/");
-const relToLang = (from, to) => (from === "ru" ? langPath(to) : to === "ru" ? "../" : "../" + to + "/");
-const portalUrl = (l) => `https://${DOMAIN}/${langPath(l)}`;
-const productUrl = (slug, l) => `https://${slug}.${DOMAIN}/${langPath(l)}`;
-const productLocal = (slug, l) => `/p/${slug}/${langPath(l)}`;
-const portalLocal = (l) => `/${langPath(l)}`;
+// Портал: /, /en/ ... Страница продукта: /safar/, /en/safar/ ... Само приложение — на поддомене (app_url).
+const portalPath = (l) => `/${langPath(l)}`;
+const productPath = (slug, l) => `/${langPath(l)}${slug}/`;
+const portalUrl = (l) => `https://${DOMAIN}${portalPath(l)}`;
+const productUrl = (slug, l) => `https://${DOMAIN}${productPath(slug, l)}`;
 
 function text(p, l) {
   const t = p.i18n[l] || p.i18n.en;
@@ -81,9 +81,9 @@ ${monoSym}
 function header(l, langHrefs, home) {
   const t = T[l];
   return `<header class="hdr"><div class="wrap">
-<a class="logo" href="${home.prod}" data-local="${home.local}" aria-label="AMR Systems">${mono("", false)}<span>Systems</span></a>
+<a class="logo" href="${home}" aria-label="AMR Systems">${mono("", false)}<span>Systems</span></a>
 <span class="sp"></span>
-<a class="nav-link" href="${home.prod}#products" data-local="${home.local}#products">${esc(t.nav_products)}</a>
+<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
 <details class="dd"><summary aria-label="${esc(t.language)}"><span class="flag" aria-hidden="true">${FLAGS[l]}</span>${l.toUpperCase()}</summary>
 <div class="dd-menu">${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
 <details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
@@ -94,7 +94,7 @@ function header(l, langHrefs, home) {
 function footer(l) {
   const t = T[l];
   return `<footer class="ftr"><div class="wrap">${mono("", false)}<span>© ${new Date().getUTCFullYear()} AMR Systems. ${esc(t.footer)}</span>
-<nav aria-label="${esc(t.nav_all)}">${products.map((p) => `<a href="${productUrl(p.slug, l)}" data-local="${productLocal(p.slug, l)}">${esc(p.name)}</a>`).join("")}</nav>
+<nav aria-label="${esc(t.nav_all)}">${products.map((p) => `<a href="${productPath(p.slug, l)}">${esc(p.name)}</a>`).join("")}</nav>
 </div></footer>
 </body></html>
 `;
@@ -105,11 +105,11 @@ const iconImg = (p, size, cls = "") => `<img${cls ? ` class="${cls}"` : ""} src=
 
 function portalPage(l) {
   const t = T[l];
-  const langHrefs = Object.fromEntries(LANGS.map((x) => [x, relToLang(l, x)]));
+  const langHrefs = Object.fromEntries(LANGS.map((x) => [x, portalPath(x)]));
   const alternates = LANGS.map((x) => [x, portalUrl(x)]).concat([["x-default", portalUrl("ru")]]);
   return (
     head({ l, title: t.title, desc: t.meta, canonical: portalUrl(l), alternates }) +
-    header(l, langHrefs, { prod: portalUrl(l), local: portalLocal(l) }) +
+    header(l, langHrefs, portalPath(l)) +
     `<main id="main">
 <section class="hero"><div class="wrap">
 ${mono("mono")}
@@ -125,7 +125,7 @@ ${mono("mono")}
 ${products
   .map((p) => {
     const x = text(p, l);
-    return `<a class="card" href="${productUrl(p.slug, l)}" data-local="${productLocal(p.slug, l)}">${iconImg(p, 64)}<div><h3>${esc(p.name)} ${badge(p.status, l)}</h3><p>${esc(x.tagline)}</p></div>${chevron}</a>`;
+    return `<a class="card" href="${productPath(p.slug, l)}">${iconImg(p, 64)}<div><h3>${esc(p.name)} ${badge(p.status, l)}</h3><p>${esc(x.tagline)}</p></div>${chevron}</a>`;
   })
   .join("\n")}
 </div></div></section>
@@ -142,7 +142,7 @@ ${[1, 2, 3].map((i) => `<div class="pi"><i></i><b>${esc(t["p" + i + "_t"])}</b><
 function productPage(p, l) {
   const t = T[l];
   const x = text(p, l);
-  const langHrefs = Object.fromEntries(LANGS.map((y) => [y, relToLang(l, y)]));
+  const langHrefs = Object.fromEntries(LANGS.map((y) => [y, productPath(p.slug, y)]));
   const alternates = LANGS.map((y) => [y, productUrl(p.slug, y)]).concat([["x-default", productUrl(p.slug, "ru")]]);
   const app = safeUrl(p.app_url);
   const demo = safeUrl(p.demo_url);
@@ -158,7 +158,7 @@ ${demo ? `<a class="btn btn-g" href="${esc(demo)}" rel="noopener">${esc(t.demo)}
   const imgs = (p.steps_images || []);
   return (
     head({ l, title: `${p.name} — ${x.tagline}`, desc: x.description, canonical: productUrl(p.slug, l), alternates, icon: p.icon }) +
-    header(l, langHrefs, { prod: portalUrl(l), local: portalLocal(l) }) +
+    header(l, langHrefs, portalPath(l)) +
     `<main id="main">
 <section class="phero"><div class="wrap"><div class="anchor">
 ${mono("wm", false)}
@@ -166,6 +166,7 @@ ${mono("wm", false)}
 <p class="tag">${esc(x.tagline)}</p>
 <p class="desc">${esc(x.description)}</p>
 ${acts}
+${x.note ? `<p class="note" data-mt>${esc(x.note)}</p>` : ""}
 </div></div></section>
 ${
   steps.length
@@ -190,7 +191,7 @@ ${
 </div></section>`
     : ""
 }
-<section><div class="wrap"><a class="back" href="${portalUrl(l)}#products" data-local="${portalLocal(l)}#products">${esc(t.back)}</a></div></section>
+<section><div class="wrap"><a class="back" href="${portalPath(l)}#products">${esc(t.back)}</a></div></section>
 </main>` +
     footer(l)
   );
@@ -208,7 +209,7 @@ export function build() {
   write(join(OUT, JS_URL), js);
   for (const l of LANGS) {
     write(join(OUT, "site", langPath(l), "index.html"), portalPage(l));
-    for (const p of products) write(join(OUT, "p", p.slug, langPath(l), "index.html"), productPage(p, l));
+    for (const p of products) write(join(OUT, "site", langPath(l), p.slug, "index.html"), productPage(p, l));
   }
   write(join(OUT, "404.html"), portalPage("ru").replace("<h1>", "<h1>404 · ").replace(' data-root', ""));
   write(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: https://${DOMAIN}/sitemap.xml\n`);
@@ -218,7 +219,7 @@ export function build() {
   return { pages: LANGS.length * (1 + products.length), products: products.map((p) => p.slug) };
 }
 
-// vercel.json: поддомен -> /p/<slug>/, остальное -> /site/. Заголовки безопасности и CSP.
+// vercel.json: все страницы -> /site/. Заголовки безопасности и CSP.
 export function vercelConfig() {
   const csp = [
     "default-src 'self'",
@@ -233,7 +234,7 @@ export function vercelConfig() {
     "object-src 'none'",
     "upgrade-insecure-requests",
   ].join("; ");
-  const PAGE = "/:path((?!assets/|p/|site/)[^.]*)";
+  const PAGE = "/:path((?!assets/|site/)[^.]*)";
   return {
     $schema: "https://openapi.vercel.sh/vercel.json",
     framework: null,
@@ -246,7 +247,6 @@ export function vercelConfig() {
       { source: "/tj/:path*", destination: "/tg/:path*", permanent: true },
       { source: "/:path*", has: [{ type: "host", value: `www.${DOMAIN}` }], destination: `https://${DOMAIN}/:path*`, permanent: true }],
     rewrites: [
-      ...products.map((p) => ({ source: PAGE, has: [{ type: "host", value: `${p.slug}.${DOMAIN}` }], destination: `/p/${p.slug}/:path` })),
       { source: PAGE, destination: "/site/:path" },
     ],
     headers: [

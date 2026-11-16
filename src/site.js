@@ -31,12 +31,6 @@
     document.querySelectorAll("details.dd[open]").forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
   });
 
-  // На превью (не amrsys.net) ссылки на поддомены ведут на локальные пути
-  var host = location.hostname;
-  if (!/(^|\.)amrsys\.net$/.test(host)) {
-    document.querySelectorAll("a[data-local]").forEach(function (a) { a.setAttribute("href", a.getAttribute("data-local")); });
-  }
-
   // Корень сайта: если язык сохранён или браузер на другом языке — перейти
   var lang = root.getAttribute("lang");
   if (root.hasAttribute("data-root") && lang === "ru") {
@@ -47,6 +41,6 @@
       if (nav === "tj") nav = "tg";
       want = LANGS.indexOf(nav) > 0 ? nav : null;
     }
-    if (want && want !== "ru" && LANGS.indexOf(want) > 0) location.replace(want + "/");
+    if (want && want !== "ru" && LANGS.indexOf(want) > 0) location.replace("/" + want + location.pathname);
   }
 })();

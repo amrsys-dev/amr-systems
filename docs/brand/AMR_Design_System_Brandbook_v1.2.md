@@ -768,11 +768,13 @@ Geometry locked. Vector master: owner-approved path SVG. Raster master: clean se
 ### 25.1 Domains
 | Address | Role |
 |---|---|
-| `amrsys.net` | Portal: welcome, presentation of all products, links to product pages. No accounts, no app logic. |
-| `<product>.amrsys.net` | Product page: short description, how it works (steps with screenshots), Open / Install / Demo. One page per product, independent. |
-| App origin (from registry `app_url`) | The PWA itself. SELF and public AMR ID cards: `id.amrsys.net`. Other apps: own origin listed in the registry. |
+| `amrsys.net` | Portal: welcome, presentation of all products. No accounts, no app logic. |
+| `amrsys.net/<slug>/` (and `/<lang>/<slug>/`) | Product page: short description, how it works, Open / Install. Static, ~6 KB, independent of other pages. |
+| `<slug>.amrsys.net` | The app itself (PWA), its own Vercel project. Installation happens here, because browsers install only the address that is open. |
 
-Reserved product slugs: `self`, `safar`, `cutting`, `hub`, `constructor`, `vision`, `bazar`.
+Hosting: all front-ends on Vercel; domain and DNS on Cloudflare (one wildcard record `*` → Vercel, DNS only); app data on Cloudflare (Workers, Durable Objects, KV, R2) or the app's own database. No app may depend on a temporary builder host (grok.me etc.) or work only inside Telegram: a Telegram Mini App is an additional entry point, the PWA is the main one.
+
+Reserved slugs: `self`, `safar`, `cutting`, `hub`, `constructor`, `vision`, `bazar`, `id` (AMR ID cards).
 
 ### 25.2 Portal (amrsys.net)
 1. Header: monogram, product menu, language switch (flag + code), theme Light/Dark/Auto.
@@ -782,8 +784,8 @@ Reserved product slugs: `self`, `safar`, `cutting`, `hub`, `constructor`, `visio
 5. Footer: contacts, languages, © AMR Systems.
 Login and registration are not on the portal; they live in AMR ID / SELF.
 
-### 25.3 Product page (`<product>.amrsys.net`)
-1. Header identical to the portal (logo returns to amrsys.net).
+### 25.3 Product page (`amrsys.net/<slug>/`)
+1. Header identical to the portal.
 2. Hero: app icon, name, one-sentence description, buttons **Открыть** (app_url), **Установить** (opens app with install hint), **Демо** (demo_url, if any). Status badge.
 3. «Как это работает»: 3–5 steps, each a WebP phone screenshot + 1 short sentence.
 4. Features: up to 6 short tiles.
@@ -805,8 +807,8 @@ Installation always happens on the app origin (browsers only allow install there
 Fields per product: `slug`, `name`, `status` (`live`, `demo`, `dev`, `soon`), `app_url`, `demo_url`, `icon`, `accent`, and `steps_images[]` (optional WebP screenshots, shared by all locales), `pwa`, `hidden`, and per locale (`i18n.<code>`): `tagline`, `description`, `steps[]` (one short sentence each), `features[]`.
 
 Rules:
-- One product = one entry; the slug equals the subdomain.
-- Screenshots go to `public/p/<slug>/` as WebP, 720 px wide max.
+- One product = one entry; the slug equals the app subdomain and the product page path.
+- Screenshots go to `public/assets/<slug>/` as WebP, 720 px wide max.
 - Status changes only when true (e.g. `live` only after a production release).
 - A pull request that adds or changes a product must keep all five locales filled (fallback to English is allowed but marked in review).
 

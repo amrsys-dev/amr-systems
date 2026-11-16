@@ -201,7 +201,7 @@
       "status": "live",
       "app_url": "https://cutting.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/cutting.svg",
+      "icon": "/assets/icons/cutting.webp",
       "accent": "#C9A44C",
       "pwa": true,
       "i18n": {
@@ -422,7 +422,7 @@
       "status": "dev",
       "app_url": "https://bazar.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/bazar.svg",
+      "icon": "/assets/icons/bazar.webp",
       "accent": "#C9A44C",
       "pwa": true,
       "i18n": {

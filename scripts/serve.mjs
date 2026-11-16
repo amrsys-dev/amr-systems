@@ -1,4 +1,4 @@
-// Локальный просмотр dist/ с теми же правилами, что на Vercel: / -> /site/, /p/<slug>/ как есть.
+// Локальный просмотр dist/ с теми же правилами, что на Vercel: всё, кроме /assets/, -> /site/.
 // Запуск: node scripts/serve.mjs [порт]
 import { createServer } from "node:http";
 import { readFileSync, existsSync, statSync } from "node:fs";
@@ -11,7 +11,7 @@ const port = Number(process.argv[2] || 4173);
 
 createServer((req, res) => {
   let p = decodeURIComponent(new URL(req.url, "http://x").pathname);
-  if (!/^\/(assets|p|site)\//.test(p) && !extname(p)) p = "/site" + p;
+  if (!/^\/(assets|site)\//.test(p) && !extname(p)) p = "/site" + p;
   let f = normalize(join(DIST, p));
   if (!f.startsWith(DIST)) { res.writeHead(400); return res.end(); }
   if (existsSync(f) && statSync(f).isDirectory()) f = join(f, "index.html");

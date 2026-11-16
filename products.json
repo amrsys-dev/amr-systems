@@ -419,7 +419,7 @@
     {
       "slug": "bazar",
       "name": "Bazar",
-      "status": "dev",
+      "status": "live",
       "app_url": "https://bazar.amrsys.net",
       "demo_url": "",
       "icon": "/assets/icons/bazar.webp",

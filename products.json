@@ -5,7 +5,7 @@
       "slug": "self",
       "name": "SELF",
       "status": "live",
-      "app_url": "https://amr-id.vercel.app",
+      "app_url": "https://self.amrsys.net",
       "demo_url": "",
       "icon": "/assets/icons/self.webp",
       "accent": "#20A879",
@@ -107,11 +107,11 @@
       "slug": "safar",
       "name": "Safar",
       "status": "live",
-      "app_url": "https://t.me/amrservic",
+      "app_url": "https://safar.amrsys.net",
       "demo_url": "",
       "icon": "/assets/icons/safar.webp",
       "accent": "#2BB3C0",
-      "pwa": false,
+      "pwa": true,
       "i18n": {
         "ru": {
           "tagline": "Помощник в поездках по Саудовской Аравии: попутки, жильё, виза",
@@ -127,8 +127,7 @@
             "Счётчик срока визы",
             "Маршрут и расход топлива",
             "Работает в Telegram"
-          ],
-          "note": "Сейчас Safar работает внутри Telegram — откройте через группу AMR SERVICE. Версия для установки на телефон готовится."
+          ]
         },
         "en": {
           "tagline": "Travel helper for Saudi Arabia: rides, housing, visa",
@@ -144,8 +143,7 @@
             "Visa deadline counter",
             "Route and fuel use",
             "Works in Telegram"
-          ],
-          "note": "Safar currently runs inside Telegram — open it via the AMR SERVICE group. An installable phone version is being prepared."
+          ]
         },
         "ar": {
           "tagline": "مساعد السفر في السعودية: مشاوير، سكن، تأشيرة",
@@ -161,8 +159,7 @@
             "عدّاد مدة التأشيرة",
             "المسار واستهلاك الوقود",
             "يعمل في تيليجرام"
-          ],
-          "note": "يعمل Safar حاليًا داخل تيليجرام — افتحه عبر مجموعة AMR SERVICE. نسخة قابلة للتثبيت على الهاتف قيد الإعداد."
+          ]
         },
         "uz": {
           "tagline": "Saudiya Arabistonida safar yordamchisi: yo‘ldosh, uy-joy, viza",
@@ -178,8 +175,7 @@
             "Viza muddati hisoblagichi",
             "Yo‘l va yoqilg‘i sarfi",
             "Telegram’da ishlaydi"
-          ],
-          "note": "Hozir Safar Telegram ichida ishlaydi — AMR SERVICE guruhi orqali oching. Telefonga o‘rnatiladigan versiya tayyorlanmoqda."
+          ]
         },
         "tg": {
           "tagline": "Ёрдамчии сафар дар Арабистони Саудӣ: ҳамроҳ, манзил, виза",
@@ -195,8 +191,7 @@
             "Ҳисобкунаки мӯҳлати виза",
             "Роҳ ва сарфи сӯзишворӣ",
             "Дар Telegram кор мекунад"
-          ],
-          "note": "Ҳоло Safar дар дохили Telegram кор мекунад — тавассути гурӯҳи AMR SERVICE кушоед. Версияи насбшаванда барои телефон омода мешавад."
+          ]
         }
       }
     },
@@ -204,7 +199,7 @@
       "slug": "cutting",
       "name": "Cutting",
       "status": "live",
-      "app_url": "https://amr-cutting.vercel.app",
+      "app_url": "https://cutting.amrsys.net",
       "demo_url": "",
       "icon": "/assets/icons/cutting.svg",
       "accent": "#C9A44C",

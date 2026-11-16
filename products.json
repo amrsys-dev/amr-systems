@@ -201,7 +201,7 @@
       "status": "live",
       "app_url": "https://cutting.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/cutting.svg",
+      "icon": "/assets/icons/cutting.webp",
       "accent": "#C9A44C",
       "pwa": true,
       "i18n": {
@@ -412,6 +412,108 @@
             "Тартиби васл",
             "Алоҳида ё бо конструктор",
             "Пайвасти кушода барои барномаҳои дигар"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bazar",
+      "name": "Bazar",
+      "status": "dev",
+      "app_url": "https://bazar.amrsys.net",
+      "demo_url": "",
+      "icon": "/assets/icons/bazar.webp",
+      "accent": "#C9A44C",
+      "pwa": true,
+      "i18n": {
+        "ru": {
+          "tagline": "Мини-витрина для подработки: сувениры, финики, подарки рядом с вами",
+          "description": "Продавец за несколько минут открывает витрину, а покупатель собирает корзину и отправляет заказ продавцу готовым сообщением в WhatsApp или Telegram. AMR только площадка: не сторона сделки, не посредник и не принимает оплату. Цену, оплату и доставку покупатель и продавец согласуют напрямую.",
+          "steps": [
+            "Продавец входит через Telegram и добавляет товары с фото и ценой.",
+            "Покупатель открывает витрину по QR-коду или ссылке.",
+            "Собирает корзину и пишет, куда принести.",
+            "Заказ уходит продавцу готовым сообщением в WhatsApp или Telegram."
+          ],
+          "features": [
+            "Витрина по ссылке и QR",
+            "Корзина без регистрации",
+            "Заказ в WhatsApp или Telegram",
+            "Продавцы вашего города",
+            "Статусы заказов у продавца",
+            "Без посредничества в оплате"
+          ]
+        },
+        "en": {
+          "tagline": "A mini storefront for side income: souvenirs, dates and gifts near you",
+          "description": "A seller opens a storefront in a few minutes; a buyer fills a cart and sends the order to the seller as a ready message in WhatsApp or Telegram. AMR is only a platform: not a party to the deal, not an intermediary, and it does not take payments. Price, payment and delivery are agreed directly between buyer and seller.",
+          "steps": [
+            "The seller signs in with Telegram and adds items with a photo and price.",
+            "The buyer opens the storefront from a QR code or link.",
+            "They fill a cart and say where to bring it.",
+            "The order goes to the seller as a ready message in WhatsApp or Telegram."
+          ],
+          "features": [
+            "Storefront by link and QR",
+            "Cart without sign-up",
+            "Order via WhatsApp or Telegram",
+            "Sellers in your city",
+            "Order statuses for the seller",
+            "No payment intermediation"
+          ]
+        },
+        "ar": {
+          "tagline": "واجهة متجر صغيرة لدخل إضافي: هدايا تذكارية وتمور وهدايا بالقرب منك",
+          "description": "يفتح البائع واجهة متجره خلال دقائق، ويملأ المشتري السلة ويرسل الطلب إلى البائع كرسالة جاهزة عبر واتساب أو تيليجرام. AMR منصة فقط: ليست طرفًا في الصفقة ولا وسيطًا ولا تستلم المدفوعات. يتفق المشتري والبائع مباشرة على السعر والدفع والتوصيل.",
+          "steps": [
+            "يسجّل البائع الدخول عبر تيليجرام ويضيف المنتجات بالصورة والسعر.",
+            "يفتح المشتري الواجهة عبر رمز QR أو رابط.",
+            "يملأ السلة ويكتب مكان التسليم.",
+            "يصل الطلب إلى البائع كرسالة جاهزة عبر واتساب أو تيليجرام."
+          ],
+          "features": [
+            "واجهة برابط ورمز QR",
+            "سلة دون تسجيل",
+            "الطلب عبر واتساب أو تيليجرام",
+            "بائعو مدينتك",
+            "حالات الطلب لدى البائع",
+            "دون وساطة في الدفع"
+          ]
+        },
+        "uz": {
+          "tagline": "Qo‘shimcha daromad uchun mini-vitrina: suvenirlar, xurmo va sovg‘alar yaqiningizda",
+          "description": "Sotuvchi bir necha daqiqada vitrina ochadi, xaridor savatni to‘ldirib, buyurtmani sotuvchiga WhatsApp yoki Telegram’da tayyor xabar sifatida yuboradi. AMR faqat maydoncha: bitim tomoni ham, vositachi ham emas va to‘lov qabul qilmaydi. Narx, to‘lov va yetkazishni xaridor va sotuvchi bevosita kelishadi.",
+          "steps": [
+            "Sotuvchi Telegram orqali kiradi va mahsulotlarni rasm va narx bilan qo‘shadi.",
+            "Xaridor vitrinani QR-kod yoki havola orqali ochadi.",
+            "Savatni to‘ldiradi va qayerga olib kelishni yozadi.",
+            "Buyurtma sotuvchiga WhatsApp yoki Telegram’da tayyor xabar bo‘lib boradi."
+          ],
+          "features": [
+            "Havola va QR orqali vitrina",
+            "Ro‘yxatdan o‘tmasdan savat",
+            "WhatsApp yoki Telegram orqali buyurtma",
+            "Shahringizdagi sotuvchilar",
+            "Sotuvchida buyurtma holatlari",
+            "To‘lovda vositachiliksiz"
+          ]
+        },
+        "tg": {
+          "tagline": "Мини-витрина барои даромади иловагӣ: тӯҳфаҳо, хурмо ва армуғонҳо дар наздикии шумо",
+          "description": "Фурӯшанда дар чанд дақиқа витрина мекушояд, харидор сабадро пур карда, фармоишро ба фурӯшанда ҳамчун паёми тайёр дар WhatsApp ё Telegram мефиристад. AMR танҳо майдонча аст: тарафи аҳд нест, миёнарав нест ва пардохт қабул намекунад. Нарх, пардохт ва расониданро харидор ва фурӯшанда бевосита мувофиқа мекунанд.",
+          "steps": [
+            "Фурӯшанда тавассути Telegram ворид шуда, молҳоро бо акс ва нарх илова мекунад.",
+            "Харидор витринаро бо рамзи QR ё пайванд мекушояд.",
+            "Сабадро пур мекунад ва менависад, ки ба куҷо оварад.",
+            "Фармоиш ба фурӯшанда ҳамчун паёми тайёр дар WhatsApp ё Telegram меравад."
+          ],
+          "features": [
+            "Витрина бо пайванд ва QR",
+            "Сабад бе бақайдгирӣ",
+            "Фармоиш тавассути WhatsApp ё Telegram",
+            "Фурӯшандагони шаҳри шумо",
+            "Ҳолати фармоишҳо барои фурӯшанда",
+            "Бе миёнаравӣ дар пардохт"
           ]
         }
       }

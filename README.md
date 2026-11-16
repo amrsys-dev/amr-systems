@@ -1,33 +1,27 @@
-# AMR Systems — Public Portal
+# AMR Systems — портал amrsys.net и страницы продуктов
 
-The public website for the AMR technology ecosystem.
+Статический сайт без зависимостей. Брендбук: `docs/brand/AMR_Design_System_Brandbook_v1.2.md` (разделы 25–26).
 
-## Scope
-The portal introduces the ecosystem, explains the independent product directions, and provides navigation. Product applications remain separate deployments and are not embedded into this site.
+## Адреса
+| Адрес | Что это |
+|---|---|
+| `amrsys.net` | Портал: приветствие и витрина всех продуктов |
+| `<slug>.amrsys.net` | Страница продукта: описание, как работает, открыть / установить / демо |
+| `app_url` из реестра | Само приложение (PWA). SELF и визитки AMR ID — `id.amrsys.net` (план) |
 
-## Product directions
-- **AMR 3D Constructor** — furniture configuration and 3D project construction.
-- **AMR Vision** — furniture model structure analysis and component decomposition.
-- **AMR Cutting** — sheet-material and profile cutting optimization.
-- **AMR Service Hub** — service discovery and request-to-provider matching; AMR does not intermediate payments.
-- **AMR SELF** — personal digital identity and contact hub.
-- **AMR SAFAR** — travel utilities including visa countdown, route/fuel calculations, and ride-request discovery.
+Языки: ru (корень `/`), en, ar (RTL), uz, tg — `/en/`, `/ar/`, `/uz/`, `/tg/`.
 
-Descriptions on the public site must reflect verified current scope. Do not imply unfinished applications or integrations are live.
+## Как добавить или изменить продукт
+Всё в одном файле — `products.json` (единый реестр для всех сессий разработки).
+1. Добавить запись: `slug` (= поддомен), `name`, `status` (`live`, `demo`, `dev`, `soon`), `app_url`, `icon`, тексты на 5 языках.
+2. Иконку положить в `public/assets/icons/` (WebP 256 px или SVG).
+3. Скриншоты шагов — WebP до 720 px в `public/p/<slug>/`, пути в `steps_images`.
+4. `node scripts/build.mjs` — пересоберёт страницы и `vercel.json` (правила поддоменов).
+5. `node --test scripts/build.test.mjs` — проверки. Коммит вместе с `vercel.json`.
+6. В Vercel (проект `amr-systems`) добавить домен `<slug>.amrsys.net`, в Cloudflare — CNAME без прокси.
 
-## Architecture
-- Main domain: public ecosystem portal.
-- Product apps: independent modules intended for their own subdomains.
-- Integrations: explicit contracts between apps; no forced monolith.
+## Просмотр
+`node scripts/build.mjs && node scripts/serve.mjs` → http://localhost:4173/ (продукт: `/p/<slug>/`).
 
-## Brand
-See [Brand Guidelines](docs/brand/BRAND-GUIDELINES.md) and [Architecture](docs/architecture/README.md).
-
-## Development
-```bash
-npm install
-npm run dev
-npm run build
-```
-
-The current language selector is a client-side prototype for English, Arabic (RTL), Russian, Tajik, and Uzbek. Localized URLs and localized SEO are not implemented yet.
+## Бренд
+`brand/monogram/` — главная монограмма (чистый набор + утверждённый SVG), `brand/social/` — официальные значки соцсетей (Simple Icons, CC0).

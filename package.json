@@ -1,23 +1,13 @@
 {
   "name": "amr-systems",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
+  "description": "AMR Systems portal (amrsys.net) and product pages (<product>.amrsys.net)",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/build.test.mjs",
+    "serve": "node scripts/build.mjs && node scripts/serve.mjs"
   },
-  "dependencies": {
-    "next": "15.5.28",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "lucide-react": "^0.468.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.10.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.2"
-  }
+  "engines": { "node": ">=20" }
 }

@@ -1,0 +1,100 @@
+{
+  "asset_pack": "AMR Social Brand Icons",
+  "version": "1.0",
+  "format": "SVG",
+  "source_repository": "https://github.com/simple-icons/simple-icons",
+  "source_license": "CC0-1.0 (Simple Icons icon artwork)",
+  "trademark_notice": "Platform names and logos remain trademarks of their respective owners. Follow each platform's current brand guidelines. This icon pack does not imply endorsement.",
+  "icons": [
+    {
+      "file": "discord.svg",
+      "name": "Discord",
+      "brand_color": "#5865F2",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/discord.svg"
+    },
+    {
+      "file": "telegram.svg",
+      "name": "Telegram",
+      "brand_color": "#26A5E4",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/telegram.svg"
+    },
+    {
+      "file": "whatsapp.svg",
+      "name": "WhatsApp",
+      "brand_color": "#25D366",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/whatsapp.svg"
+    },
+    {
+      "file": "messenger.svg",
+      "name": "Messenger",
+      "brand_color": "#0866FF",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/messenger.svg"
+    },
+    {
+      "file": "signal.svg",
+      "name": "Signal",
+      "brand_color": "#3A76F0",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/signal.svg"
+    },
+    {
+      "file": "viber.svg",
+      "name": "Viber",
+      "brand_color": "#7360F2",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/viber.svg"
+    },
+    {
+      "file": "line.svg",
+      "name": "LINE",
+      "brand_color": "#06C755",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/line.svg"
+    },
+    {
+      "file": "youtube.svg",
+      "name": "YouTube",
+      "brand_color": "#FF0000",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/youtube.svg"
+    },
+    {
+      "file": "instagram.svg",
+      "name": "Instagram",
+      "brand_color": "#E4405F",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/instagram.svg"
+    },
+    {
+      "file": "x.svg",
+      "name": "X (formerly Twitter)",
+      "brand_color": "#000000",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/x.svg"
+    },
+    {
+      "file": "tiktok.svg",
+      "name": "TikTok",
+      "brand_color": "#000000",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/tiktok.svg"
+    },
+    {
+      "file": "threads.svg",
+      "name": "Threads",
+      "brand_color": "#000000",
+      "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/threads.svg"
+    }
+  ],
+  "usage": {
+    "primary": "SVG inline or as external image; preserve viewBox and aspect ratio",
+    "recommended_sizes_px": [
+      20,
+      24,
+      28,
+      32,
+      40,
+      48
+    ],
+    "bright_treatment": "Use original brand-colour glyphs on neutral or theme-matched surfaces. For dark themes, place dark glyphs such as X/TikTok/Threads on a light neutral tile; do not recolour the glyph arbitrarily.",
+    "do_not": [
+      "distort logo geometry",
+      "add glow over the brand mark",
+      "combine platform logos into the AMR monogram",
+      "use platform marks as generic decorative ornaments"
+    ]
+  }
+}

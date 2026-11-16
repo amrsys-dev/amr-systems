@@ -140,3 +140,6 @@ section{padding:32px 0}
 .ftr nav{display:flex;flex-wrap:wrap;gap:8px 16px}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+[data-mt]{margin-top:16px}

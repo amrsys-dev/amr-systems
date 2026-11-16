@@ -39,6 +39,7 @@ test("сборка: все страницы, без внешних скрипт�
     const html = readFileSync(new URL(`../dist/site/${dir}index.html`, import.meta.url), "utf8");
     assert.ok(!/<script[^>]+src="https?:/.test(html));
     assert.ok(html.includes(`lang="${l}"`));
+    assert.ok(!/ style="/.test(html), "inline style запрещён CSP");
   }
 });
 

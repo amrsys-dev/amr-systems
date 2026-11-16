@@ -30,7 +30,7 @@ const JS_URL = `/assets/site.${h(js)}.js`;
 export const THEME_BOOT = `try{var t=localStorage.getItem("amr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}`;
 export const THEME_BOOT_HASH = "sha256-" + createHash("sha256").update(THEME_BOOT).digest("base64");
 
-const monoSym = `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="var(--mono-a)"/><stop offset=".55" stop-color="var(--mono-b)"/><stop offset="1" stop-color="var(--mono-c)"/></linearGradient><symbol id="amr" viewBox="0 0 290.4 100"><path fill-rule="evenodd" d="${MONO_D}"/></symbol></defs></svg>`;
+const monoSym = `<svg class="sprite" width="0" height="0" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="var(--mono-a)"/><stop offset=".55" stop-color="var(--mono-b)"/><stop offset="1" stop-color="var(--mono-c)"/></linearGradient><symbol id="amr" viewBox="0 0 290.4 100"><path fill-rule="evenodd" d="${MONO_D}"/></symbol></defs></svg>`;
 const mono = (cls, label = true) =>
   `<svg class="${cls}" viewBox="0 0 290.4 100" ${label ? 'role="img" aria-label="AMR"' : 'aria-hidden="true"'}><use href="#amr" fill="url(#mg)" stroke="var(--mono-edge)" stroke-width="1.5" paint-order="stroke"/></svg>`;
 const chevron = `<svg class="go" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>`;
@@ -131,7 +131,7 @@ ${products
 </div></div></section>
 <section><div class="wrap">
 <h2>${esc(t.principles_title)}</h2>
-<div class="prin" style="margin-top:16px">
+<div class="prin" data-mt>
 ${[1, 2, 3].map((i) => `<div class="pi"><i></i><b>${esc(t["p" + i + "_t"])}</b><p>${esc(t["p" + i + "_d"])}</p></div>`).join("\n")}
 </div></div></section>
 </main>` +
@@ -170,7 +170,7 @@ ${acts}
 ${
   steps.length
     ? `<section><div class="wrap"><h2>${esc(t.how_title)}</h2>
-<ol class="steps${imgs.length ? " has-img" : ""}" style="margin-top:16px">
+<ol class="steps${imgs.length ? " has-img" : ""}" data-mt>
 ${steps.map((s, i) => `<li><span>${esc(s)}</span>${imgs[i] ? `<img src="${esc(imgs[i])}" alt="" loading="lazy" decoding="async" width="300" height="600">` : ""}</li>`).join("\n")}
 </ol></div></section>`
     : ""
@@ -178,14 +178,14 @@ ${steps.map((s, i) => `<li><span>${esc(s)}</span>${imgs[i] ? `<img src="${esc(im
 ${
   (x.features || []).length
     ? `<section><div class="wrap"><h2>${esc(t.features_title)}</h2>
-<div class="feats" style="margin-top:16px">${x.features.map((f) => `<div>${esc(f)}</div>`).join("")}</div></div></section>`
+<div class="feats" data-mt>${x.features.map((f) => `<div>${esc(f)}</div>`).join("")}</div></div></section>`
     : ""
 }
 ${
   usable && p.pwa
     ? `<section id="install"><div class="wrap"><h2>${esc(t.install_title)}</h2>
-<div class="inst" style="margin-top:16px"><div><b>${esc(t.install_android_t)}</b><p>${esc(t.install_android)}</p></div><div><b>${esc(t.install_ios_t)}</b><p>${esc(t.install_ios)}</p></div></div>
-<p class="sub" style="margin-top:12px">${esc(t.install_note)}</p>
+<div class="inst" data-mt><div><b>${esc(t.install_android_t)}</b><p>${esc(t.install_android)}</p></div><div><b>${esc(t.install_ios_t)}</b><p>${esc(t.install_ios)}</p></div></div>
+<p class="sub" data-mt>${esc(t.install_note)}</p>
 <a class="btn btn-p" href="${esc(app)}" rel="noopener">${esc(t.open)} ${esc(p.name)}</a>
 </div></section>`
     : ""
@@ -254,7 +254,7 @@ export function vercelConfig() {
         source: "/(.*)",
         headers: [
           { key: "Content-Security-Policy", value: csp },
-          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },

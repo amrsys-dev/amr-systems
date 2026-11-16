@@ -1,3 +1,5 @@
+> Устарело. Действующий брендбук: `AMR_Design_System_Brandbook_v1.2.md`.
+
 # AMR Systems — Brand & Digital Design Principles
 
 Version: 0.1  

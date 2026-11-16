@@ -1,0 +1,792 @@
+{
+  "version": "1.2",
+  "status": "approved_design_system_contract_final",
+  "brand": {
+    "monogram_geometry": "immutable_user_supplied_connected_a_m_R_silhouette",
+    "geometry_description": "Use the exact connected lowercase-styled a-m-R contour shown in the supplied AMR brand identity references. The circular a counter, two central vertical arches, R bowl/terminal and pointed lower R-leg cut are all fixed.",
+    "allowed_monogram_variations": [
+      "colour",
+      "material_finish",
+      "lighting",
+      "background"
+    ],
+    "prohibited_monogram_changes": [
+      "redraw",
+      "retype",
+      "stretch",
+      "skew",
+      "crop",
+      "reshape",
+      "simplify",
+      "add_frame"
+    ],
+    "watermark": {
+      "opacity_min": 0.03,
+      "opacity_max": 0.05,
+      "allowed_placements": [
+        "primary_hero_cards",
+        "splash_screens",
+        "AMR_ID_header"
+      ],
+      "must_not_reduce_content_contrast": true
+    },
+    "approved_monogram_treatments": {
+      "dark_background": [
+        "champagne_gold",
+        "emerald",
+        "white",
+        "silver"
+      ],
+      "light_background": [
+        "deep_emerald",
+        "graphite",
+        "champagne_gold",
+        "black"
+      ],
+      "flat_variants_for": [
+        "small_digital_ui",
+        "favicon",
+        "compact_placements"
+      ],
+      "metallic_variants_for": [
+        "large_brand_placements",
+        "launch_screens",
+        "presentation_covers",
+        "promotional_materials"
+      ],
+      "production_source_rule": "Use supplied original vector master only; the HTML prototype uses a clearly labelled typographic placeholder, not production artwork."
+    },
+    "logo_and_monogram_identity": "The supplied AMR monogram is both the logo and the brand's meaningful letterform identity; it is not a replaceable decorative mark.",
+    "approved_reference_images": [
+      "brand-reference/AMR_Monogram_Usage_Guide_Reference.png",
+      "brand-reference/AMR_Monogram_Metallic_Master_Reference.png"
+    ],
+    "geometry_authority": "The exact connected a-m-R silhouette in the user-supplied reference images is the visual authority. Preserve every contour, counter, join, proportion, terminal and the pointed cut of the lower R leg. Do not approximate from typed letters or redraw with CSS/SVG paths.",
+    "approved_colour_and_finish_variants": {
+      "dark_background_primary": "Metallic champagne / warm gold monogram.",
+      "light_background_primary": "Deep emerald monogram with a restrained metallic edge.",
+      "dark_background_flat": [
+        "flat white",
+        "flat champagne"
+      ],
+      "light_background_flat": [
+        "flat black",
+        "flat emerald"
+      ],
+      "large_brand_placements": [
+        "silver-metal with champagne/copper edge",
+        "metallic champagne"
+      ],
+      "compact_digital_placements": [
+        "flat white",
+        "flat black",
+        "flat emerald",
+        "flat champagne"
+      ]
+    },
+    "asset_integrity": {
+      "never_change_geometry": true,
+      "allowed_changes": [
+        "colour",
+        "material_finish",
+        "lighting",
+        "background"
+      ],
+      "prohibited": [
+        "redraw",
+        "retype",
+        "trace_approximation",
+        "reshape",
+        "crop_into_letterforms",
+        "stretch",
+        "skew",
+        "perspective_distortion",
+        "alter_negative_space",
+        "separate_letters"
+      ],
+      "reference_raster_policy": "The supplied PNGs are authoritative visual references. Use them unchanged for reference and review. For production at arbitrary scale, request the original vector master; do not manufacture a replacement from the raster."
+    },
+    "production_asset_status": "approved transparent raster master and flat colour exports supplied; native editable vector master not supplied; SVG wrapper is raster-backed and must not be described as true vector.",
+    "logo_display_rule": "standalone_monogram_only_no_frame_no_circle_no_shield_no_badge_no_background",
+    "asset_package": {
+      "master_raster": "brand/monogram/AMR_monogram_master_metallic.png",
+      "flat_variants": {
+        "white": "brand/monogram/AMR_monogram_white.png",
+        "black": "brand/monogram/AMR_monogram_black.png",
+        "emerald": "brand/monogram/AMR_monogram_emerald.png",
+        "champagne": "brand/monogram/AMR_monogram_champagne.png"
+      },
+      "transparent_app_icons": [
+        "brand/monogram/AMR_app_icon_192.png",
+        "brand/monogram/AMR_app_icon_512.png",
+        "brand/monogram/AMR_app_icon_1024.png"
+      ],
+      "svg_wrapper": "brand/monogram/AMR_monogram_master_raster-backed.svg",
+      "svg_wrapper_is_native_vector": false,
+      "native_vector_master_status": "not_supplied; do_not_trace_or_fabricate"
+    },
+    "monogram": {
+      "vector_master": "brand/monogram/amr-monogram.svg",
+      "raster_master": "brand/monogram/amr-white.png",
+      "approved": "2026-11-16, owner",
+      "note": "path vector traced from clean set B, overlap > 99%"
+    }
+  },
+  "foundation": {
+    "brand.emerald": "#087A55",
+    "brand.forest": "#064B38",
+    "brand.mint": "#20C997",
+    "brand.gold": "#C9A44C",
+    "neutral.graphite": "#17231F",
+    "neutral.dark": "#101714",
+    "neutral.light": "#F6F8F7",
+    "metal.champagne": "#D8BD7A",
+    "metal.steel": "#AAB8C8"
+  },
+  "appearance_modes": [
+    "light",
+    "dark"
+  ],
+  "semantic_token_contract": {
+    "required_tokens": [
+      "bg",
+      "surface",
+      "surface_elevated",
+      "border",
+      "border_accent_edge",
+      "text_primary",
+      "text_secondary",
+      "action_primary",
+      "action_primary_text",
+      "action_secondary",
+      "accent",
+      "success",
+      "warning",
+      "danger",
+      "focus"
+    ],
+    "contrast_requirements": {
+      "normal_text": "WCAG 2.2 AA: >= 4.5:1 for text_primary and text_secondary on bg, surface and surface_elevated.",
+      "primary_button_label": "WCAG 2.2 AA: >= 4.5:1 for action_primary_text on action_primary.",
+      "secondary_button_label": "Use text_primary or text_secondary on action_secondary; each pairing >= 4.5:1.",
+      "status_text": "success, warning and danger are semantic foreground colours; each must achieve >= 4.5:1 on bg, surface and surface_elevated.",
+      "focus_indicator": "focus must achieve >= 3:1 against bg, surface and surface_elevated.",
+      "decorative_tokens": "border and border_accent_edge are decorative separators and must not be the sole visual indicator of an interactive state."
+    },
+    "implementation_note": "Use text_primary/text_secondary for copy. Use success/warning/danger as foreground labels/icons, not as filled status backgrounds unless a separately tested on-colour token is added. accent and border_accent_edge are decorative and must not be used for body text."
+  },
+  "themes": [
+    {
+      "id": "emerald-saudi",
+      "name": "Emerald Saudi",
+      "combination": [
+        "deep emerald",
+        "forest green",
+        "sand/champagne gold",
+        "muted mint"
+      ],
+      "modes": {
+        "light": {
+          "bg": "#F4F7F3",
+          "surface": "#FFFFFF",
+          "surface_elevated": "#E8F0EA",
+          "border": "#C7D5CA",
+          "border_accent_edge": "#B99A58",
+          "text_primary": "#17231F",
+          "text_secondary": "#52635A",
+          "action_primary": "#075B40",
+          "action_primary_text": "#FFFFFF",
+          "action_secondary": "#E4EEE7",
+          "accent": "#B58A3A",
+          "success": "#176B49",
+          "warning": "#805400",
+          "danger": "#B42335",
+          "focus": "#087A55"
+        },
+        "dark": {
+          "bg": "#0D1713",
+          "surface": "#14231C",
+          "surface_elevated": "#1B3027",
+          "border": "#355044",
+          "border_accent_edge": "#D8BD7A",
+          "text_primary": "#F3F7F4",
+          "text_secondary": "#B7C8BE",
+          "action_primary": "#20A879",
+          "action_primary_text": "#081B13",
+          "action_secondary": "#21392E",
+          "accent": "#D8B66A",
+          "success": "#65D6A0",
+          "warning": "#F2C66D",
+          "danger": "#FF7B83",
+          "focus": "#70DDB0"
+        }
+      }
+    },
+    {
+      "id": "wood-metal",
+      "name": "Wood & Metal",
+      "combination": [
+        "dark walnut",
+        "warm graphite",
+        "brushed steel",
+        "pale champagne gold"
+      ],
+      "modes": {
+        "light": {
+          "bg": "#F5F1EA",
+          "surface": "#FFFCF7",
+          "surface_elevated": "#ECE5DA",
+          "border": "#D3C7B5",
+          "border_accent_edge": "#B48A50",
+          "text_primary": "#29231D",
+          "text_secondary": "#62584D",
+          "action_primary": "#624326",
+          "action_primary_text": "#FFFFFF",
+          "action_secondary": "#EEE6D9",
+          "accent": "#A8793F",
+          "success": "#326B4C",
+          "warning": "#805600",
+          "danger": "#B32632",
+          "focus": "#71512F"
+        },
+        "dark": {
+          "bg": "#171411",
+          "surface": "#231E19",
+          "surface_elevated": "#302820",
+          "border": "#51473B",
+          "border_accent_edge": "#D6B57A",
+          "text_primary": "#F7F1E8",
+          "text_secondary": "#C9BBAA",
+          "action_primary": "#C69A5B",
+          "action_primary_text": "#211A12",
+          "action_secondary": "#3A3025",
+          "accent": "#E2C28A",
+          "success": "#78C69A",
+          "warning": "#F0C66B",
+          "danger": "#FF8585",
+          "focus": "#E2C28A"
+        }
+      }
+    },
+    {
+      "id": "carbon-red",
+      "name": "Carbon Red",
+      "combination": [
+        "carbon black",
+        "graphite",
+        "restrained crimson",
+        "cool steel grey"
+      ],
+      "modes": {
+        "light": {
+          "bg": "#F3F4F5",
+          "surface": "#FFFFFF",
+          "surface_elevated": "#E8EAED",
+          "border": "#C8CDD3",
+          "border_accent_edge": "#8F98A3",
+          "text_primary": "#181B20",
+          "text_secondary": "#555E69",
+          "action_primary": "#A51F32",
+          "action_primary_text": "#FFFFFF",
+          "action_secondary": "#E9EDF1",
+          "accent": "#A51F32",
+          "success": "#176B48",
+          "warning": "#805400",
+          "danger": "#B42335",
+          "focus": "#596575"
+        },
+        "dark": {
+          "bg": "#101216",
+          "surface": "#191D23",
+          "surface_elevated": "#242A32",
+          "border": "#3E4651",
+          "border_accent_edge": "#D3D9E0",
+          "text_primary": "#F5F7FA",
+          "text_secondary": "#B8C0CA",
+          "action_primary": "#D63A4F",
+          "action_primary_text": "#FFFFFF",
+          "action_secondary": "#2A3039",
+          "accent": "#FF6578",
+          "success": "#6BD49A",
+          "warning": "#F4C66A",
+          "danger": "#FF7B88",
+          "focus": "#AAB8C8"
+        }
+      }
+    },
+    {
+      "id": "cream-lavender",
+      "name": "Cream Lavender",
+      "combination": [
+        "warm cream",
+        "pearl",
+        "muted lavender",
+        "soft violet"
+      ],
+      "modes": {
+        "light": {
+          "bg": "#FAF7F1",
+          "surface": "#FFFFFF",
+          "surface_elevated": "#F0EBF4",
+          "border": "#D9D1E2",
+          "border_accent_edge": "#A89ABF",
+          "text_primary": "#282431",
+          "text_secondary": "#625B6C",
+          "action_primary": "#67527F",
+          "action_primary_text": "#FFFFFF",
+          "action_secondary": "#EEE8F3",
+          "accent": "#80659F",
+          "success": "#28684D",
+          "warning": "#805400",
+          "danger": "#B42335",
+          "focus": "#765B99"
+        },
+        "dark": {
+          "bg": "#17151D",
+          "surface": "#24212C",
+          "surface_elevated": "#302B3A",
+          "border": "#4B4358",
+          "border_accent_edge": "#C9B8E4",
+          "text_primary": "#F7F3FA",
+          "text_secondary": "#C8BED3",
+          "action_primary": "#A98ACF",
+          "action_primary_text": "#1D1727",
+          "action_secondary": "#393243",
+          "accent": "#C9A9F1",
+          "success": "#75D2A1",
+          "warning": "#F2C66D",
+          "danger": "#FF828E",
+          "focus": "#D0B7F4"
+        }
+      }
+    },
+    {
+      "id": "rose-champagne",
+      "name": "Rose Champagne",
+      "combination": [
+        "dusty rose",
+        "warm pearl",
+        "rose metal",
+        "champagne gold"
+      ],
+      "modes": {
+        "light": {
+          "bg": "#FBF5F2",
+          "surface": "#FFFFFF",
+          "surface_elevated": "#F3E8E4",
+          "border": "#E0CFC8",
+          "border_accent_edge": "#B98B82",
+          "text_primary": "#302321",
+          "text_secondary": "#6B5551",
+          "action_primary": "#80514A",
+          "action_primary_text": "#FFFFFF",
+          "action_secondary": "#F1E5E0",
+          "accent": "#A76E65",
+          "success": "#28684D",
+          "warning": "#805400",
+          "danger": "#B42335",
+          "focus": "#98645C"
+        },
+        "dark": {
+          "bg": "#1A1415",
+          "surface": "#281E20",
+          "surface_elevated": "#36282B",
+          "border": "#594347",
+          "border_accent_edge": "#E0B4A8",
+          "text_primary": "#FAF3F0",
+          "text_secondary": "#D0BDB9",
+          "action_primary": "#C78A7F",
+          "action_primary_text": "#26191B",
+          "action_secondary": "#3B2B2E",
+          "accent": "#E5A89C",
+          "success": "#78D1A0",
+          "warning": "#F2C66D",
+          "danger": "#FF858A",
+          "focus": "#E9B5AA"
+        }
+      }
+    },
+    {
+      "id": "digital",
+      "name": "Digital",
+      "profiles": {
+        "creator": {
+          "name": "Creator",
+          "combination": [
+            "charcoal",
+            "dark plum/indigo",
+            "controlled violet",
+            "coral/turquoise signal accents"
+          ],
+          "modes": {
+            "light": {
+              "bg": "#F5F3FA",
+              "surface": "#FFFFFF",
+              "surface_elevated": "#ECE8F5",
+              "border": "#D4CDE3",
+              "border_accent_edge": "#9A83C6",
+              "text_primary": "#241F32",
+              "text_secondary": "#5E586F",
+              "action_primary": "#60418E",
+              "action_primary_text": "#FFFFFF",
+              "action_secondary": "#ECE7F5",
+              "accent": "#7654B2",
+              "success": "#176B49",
+              "warning": "#805400",
+              "danger": "#B42335",
+              "focus": "#7455A6"
+            },
+            "dark": {
+              "bg": "#12111A",
+              "surface": "#1D1A28",
+              "surface_elevated": "#292438",
+              "border": "#433B58",
+              "border_accent_edge": "#C8B4F3",
+              "text_primary": "#F5F2FC",
+              "text_secondary": "#C5BDD8",
+              "action_primary": "#9A7BE0",
+              "action_primary_text": "#171321",
+              "action_secondary": "#342D46",
+              "accent": "#C2A4FF",
+              "success": "#70D9A0",
+              "warning": "#F2C66D",
+              "danger": "#FF828E",
+              "focus": "#C8B4F3"
+            }
+          }
+        },
+        "gamer-tactical": {
+          "name": "Gamer Tactical",
+          "combination": [
+            "tactical graphite",
+            "muted olive/khaki",
+            "signal green",
+            "restrained warning accents"
+          ],
+          "modes": {
+            "light": {
+              "bg": "#F2F4EF",
+              "surface": "#FFFFFF",
+              "surface_elevated": "#E8ECE3",
+              "border": "#C9D1C2",
+              "border_accent_edge": "#8E9B77",
+              "text_primary": "#20251D",
+              "text_secondary": "#596250",
+              "action_primary": "#4B5C36",
+              "action_primary_text": "#FFFFFF",
+              "action_secondary": "#E6EBDD",
+              "accent": "#738A4F",
+              "success": "#176B49",
+              "warning": "#805400",
+              "danger": "#B42335",
+              "focus": "#60754A"
+            },
+            "dark": {
+              "bg": "#111510",
+              "surface": "#1B2119",
+              "surface_elevated": "#252D21",
+              "border": "#424D3A",
+              "border_accent_edge": "#C1D09A",
+              "text_primary": "#F2F5ED",
+              "text_secondary": "#C2CCB7",
+              "action_primary": "#849D59",
+              "action_primary_text": "#151B12",
+              "action_secondary": "#2B3526",
+              "accent": "#C0D58A",
+              "success": "#75D59A",
+              "warning": "#F0C66A",
+              "danger": "#FF8288",
+              "focus": "#C6D99A"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "theme_behaviour": {
+    "same_components": true,
+    "same_interactions": true,
+    "page_reload_on_switch": false,
+    "network_request_on_switch": false,
+    "separate_bundle_per_theme": false,
+    "target_theme_assets_compressed_bytes_max": 51200,
+    "digital_profile_switch": "Local token swap only; Creator and Gamer Tactical remain profiles inside the Digital family."
+  },
+  "signature_brand_dna": {
+    "monogram_watermark": "Use the exact supplied connected a-m-R monogram master, never a text or CSS approximation, at 3–5% opacity only on primary Hero cards, splash screens and the AMR ID header. If the original master asset is not present in the build, omit the watermark.",
+    "champagne_edge": "1px inner metallic/champagne edge on key hero/summary/status cards; decorative only.",
+    "geometry": "Outer card radius 16px; nested element radius 12px; status badge radius 999px.",
+    "numerals": "font-variant-numeric: tabular-nums for every number, currency, date, quantity and measurement.",
+    "hero_anatomy": "Left context/status; right compact AMR ID trigger; primary module anchor card immediately below.",
+    "tactile_feedback": "Pressed scale 0.98 over 120ms; no spring/bounce easing.",
+    "monogram_identity_lock": "The AMR monogram is simultaneously the logo and the meaningful brand letterform. Its silhouette is immutable across all six products and all themes; only approved colour, material finish, lighting and background variants may change."
+  },
+  "graphics": {
+    "svg": [
+      "ui_icons",
+      "approved_logos",
+      "monogram",
+      "2d_diagrams",
+      "technical_drawings"
+    ],
+    "png": [
+      "pwa_icon_exports",
+      "lossless_transparency",
+      "compatibility_exports"
+    ],
+    "webp": [
+      "photos",
+      "product_images",
+      "material_previews",
+      "optional_texture_tiles"
+    ],
+    "css": [
+      "gradients",
+      "borders",
+      "shadows",
+      "highlights",
+      "simple_glass_surfaces"
+    ],
+    "canvas_webgl": [
+      "interactive_diagrams",
+      "complex_drawing",
+      "3d_visualization"
+    ]
+  },
+  "locales": [
+    "en",
+    "ru",
+    "ar",
+    "uz",
+    "tg"
+  ],
+  "amr_self_navigation": [
+    "home",
+    "finance",
+    "planner",
+    "services",
+    "profile"
+  ],
+  "services_tab_policy": "show_only_connected_or_entitled_modules",
+  "excluded_from_services_tab": [
+    "AMR 3D Constructor",
+    "AMR Vision"
+  ],
+  "visual_language": {
+    "direction": "restrained_premium_depth",
+    "surface_levels": {
+      "0": "base_solid_surface",
+      "1": "raised_surface_subtle_border_soft_shadow",
+      "2": "focus_surface_subtle_tonal_gradient_or_inner_highlight",
+      "3": "glass_surface_reserved_for_overlays_and_floating_elements",
+      "4": "brand_feature_static_accent"
+    },
+    "glass": {
+      "default_for_all_cards": false,
+      "preferred_uses": [
+        "floating_actions",
+        "overlays",
+        "navigation_popovers",
+        "theme_selectors"
+      ],
+      "fallback": "opaque_surface",
+      "avoid": [
+        "nested_glass",
+        "large_blur_regions",
+        "stacked_backdrop_filters"
+      ]
+    },
+    "gradients": {
+      "allowed": true,
+      "style": "low_contrast_short_range_within_theme_palette",
+      "avoid": [
+        "full_screen_gradients",
+        "rainbow_gradients",
+        "neon_glow",
+        "animated_light_streaks"
+      ]
+    },
+    "motion": {
+      "default_duration_ms": [
+        120,
+        180
+      ],
+      "pressed_scale": 0.98,
+      "pressed_duration_ms": 120,
+      "preferred_properties": [
+        "opacity",
+        "transform"
+      ],
+      "respect_reduced_motion": true,
+      "continuous_decorative_animation": false
+    }
+  },
+  "currency_assets": {
+    "saudi_riyal": {
+      "data_code": "SAR",
+      "primary_asset_format": "SVG",
+      "fallback_asset_format": "PNG",
+      "geometry_locked": true,
+      "accessibility_name": "Saudi riyal",
+      "source_asset": "Saudi_Riyal_Symbol-2.svg"
+    }
+  },
+  "performance": {
+    "theme_switch": {
+      "page_reload": false,
+      "network_request": false,
+      "separate_bundle_per_theme": false
+    },
+    "theme_specific_decorative_assets_compressed_bytes_max": 51200,
+    "premium_visuals": {
+      "css_for": [
+        "gradients",
+        "borders",
+        "shadows",
+        "highlights",
+        "simple_glass_surfaces"
+      ],
+      "no_webgl_for_static_decoration": true,
+      "app_usable_when_decorative_effects_disabled": true,
+      "measure_before_claiming_compliance": true
+    }
+  },
+  "contrast_validation": {
+    "standard": "WCAG 2.2 AA",
+    "method": "Relative luminance contrast ratio",
+    "results": {
+      "emerald-saudi": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 13.95,
+          "text_secondary_on_bg_surface_elevated": 5.49,
+          "primary_button_label": 8.14,
+          "secondary_button_label": 5.37,
+          "status_text_on_surfaces": 5.59,
+          "focus_indicator_on_surfaces": 4.61
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 12.96,
+          "text_secondary_on_bg_surface_elevated": 8.02,
+          "primary_button_label": 5.9,
+          "secondary_button_label": 7.11,
+          "status_text_on_surfaces": 5.61,
+          "focus_indicator_on_surfaces": 8.45
+        }
+      },
+      "wood-metal": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 12.41,
+          "text_secondary_on_bg_surface_elevated": 5.55,
+          "primary_button_label": 8.94,
+          "secondary_button_label": 5.61,
+          "status_text_on_surfaces": 5.02,
+          "focus_indicator_on_surfaces": 5.75
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 12.9,
+          "text_secondary_on_bg_surface_elevated": 7.7,
+          "primary_button_label": 6.69,
+          "secondary_button_label": 6.86,
+          "status_text_on_surfaces": 6.17,
+          "focus_indicator_on_surfaces": 8.49
+        }
+      },
+      "carbon-red": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 14.32,
+          "text_secondary_on_bg_surface_elevated": 5.46,
+          "primary_button_label": 7.39,
+          "secondary_button_label": 5.59,
+          "status_text_on_surfaces": 5.39,
+          "focus_indicator_on_surfaces": 4.92
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 13.47,
+          "text_secondary_on_bg_surface_elevated": 7.87,
+          "primary_button_label": 4.59,
+          "secondary_button_label": 7.23,
+          "status_text_on_surfaces": 5.81,
+          "focus_indicator_on_surfaces": 7.16
+        }
+      },
+      "cream-lavender": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 12.9,
+          "text_secondary_on_bg_surface_elevated": 5.54,
+          "primary_button_label": 6.8,
+          "secondary_button_label": 5.41,
+          "status_text_on_surfaces": 5.54,
+          "focus_indicator_on_surfaces": 4.8
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 12.5,
+          "text_secondary_on_bg_surface_elevated": 7.68,
+          "primary_button_label": 6.0,
+          "secondary_button_label": 6.87,
+          "status_text_on_surfaces": 5.77,
+          "focus_indicator_on_surfaces": 7.68
+        }
+      },
+      "rose-champagne": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 12.59,
+          "text_secondary_on_bg_surface_elevated": 5.74,
+          "primary_button_label": 6.58,
+          "secondary_button_label": 5.59,
+          "status_text_on_surfaces": 5.41,
+          "focus_indicator_on_surfaces": 4.05
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 12.8,
+          "text_secondary_on_bg_surface_elevated": 7.8,
+          "primary_button_label": 5.96,
+          "secondary_button_label": 7.42,
+          "status_text_on_surfaces": 6.0,
+          "focus_indicator_on_surfaces": 7.79
+        }
+      },
+      "digital-creator": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 13.23,
+          "text_secondary_on_bg_surface_elevated": 5.62,
+          "primary_button_label": 7.94,
+          "secondary_button_label": 5.58,
+          "status_text_on_surfaces": 5.39,
+          "focus_indicator_on_surfaces": 4.85
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 13.53,
+          "text_secondary_on_bg_surface_elevated": 8.3,
+          "primary_button_label": 5.46,
+          "secondary_button_label": 7.23,
+          "status_text_on_surfaces": 6.29,
+          "focus_indicator_on_surfaces": 8.03
+        }
+      },
+      "digital-gamer-tactical": {
+        "light": {
+          "text_primary_on_bg_surface_elevated": 13.05,
+          "text_secondary_on_bg_surface_elevated": 5.33,
+          "primary_button_label": 7.28,
+          "secondary_button_label": 5.26,
+          "status_text_on_surfaces": 5.42,
+          "focus_indicator_on_surfaces": 4.24
+        },
+        "dark": {
+          "text_primary_on_bg_surface_elevated": 12.91,
+          "text_secondary_on_bg_surface_elevated": 8.55,
+          "primary_button_label": 5.8,
+          "secondary_button_label": 7.69,
+          "status_text_on_surfaces": 5.96,
+          "focus_indicator_on_surfaces": 9.34
+        }
+      }
+    },
+    "note": "Ratios are computed for the specified semantic pairings in this token file. Full application compliance still requires testing actual rendered components, disabled states, charts, overlays and user-provided content."
+  },
+  "typography_min": {
+    "body_px": 16,
+    "caption_px": 13,
+    "min_readable_px": 13
+  }
+}

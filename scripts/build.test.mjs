@@ -53,3 +53,25 @@ test("vercel.json совпадает со сборкой и содержит CSP
 test("экранирование", () => {
   assert.equal(esc(`<a href="x">'`), "&lt;a href=&quot;x&quot;&gt;&#39;");
 });
+
+test("Установить рядом с Открыть ведёт на приложение с ?install=1", () => {
+  const r = build();
+  assert.ok(r.products.includes("self"));
+  for (const p of reg.products) {
+    if (p.status !== "live" && p.status !== "demo") continue;
+    if (!p.app_url || !p.pwa) continue;
+    for (const l of LANGS) {
+      const dir = l === "ru" ? "" : l + "/";
+      const html = readFileSync(new URL(`../dist/site/${dir}${p.slug}/index.html`, import.meta.url), "utf8");
+      const open = `href="${p.app_url}"`;
+      const inst = `href="${p.app_url}?install=1"`;
+      assert.ok(html.includes(open), `${p.slug}/${l}: нет Открыть`);
+      assert.ok(html.includes(inst), `${p.slug}/${l}: нет Установить ?install=1`);
+      const acts = html.split('class="acts"')[1] ?? "";
+      const openAt = acts.indexOf(open);
+      const instAt = acts.indexOf(inst);
+      assert.ok(openAt >= 0 && instAt > openAt, `${p.slug}/${l}: Установить должна быть рядом, после Открыть`);
+      assert.equal((acts.split('href="#install"').length - 1), 0, `${p.slug}/${l}: верхняя кнопка не должна вести на #install`);
+    }
+  }
+});

@@ -18,6 +18,11 @@ const products = registry.products.filter((p) => !p.hidden);
 
 export const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const safeUrl = (u) => (/^https:\/\/[^\s"'<>]+$/.test(u || "") ? u : "");
+/** Catalog pages cannot prompt another origin's PWA; open the app with ?install=1 instead. */
+export function installHref(app) {
+  if (!app) return "";
+  return app + (app.includes("?") ? "&" : "?") + "install=1";
+}
 
 // Хэш файлов для кэша
 const css = readFileSync(join(ROOT, "src/site.css"), "utf8");
@@ -150,7 +155,7 @@ function productPage(p, l) {
   const acts = usable
     ? `<div class="acts">
 <a class="btn btn-p" href="${esc(app)}" rel="noopener">${esc(t.open)}</a>
-${p.pwa ? `<a class="btn btn-s" href="#install">${esc(t.install)}</a>` : ""}
+${p.pwa ? `<a class="btn btn-s" href="${esc(installHref(app))}" rel="noopener">${esc(t.install)}</a>` : ""}
 ${demo ? `<a class="btn btn-g" href="${esc(demo)}" rel="noopener">${esc(t.demo)}</a>` : ""}
 </div>`
     : `<p class="note">${esc(p.status === "dev" ? t.not_ready_dev : t.not_ready_soon)}</p>`;

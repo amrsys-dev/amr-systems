@@ -7,8 +7,8 @@
       "status": "live",
       "app_url": "https://self.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/self.webp",
-      "accent": "#20A879",
+      "icon": "/assets/icons/self.svg",
+      "accent": "#1FA37A",
       "pwa": true,
       "i18n": {
         "ru": {
@@ -109,8 +109,8 @@
       "status": "live",
       "app_url": "https://safar.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/safar.webp",
-      "accent": "#2BB3C0",
+      "icon": "/assets/icons/safar.svg",
+      "accent": "#1FB2C1",
       "pwa": true,
       "i18n": {
         "ru": {
@@ -201,7 +201,7 @@
       "status": "live",
       "app_url": "https://cutting.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/cutting.webp",
+      "icon": "/assets/icons/cutting.svg",
       "accent": "#C9A44C",
       "pwa": true,
       "i18n": {
@@ -288,8 +288,8 @@
       "status": "soon",
       "app_url": "",
       "demo_url": "",
-      "icon": "/assets/icons/constructor.webp",
-      "accent": "#3AA0FF",
+      "icon": "/assets/icons/constructor.svg",
+      "accent": "#3A8DFF",
       "pwa": true,
       "i18n": {
         "ru": {
@@ -355,8 +355,8 @@
       "status": "soon",
       "app_url": "",
       "demo_url": "",
-      "icon": "/assets/icons/vision.webp",
-      "accent": "#5BC0EB",
+      "icon": "/assets/icons/vision.svg",
+      "accent": "#7A6CFF",
       "pwa": false,
       "i18n": {
         "ru": {
@@ -422,8 +422,8 @@
       "status": "live",
       "app_url": "https://bazar.amrsys.net",
       "demo_url": "",
-      "icon": "/assets/icons/bazar.webp",
-      "accent": "#C9A44C",
+      "icon": "/assets/icons/bazar.svg",
+      "accent": "#E0773A",
       "pwa": true,
       "i18n": {
         "ru": {
@@ -525,7 +525,7 @@
       "app_url": "",
       "demo_url": "",
       "icon": "/assets/icons/hub.svg",
-      "accent": "#9B7BFF",
+      "accent": "#E2557A",
       "pwa": true,
       "i18n": {
         "ru": {

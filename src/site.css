@@ -86,7 +86,7 @@ section{padding:32px 0}
 .card{position:relative;display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);transition:transform .12s ease,border-color .12s ease}
 .card:hover{border-color:var(--edge)}
 .card:active{transform:scale(.98)}
-.card img{width:64px;height:64px;object-fit:contain}
+.card img{width:64px;height:64px;object-fit:cover;border-radius:22%}
 .card h3{margin:0 0 4px;font-size:18px;font-weight:650;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .card p{margin:0;color:var(--text2);font-size:15px}
 .card .go{position:absolute;inset-inline-end:14px;top:16px;color:var(--text2)}
@@ -109,7 +109,7 @@ section{padding:32px 0}
 /* Страница продукта */
 .phero{padding:36px 0 12px}
 .phero .top{display:flex;gap:16px;align-items:center;margin-bottom:16px}
-.phero .ic{width:88px;height:88px;object-fit:contain;flex:none}
+.phero .ic{width:88px;height:88px;object-fit:cover;border-radius:22%;flex:none}
 .phero h1{margin:0 0 6px;max-width:none;font-size:32px}
 .phero .tag{font-size:18px;color:var(--text);margin:0 0 10px;max-width:46ch}
 .phero .desc{color:var(--text2);max-width:62ch;margin:0 0 22px}

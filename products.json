@@ -524,7 +524,7 @@
       "status": "dev",
       "app_url": "",
       "demo_url": "",
-      "icon": "/assets/icons/hub.svg",
+      "icon": "/assets/icons/hub.webp",
       "accent": "#9B7BFF",
       "pwa": true,
       "i18n": {

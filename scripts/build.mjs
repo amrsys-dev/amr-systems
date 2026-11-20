@@ -53,17 +53,17 @@ function text(p, l) {
   return t;
 }
 
-function head({ l, title, desc, canonical, alternates, icon }) {
+function head({ l, title, desc, canonical, alternates, icon, home = false }) {
   const t = T[l];
   return `<!doctype html>
-<html lang="${HTML_LANG[l]}" dir="${t.dir}"${l === "ru" ? " data-root" : ""}>
+<html lang="${HTML_LANG[l]}" dir="${t.dir}"${home ? ' class="home"' : ""}${l === "ru" ? " data-root" : ""}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<meta name="theme-color" content="#F4F7F3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0D1713" media="(prefers-color-scheme: dark)">
+${home ? '<meta name="theme-color" content="#050A10">' : `<meta name="theme-color" content="#F4F7F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1713" media="(prefers-color-scheme: dark)">`}
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="${canonical}">
 ${alternates.map(([hl, href]) => `<link rel="alternate" hreflang="${hl}" href="${href}">`).join("\n")}
@@ -83,16 +83,16 @@ ${monoSym}
 <a class="skip" href="#main">${l === "ar" ? "تخطَّ إلى المحتوى" : "↓"}</a>`;
 }
 
-function header(l, langHrefs, home) {
+function header(l, langHrefs, home, isHome = false) {
   const t = T[l];
   return `<header class="hdr"><div class="wrap">
 <a class="logo" href="${home}" aria-label="AMR Systems">${mono("", false)}<span>Systems</span></a>
 <span class="sp"></span>
-<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
+${isHome ? `<a class="nav-link" href="#eco">${esc(t.nav_eco)}</a><a class="nav-link" href="#id">${esc(t.nav_id)}</a><a class="nav-link" href="#show">${esc(t.nav_how)}</a>` : ""}<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
 <details class="dd"><summary aria-label="${esc(t.language)}"><span class="flag" aria-hidden="true">${FLAGS[l]}</span>${l.toUpperCase()}</summary>
 <div class="dd-menu">${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
-<details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
-<div class="dd-menu">${["auto", "light", "dark"].map((x) => `<button type="button" data-theme-set="${x}">${esc(t["theme_" + x])}</button>`).join("")}</div></details>
+${isHome ? `<a class="login" href="https://self.amrsys.net" rel="noopener">${esc(t.login)}</a>` : `<details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
+<div class="dd-menu">${["auto", "light", "dark"].map((x) => `<button type="button" data-theme-set="${x}">${esc(t["theme_" + x])}</button>`).join("")}</div></details>`}
 </div></header>`;
 }
 
@@ -108,37 +108,107 @@ function footer(l) {
 const badge = (s, l) => `<span class="badge ${esc(s)}">${esc(T[l]["status_" + s] || s)}</span>`;
 const iconImg = (p, size, cls = "") => `<img${cls ? ` class="${cls}"` : ""} src="${esc(p.icon)}" alt="" width="${size}" height="${size}" decoding="async">`;
 
+const LIVE = ["self", "safar", "cutting", "bazar"];
+const bySlug = (slug) => products.find((p) => p.slug === slug);
+
+// Схема экосистемы: в центре AMR ID, слева производство, справа личное. Только SVG + CSS.
+function ecoSvg(t) {
+  const C = [320, 240];
+  const ind = [["vision", 110, 92], ["constructor", 66, 240], ["cutting", 110, 388], [null, 262, 444]];
+  const per = [["self", 530, 92], ["bazar", 574, 240], ["safar", 530, 388]];
+  const link = (x, y, cls) => {
+    const dx = x - C[0], dy = y - C[1], d = Math.hypot(dx, dy), ux = dx / d, uy = dy / d;
+    return `<path class="ln ${cls}" d="M${Math.round(C[0] + ux * 104)} ${Math.round(C[1] + uy * 104)}L${Math.round(x - ux * 44)} ${Math.round(y - uy * 44)}"/>`;
+  };
+  const node = (slug, x, y, cls) => {
+    const p = slug && bySlug(slug);
+    const name = p ? p.name : t.eco_reports;
+    const inner = p
+      ? `<clipPath id="c-${slug}"><rect x="${x - 28}" y="${y - 28}" width="56" height="56" rx="14"/></clipPath><image href="${esc(p.icon)}" x="${x - 28}" y="${y - 28}" width="56" height="56" clip-path="url(#c-${slug})"/>`
+      : `<g class="doc" transform="translate(${x - 16} ${y - 20})"><path d="M0 0h22l10 10v30H0z"/><path d="M22 0v10h10M7 18h18M7 26h18M7 33h11"/></g>`;
+    const body = `<circle cx="${x}" cy="${y}" r="40"/>${inner}<text x="${x}" y="${y + 60}" text-anchor="middle">${esc(name)}</text>`;
+    return p ? `<a class="nd ${cls}" href="${productPath(slug, t.__l)}">${body}</a>` : `<g class="nd ${cls}">${body}</g>`;
+  };
+  return `<svg class="eco" viewBox="0 0 640 520" role="img" aria-label="${esc(t.eco_aria)}">
+<defs><linearGradient id="idg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F28A32"/><stop offset=".5" stop-color="#FFD29A"/><stop offset="1" stop-color="#00BFFF"/></linearGradient></defs>
+<text class="grp" x="110" y="26" text-anchor="middle" fill="#F28A32">${esc(t.eco_prod)}</text><text class="grp" x="530" y="26" text-anchor="middle" fill="#00BFFF">${esc(t.eco_pers)}</text>
+<path class="ln cu" d="M110 92C40 140 40 190 66 240"/><path class="ln cu" d="M66 240C40 300 60 350 110 388"/><path class="ln cu" d="M110 388C150 440 200 450 262 444"/>
+<path class="ln bl" d="M530 92C600 140 600 190 574 240"/><path class="ln bl" d="M574 240C600 300 580 350 530 388"/>
+${ind.map(([s, x, y]) => link(x, y, "cu")).join("")}${per.map(([s, x, y]) => link(x, y, "bl")).join("")}
+<circle class="core" cx="320" cy="240" r="100"/><circle class="idr" cx="320" cy="240" r="100" stroke="url(#idg)"/>
+<image href="/assets/home/amr-512.webp" x="226" y="205" width="188" height="69"/>
+<text class="idl" x="320" y="306" text-anchor="middle">${esc(t.eco_id)}</text>
+${ind.map(([s, x, y]) => node(s, x, y, "cu")).join("")}${per.map(([s, x, y]) => node(s, x, y, "bl")).join("")}
+</svg>`;
+}
+
+const ICON = {
+  b1: '<path d="M27 3 9 27h13l-2 18 19-26H25z"/>',
+  b2: '<circle cx="22" cy="25" r="17"/><circle cx="22" cy="25" r="8"/><path d="m22 25 18-18m-9 0h9v9"/>',
+  b3: '<path d="m24 4 19 10-19 10L5 14zM5 24l19 10 19-10M5 34l19 10 19-10"/>',
+  b4: '<path d="M24 3 42 10v12c0 11-8 19-18 23C14 41 6 33 6 22V10z"/><path d="m15 24 6 6 13-14"/>',
+};
+const IDI = [
+  '<rect x="10" y="20" width="28" height="22" rx="4"/><path d="M16 20v-6a8 8 0 0 1 16 0v6M24 29v5"/>',
+  '<path d="M6 8h14v14H6zM28 8h14v14H28zM6 28h14v14H6z"/><path d="M28 28h6v6h-6zM38 36h4v6h-4zM28 38h6v4"/>',
+  '<path d="M24 4 41 11v12c0 10-7 18-17 21C14 41 7 33 7 23V11z"/><path d="M17 23l5 5 10-10"/>',
+  '<circle cx="24" cy="24" r="17"/><path d="M24 14v10l7 5"/>',
+];
+const waves = () => {
+  let s = "";
+  for (let i = 0; i < 8; i++) s += `<path class="${i % 2 ? "s" : "c"}" d="M0 ${100 + i * 6}C300 ${40 + i * 10} 600 ${150 - i * 4} 900 ${90 + i * 5}S1300 ${30 + i * 8} 1600 ${80 + i * 6}"/>`;
+  return `<svg class="h-waves" viewBox="0 0 1600 160" preserveAspectRatio="none" aria-hidden="true">${s}</svg>`;
+};
+
 function portalPage(l) {
-  const t = T[l];
+  const t = { ...T[l], __l: l };
   const langHrefs = Object.fromEntries(LANGS.map((x) => [x, portalPath(x)]));
   const alternates = LANGS.map((x) => [x, portalUrl(x)]).concat([["x-default", portalUrl("ru")]]);
+  const live = LIVE.map(bySlug).filter(Boolean);
+  const soon = products.filter((p) => !LIVE.includes(p.slug));
   return (
-    head({ l, title: t.title, desc: t.meta, canonical: portalUrl(l), alternates }) +
-    header(l, langHrefs, portalPath(l)) +
+    head({ l, title: t.title, desc: t.meta, canonical: portalUrl(l), alternates, home: true }) +
+    header(l, langHrefs, portalPath(l), true) +
     `<main id="main">
-<section class="hero"><div class="wrap">
-${mono("mono")}
-<div class="kicker">${esc(t.hero_kicker)}</div>
-<h1>${esc(t.hero_title)}</h1>
-<p class="lead">${esc(t.hero_sub)}</p>
-<a class="btn btn-p" href="#products">${esc(t.hero_cta)}</a>
+<section class="h-hero" id="eco"><div class="wrap"><div>
+<p class="eyebrow">${esc(t.home_eyebrow)}</p>
+<h1>${esc(t.home_t1)} <span>${esc(t.home_t2)}</span></h1>
+<p class="h-lead">${esc(t.home_lead)}</p>
+<div class="h-acts"><a class="hb hb-p" href="#products">${esc(t.home_cta)}</a><a class="hb hb-s" href="#show">${esc(t.home_watch)}</a></div>
+<p class="h-pf"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M8 21h8m-4-4v4"/></svg><span>${esc(t.home_pwa)}</span></p>
+</div>
+<div>${ecoSvg(t)}</div>
+</div>${waves()}</section>
+<section class="h-ben"><div class="wrap">
+${[1, 2, 3, 4].map((i) => `<div class="hbn"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">${ICON["b" + i]}</svg><div><b>${esc(t["b" + i + "_t"])}</b><small>${esc(t["b" + i + "_d"])}</small></div></div>`).join("\n")}
 </div></section>
-<section id="products"><div class="wrap">
-<h2>${esc(t.products_title)}</h2>
-<p class="sub">${esc(t.products_sub)}</p>
-<div class="grid">
-${products
+<section class="h-sec h-id" id="id"><div class="wrap h-id-in">
+<div><span class="kick kick-s">${esc(t.id_kicker)}</span><h2>${esc(t.id_title)}</h2><p class="h-id-sub">${esc(t.id_sub)}</p>
+<ul class="h-id-list">${[1, 2, 3, 4].map((i) => `<li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IDI[i - 1]}</svg><div><b>${esc(t["id" + i + "_t"])}</b><p>${esc(t["id" + i + "_d"])}</p></div></li>`).join("")}</ul>
+<a class="hb hb-p" href="https://self.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
+<div class="h-id-ph"><div class="phn phn-s"><div class="scr"><img class="on" src="/assets/home/id-phone.webp" alt="${esc(t.screen_of)}: AMR ID" width="540" height="1170" loading="lazy" decoding="async"></div></div></div>
+</div></section>
+<section class="h-sec h-show" id="show"><div class="wrap">
+<div class="h-sh"><span class="kick">${esc(t.show_kicker)}</span><h2>${esc(t.show_title)}</h2><p>${esc(t.show_sub)}</p></div>
+<div class="dev" data-anim><div class="lap"><div class="scr">${live.map((p, i) => `<img src="/assets/home/${p.slug}-desk.webp" alt="${esc(t.screen_of)}: ${esc(p.name)}" width="1280" height="800" decoding="async"${i ? ' loading="lazy"' : ""}>`).join("")}</div></div>
+<div class="phn"><div class="scr">${live.map((p, i) => `<img src="/assets/home/${p.slug}-phone.webp" alt="" width="540" height="1170" decoding="async"${i ? ' loading="lazy"' : ""}>`).join("")}</div></div></div>
+<div class="h-tabs" aria-hidden="true">${live.map((p) => `<span><img src="${esc(p.icon)}" alt="" width="28" height="28">${esc(p.name)}</span>`).join("")}</div>
+</div></section>
+<section class="h-sec" id="products"><div class="wrap">
+<div class="h-sh"><span class="kick">${esc(t.prod_kicker)}</span><h2>${esc(t.prod_title)}</h2><p>${esc(t.prod_sub)}</p></div>
+<div class="h-grid">
+${live
   .map((p) => {
     const x = text(p, l);
-    return `<a class="card" href="${productPath(p.slug, l)}">${iconImg(p, 64)}<div><h3>${esc(p.name)} ${badge(p.status, l)}</h3><p>${esc(x.tagline)}</p></div>${chevron}</a>`;
+    return `<a class="pc pc-${p.slug}" href="${productPath(p.slug, l)}"><div class="shot"><img src="/assets/home/${p.slug}-phone.webp" alt="${esc(t.screen_of)}: ${esc(p.name)}" width="540" height="1170" loading="lazy" decoding="async"></div><div class="cb"><div class="ct">${iconImg(p, 34)}<b>${esc(p.name)}</b></div><p>${esc(x.tagline)}</p><span class="go">${esc(t.more)} →</span></div></a>`;
   })
   .join("\n")}
-</div></div></section>
-<section><div class="wrap">
-<h2>${esc(t.principles_title)}</h2>
-<div class="prin" data-mt>
-${[1, 2, 3].map((i) => `<div class="pi"><i></i><b>${esc(t["p" + i + "_t"])}</b><p>${esc(t["p" + i + "_d"])}</p></div>`).join("\n")}
-</div></div></section>
+</div>
+<div class="h-soon">
+${soon.map((p) => `<a class="sn" href="${productPath(p.slug, l)}">${iconImg(p, 42)}<div><b>${esc(p.name)}</b><small>${esc(text(p, l).tagline)}</small></div><em>${esc(t["status_" + p.status] || p.status)}</em></a>`).join("\n")}
+</div>
+<div class="h-band"><div><b>${esc(t.band_title)}</b><p>${esc(t.band_text)}</p></div><a class="hb hb-p" href="https://self.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
+</div></section>
 </main>` +
     footer(l)
   );

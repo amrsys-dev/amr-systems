@@ -76,7 +76,19 @@
     "band_title": "Одна платформа. Разные направления.",
     "band_text": "Создайте AMR ID один раз — и входите во все приложения AMR: от личных финансов до раскроя в цеху.",
     "band_cta": "Создать AMR ID",
-    "screen_of": "Экран приложения"
+    "screen_of": "Экран приложения",
+    "id_kicker": "AMR ID",
+    "id_title": "Один ключ ко всей экосистеме",
+    "id_sub": "Создаёте один раз — и входите во все приложения AMR без новых регистраций.",
+    "id1_t": "Один вход везде",
+    "id1_d": "Один ник и пароль для SELF, Safar, Bazar, AMR Cut и всех будущих приложений.",
+    "id2_t": "Электронная визитка",
+    "id2_d": "Ваш QR-код с телефоном, мессенджерами и сайтом. Навели камеру — контакт сохранён.",
+    "id3_t": "Данные под замком",
+    "id3_d": "Личные данные шифруются на вашем телефоне ещё до отправки. Пароль знаете только вы.",
+    "id4_t": "Вы решаете, что видно",
+    "id4_d": "Приложение получает только ваш ник и имя — и только после вашего разрешения. Без рекламы и продажи данных.",
+    "nav_id": "AMR ID"
   },
   "en": {
     "lang_name": "English",
@@ -155,7 +167,19 @@
     "band_title": "One platform. Many directions.",
     "band_text": "Create your AMR ID once and sign in to every AMR app — from personal finances to cutting in the workshop.",
     "band_cta": "Create AMR ID",
-    "screen_of": "App screen"
+    "screen_of": "App screen",
+    "id_kicker": "AMR ID",
+    "id_title": "One key to the whole ecosystem",
+    "id_sub": "Create it once and sign in to every AMR app — no new sign-ups.",
+    "id1_t": "One sign-in everywhere",
+    "id1_d": "One username and password for SELF, Safar, Bazar, AMR Cut and every future app.",
+    "id2_t": "Digital business card",
+    "id2_d": "Your QR code with phone, messengers and website. Point a camera — the contact is saved.",
+    "id3_t": "Data under lock",
+    "id3_d": "Personal data is encrypted on your phone before it is sent. Only you know the password.",
+    "id4_t": "You decide what is shared",
+    "id4_d": "An app gets only your username and name — and only after you allow it. No ads, no data selling.",
+    "nav_id": "AMR ID"
   },
   "ar": {
     "lang_name": "العربية",
@@ -234,7 +258,19 @@
     "band_title": "منصة واحدة. اتجاهات متعددة.",
     "band_text": "أنشئ حساب AMR ID مرة واحدة وادخل إلى كل تطبيقات AMR — من مالك الشخصي إلى التقطيع في الورشة.",
     "band_cta": "إنشاء AMR ID",
-    "screen_of": "شاشة التطبيق"
+    "screen_of": "شاشة التطبيق",
+    "id_kicker": "AMR ID",
+    "id_title": "مفتاح واحد للمنظومة كلها",
+    "id_sub": "أنشئه مرة واحدة وادخل إلى كل تطبيقات AMR دون تسجيل جديد.",
+    "id1_t": "دخول واحد في كل مكان",
+    "id1_d": "اسم مستخدم وكلمة مرور واحدة لـ SELF وSafar وBazar وAMR Cut وكل التطبيقات القادمة.",
+    "id2_t": "بطاقة أعمال رقمية",
+    "id2_d": "رمز QR الخاص بك مع الهاتف والمراسلة والموقع. وجّه الكاميرا — ويُحفظ جهة الاتصال.",
+    "id3_t": "بياناتك محمية",
+    "id3_d": "تُشفَّر بياناتك الشخصية على هاتفك قبل إرسالها. كلمة المرور يعرفها أنت فقط.",
+    "id4_t": "أنت تقرر ما يُشارك",
+    "id4_d": "يحصل التطبيق على اسم المستخدم والاسم فقط — وبعد إذنك. بلا إعلانات ولا بيع للبيانات.",
+    "nav_id": "AMR ID"
   },
   "uz": {
     "lang_name": "O‘zbekcha",
@@ -313,7 +349,19 @@
     "band_title": "Bitta platforma. Turli yo‘nalishlar.",
     "band_text": "AMR ID’ni bir marta yarating va barcha AMR ilovalariga kiring — shaxsiy moliyadan sexdagi kesishgacha.",
     "band_cta": "AMR ID yaratish",
-    "screen_of": "Ilova ekrani"
+    "screen_of": "Ilova ekrani",
+    "id_kicker": "AMR ID",
+    "id_title": "Butun ekotizimga bitta kalit",
+    "id_sub": "Bir marta yarating va barcha AMR ilovalariga yangi ro‘yxatdan o‘tmasdan kiring.",
+    "id1_t": "Hamma joyda bitta kirish",
+    "id1_d": "SELF, Safar, Bazar, AMR Cut va kelajakdagi barcha ilovalar uchun bitta login va parol.",
+    "id2_t": "Elektron vizitka",
+    "id2_d": "Telefon, messenjerlar va sayt bilan QR-kodingiz. Kamerani tuting — kontakt saqlanadi.",
+    "id3_t": "Ma’lumotlar qulf ostida",
+    "id3_d": "Shaxsiy ma’lumotlar yuborilishidan oldin telefoningizda shifrlanadi. Parolni faqat siz bilasiz.",
+    "id4_t": "Nima ko‘rinishini siz hal qilasiz",
+    "id4_d": "Ilova faqat loginingiz va ismingizni oladi — va faqat ruxsatingizdan keyin. Reklamasiz, ma’lumot sotilmaydi.",
+    "nav_id": "AMR ID"
   },
   "tg": {
     "lang_name": "Тоҷикӣ",
@@ -392,6 +440,18 @@
     "band_title": "Як платформа. Самтҳои гуногун.",
     "band_text": "AMR ID-ро як бор созед ва ба ҳамаи барномаҳои AMR дароед — аз молияи шахсӣ то буриш дар сех.",
     "band_cta": "Сохтани AMR ID",
-    "screen_of": "Экрани барнома"
+    "screen_of": "Экрани барнома",
+    "id_kicker": "AMR ID",
+    "id_title": "Як калид ба тамоми экосистема",
+    "id_sub": "Як бор созед ва ба ҳамаи барномаҳои AMR бе бақайдгирии нав дароед.",
+    "id1_t": "Як даромад дар ҳама ҷо",
+    "id1_d": "Як ном ва парол барои SELF, Safar, Bazar, AMR Cut ва ҳамаи барномаҳои оянда.",
+    "id2_t": "Визиткаи электронӣ",
+    "id2_d": "QR-коди шумо бо телефон, мессенҷерҳо ва сайт. Камераро равона кунед — тамос нигоҳ дошта мешавад.",
+    "id3_t": "Маълумот дар қулф",
+    "id3_d": "Маълумоти шахсӣ пеш аз фиристодан дар телефони шумо рамзгузорӣ мешавад. Паролро танҳо шумо медонед.",
+    "id4_t": "Шумо ҳал мекунед, ки чӣ намоён аст",
+    "id4_d": "Барнома танҳо ном ва номи корбари шуморо мегирад — ва танҳо бо иҷозати шумо. Бе реклама ва фурӯши маълумот.",
+    "nav_id": "AMR ID"
   }
 }

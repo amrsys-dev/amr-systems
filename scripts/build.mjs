@@ -88,7 +88,7 @@ function header(l, langHrefs, home, isHome = false) {
   return `<header class="hdr"><div class="wrap">
 <a class="logo" href="${home}" aria-label="AMR Systems">${mono("", false)}<span>Systems</span></a>
 <span class="sp"></span>
-${isHome ? `<a class="nav-link" href="#eco">${esc(t.nav_eco)}</a><a class="nav-link" href="#show">${esc(t.nav_how)}</a>` : ""}<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
+${isHome ? `<a class="nav-link" href="#eco">${esc(t.nav_eco)}</a><a class="nav-link" href="#id">${esc(t.nav_id)}</a><a class="nav-link" href="#show">${esc(t.nav_how)}</a>` : ""}<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
 <details class="dd"><summary aria-label="${esc(t.language)}"><span class="flag" aria-hidden="true">${FLAGS[l]}</span>${l.toUpperCase()}</summary>
 <div class="dd-menu">${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
 ${isHome ? `<a class="login" href="https://self.amrsys.net" rel="noopener">${esc(t.login)}</a>` : `<details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
@@ -148,6 +148,12 @@ const ICON = {
   b3: '<path d="m24 4 19 10-19 10L5 14zM5 24l19 10 19-10M5 34l19 10 19-10"/>',
   b4: '<path d="M24 3 42 10v12c0 11-8 19-18 23C14 41 6 33 6 22V10z"/><path d="m15 24 6 6 13-14"/>',
 };
+const IDI = [
+  '<rect x="10" y="20" width="28" height="22" rx="4"/><path d="M16 20v-6a8 8 0 0 1 16 0v6M24 29v5"/>',
+  '<path d="M6 8h14v14H6zM28 8h14v14H28zM6 28h14v14H6z"/><path d="M28 28h6v6h-6zM38 36h4v6h-4zM28 38h6v4"/>',
+  '<path d="M24 4 41 11v12c0 10-7 18-17 21C14 41 7 33 7 23V11z"/><path d="M17 23l5 5 10-10"/>',
+  '<circle cx="24" cy="24" r="17"/><path d="M24 14v10l7 5"/>',
+];
 const waves = () => {
   let s = "";
   for (let i = 0; i < 8; i++) s += `<path class="${i % 2 ? "s" : "c"}" d="M0 ${100 + i * 6}C300 ${40 + i * 10} 600 ${150 - i * 4} 900 ${90 + i * 5}S1300 ${30 + i * 8} 1600 ${80 + i * 6}"/>`;
@@ -175,6 +181,12 @@ function portalPage(l) {
 </div>${waves()}</section>
 <section class="h-ben"><div class="wrap">
 ${[1, 2, 3, 4].map((i) => `<div class="hbn"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">${ICON["b" + i]}</svg><div><b>${esc(t["b" + i + "_t"])}</b><small>${esc(t["b" + i + "_d"])}</small></div></div>`).join("\n")}
+</div></section>
+<section class="h-sec h-id" id="id"><div class="wrap h-id-in">
+<div><span class="kick kick-s">${esc(t.id_kicker)}</span><h2>${esc(t.id_title)}</h2><p class="h-id-sub">${esc(t.id_sub)}</p>
+<ul class="h-id-list">${[1, 2, 3, 4].map((i) => `<li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IDI[i - 1]}</svg><div><b>${esc(t["id" + i + "_t"])}</b><p>${esc(t["id" + i + "_d"])}</p></div></li>`).join("")}</ul>
+<a class="hb hb-p" href="https://self.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
+<div class="h-id-ph"><div class="phn phn-s"><div class="scr"><img class="on" src="/assets/home/id-phone.webp" alt="${esc(t.screen_of)}: AMR ID" width="540" height="1170" loading="lazy" decoding="async"></div></div></div>
 </div></section>
 <section class="h-sec h-show" id="show"><div class="wrap">
 <div class="h-sh"><span class="kick">${esc(t.show_kicker)}</span><h2>${esc(t.show_title)}</h2><p>${esc(t.show_sub)}</p></div>

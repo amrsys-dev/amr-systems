@@ -91,7 +91,7 @@ function header(l, langHrefs, home, isHome = false) {
 ${isHome ? `<a class="nav-link" href="#eco">${esc(t.nav_eco)}</a><a class="nav-link" href="#id">${esc(t.nav_id)}</a><a class="nav-link" href="#show">${esc(t.nav_how)}</a>` : ""}<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
 <details class="dd"><summary aria-label="${esc(t.language)}"><span class="flag" aria-hidden="true">${FLAGS[l]}</span>${l.toUpperCase()}</summary>
 <div class="dd-menu">${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
-${isHome ? `<a class="login" href="https://self.amrsys.net" rel="noopener">${esc(t.login)}</a>` : `<details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
+${isHome ? `<a class="login" href="https://id.amrsys.net" rel="noopener">${esc(t.login)}</a>` : `<details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
 <div class="dd-menu">${["auto", "light", "dark"].map((x) => `<button type="button" data-theme-set="${x}">${esc(t["theme_" + x])}</button>`).join("")}</div></details>`}
 </div></header>`;
 }
@@ -185,7 +185,7 @@ ${[1, 2, 3, 4].map((i) => `<div class="hbn"><svg viewBox="0 0 48 48" fill="none"
 <section class="h-sec h-id" id="id"><div class="wrap h-id-in">
 <div><span class="kick kick-s">${esc(t.id_kicker)}</span><h2>${esc(t.id_title)}</h2><p class="h-id-sub">${esc(t.id_sub)}</p>
 <ul class="h-id-list">${[1, 2, 3, 4].map((i) => `<li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IDI[i - 1]}</svg><div><b>${esc(t["id" + i + "_t"])}</b><p>${esc(t["id" + i + "_d"])}</p></div></li>`).join("")}</ul>
-<a class="hb hb-p" href="https://self.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
+<a class="hb hb-p" href="https://id.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
 <div class="h-id-ph"><div class="phn phn-s"><div class="scr"><img class="on" src="/assets/home/id-phone.webp" alt="${esc(t.screen_of)}: AMR ID" width="540" height="1170" loading="lazy" decoding="async"></div></div></div>
 </div></section>
 <section class="h-sec h-show" id="show"><div class="wrap">
@@ -207,7 +207,7 @@ ${live
 <div class="h-soon">
 ${soon.map((p) => `<a class="sn" href="${productPath(p.slug, l)}">${iconImg(p, 42)}<div><b>${esc(p.name)}</b><small>${esc(text(p, l).tagline)}</small></div><em>${esc(t["status_" + p.status] || p.status)}</em></a>`).join("\n")}
 </div>
-<div class="h-band"><div><b>${esc(t.band_title)}</b><p>${esc(t.band_text)}</p></div><a class="hb hb-p" href="https://self.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
+<div class="h-band"><div><b>${esc(t.band_title)}</b><p>${esc(t.band_text)}</p></div><a class="hb hb-p" href="https://id.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
 </div></section>
 </main>` +
     footer(l)

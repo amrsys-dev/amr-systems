@@ -199,7 +199,7 @@
       "slug": "cutting",
       "name": "AMR Cut",
       "status": "live",
-      "app_url": "https://cutting.amrsys.net",
+      "app_url": "https://cut.amrsys.net",
       "demo_url": "",
       "icon": "/assets/icons/cutting.webp",
       "accent": "#C9A44C",

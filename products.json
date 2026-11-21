@@ -2,6 +2,108 @@
   "$comment": "Единый реестр продуктов AMR. Брендбук v1.2, разделы 25-26. slug = поддомен приложения и путь страницы /slug/. Статусы: live, demo, dev, soon.",
   "products": [
     {
+      "slug": "id",
+      "name": "AMR ID",
+      "status": "live",
+      "app_url": "https://id.amrsys.net",
+      "demo_url": "",
+      "icon": "/assets/icons/id.webp",
+      "accent": "#00D4FF",
+      "pwa": true,
+      "i18n": {
+        "ru": {
+          "tagline": "Цифровая визитка и единый контакт",
+          "description": "AMR ID — ваш постоянный контакт вместо десятка: телефон, WhatsApp, Telegram, соцсети и сайт собраны в одной ссылке и одном QR. Сменили номер или аккаунт — ссылка та же, люди вас не потеряют. Этим же AMR ID вы входите во все приложения AMR.",
+          "steps": [
+            "Придумайте ник — это ваш адрес навсегда, например murad.amr.",
+            "Добавьте телефон, мессенджеры, соцсети и сайт.",
+            "Поделитесь ссылкой или QR — контакт сохраняется в телефон одним касанием.",
+            "Входите в SELF, Safar, Bazar и AMR Cut кнопкой «Войти через AMR ID»."
+          ],
+          "features": [
+            "Цифровая визитка с QR",
+            "Все контакты в одной ссылке",
+            "Ссылка не меняется",
+            "Сохранение в контакты телефона",
+            "Один вход во все приложения AMR",
+            "8 языков, светлая и тёмная тема"
+          ]
+        },
+        "en": {
+          "tagline": "Digital business card and one contact",
+          "description": "AMR ID is one permanent contact instead of dozens: phone, WhatsApp, Telegram, social networks and website in one link and one QR. Change your number or account — the link stays, people won't lose you. The same AMR ID signs you in to every AMR app.",
+          "steps": [
+            "Choose a nickname — your address for good, for example murad.amr.",
+            "Add your phone, messengers, social networks and website.",
+            "Share the link or QR — your contact is saved to a phone in one tap.",
+            "Sign in to SELF, Safar, Bazar and AMR Cut with «Sign in with AMR ID»."
+          ],
+          "features": [
+            "Digital card with QR",
+            "All contacts in one link",
+            "The link never changes",
+            "Save to phone contacts",
+            "One sign-in for all AMR apps",
+            "8 languages, light and dark theme"
+          ]
+        },
+        "ar": {
+          "tagline": "بطاقة أعمال رقمية وجهة اتصال موحّدة",
+          "description": "AMR ID جهة اتصال ثابتة واحدة بدل العشرات: الهاتف وواتساب وتيليجرام والشبكات الاجتماعية والموقع في رابط واحد ورمز QR واحد. غيّرت رقمك أو حسابك — يبقى الرابط نفسه ولن يفقدك أحد. وبنفس AMR ID تدخل كل تطبيقات AMR.",
+          "steps": [
+            "اختر اسم مستخدم — عنوانك الدائم، مثل murad.amr.",
+            "أضف الهاتف والمراسلة والشبكات الاجتماعية والموقع.",
+            "شارك الرابط أو رمز QR — تُحفظ جهة اتصالك في الهاتف بلمسة.",
+            "ادخل SELF وSafar وBazar وAMR Cut بزر «الدخول عبر AMR ID»."
+          ],
+          "features": [
+            "بطاقة رقمية مع QR",
+            "كل جهات الاتصال في رابط واحد",
+            "الرابط لا يتغير",
+            "الحفظ في جهات اتصال الهاتف",
+            "دخول واحد لكل تطبيقات AMR",
+            "8 لغات، سمة فاتحة وداكنة"
+          ]
+        },
+        "uz": {
+          "tagline": "Raqamli vizitka va yagona kontakt",
+          "description": "AMR ID — o'nlab kontakt o'rniga bitta doimiy kontakt: telefon, WhatsApp, Telegram, ijtimoiy tarmoqlar va sayt bitta havola va bitta QR'da. Raqam yoki akkaunt o'zgarsa ham havola o'sha, odamlar sizni yo'qotmaydi. Shu AMR ID bilan barcha AMR ilovalariga kirasiz.",
+          "steps": [
+            "Nik tanlang — bu doimiy manzilingiz, masalan murad.amr.",
+            "Telefon, messenjerlar, ijtimoiy tarmoqlar va saytni qo'shing.",
+            "Havola yoki QR'ni ulashing — kontaktingiz telefonga bir bosishda saqlanadi.",
+            "SELF, Safar, Bazar va AMR Cut'ga «AMR ID orqali kirish» bilan kiring."
+          ],
+          "features": [
+            "QR bilan raqamli vizitka",
+            "Barcha kontaktlar bitta havolada",
+            "Havola o'zgarmaydi",
+            "Telefon kontaktlariga saqlash",
+            "Barcha AMR ilovalariga bitta kirish",
+            "8 til, yorug' va qorong'i mavzu"
+          ]
+        },
+        "tg": {
+          "tagline": "Визиткаи рақамӣ ва тамоси ягона",
+          "description": "AMR ID — ба ҷои даҳҳо тамос як тамоси доимӣ: телефон, WhatsApp, Telegram, шабакаҳои иҷтимоӣ ва сайт дар як пайванд ва як QR. Рақам ё аккаунт иваз шавад — пайванд ҳамон аст, одамон шуморо гум намекунанд. Бо ҳамин AMR ID ба ҳамаи барномаҳои AMR ворид мешавед.",
+          "steps": [
+            "Ник интихоб кунед — суроғаи доимии шумо, масалан murad.amr.",
+            "Телефон, мессенҷерҳо, шабакаҳои иҷтимоӣ ва сайтро илова кунед.",
+            "Пайванд ё QR-ро фиристед — тамоси шумо бо як ламс дар телефон сабт мешавад.",
+            "Ба SELF, Safar, Bazar ва AMR Cut бо «Ворид шудан тавассути AMR ID» ворид шавед."
+          ],
+          "features": [
+            "Визиткаи рақамӣ бо QR",
+            "Ҳамаи тамосҳо дар як пайванд",
+            "Пайванд иваз намешавад",
+            "Сабт дар тамосҳои телефон",
+            "Як воридшавӣ ба ҳамаи барномаҳои AMR",
+            "8 забон, мавзӯи равшан ва торик"
+          ]
+        }
+      }
+    },
+    {
       "slug": "self",
       "name": "SELF",
       "status": "live",
@@ -12,91 +114,91 @@
       "pwa": true,
       "i18n": {
         "ru": {
-          "tagline": "Личный помощник: деньги, планы, здоровье, машина и визитка AMR ID",
-          "description": "SELF помогает держать порядок в повседневных делах. Баланс, расходы и долги без привязки к банку, задачи и тренировки, обслуживание машины и цифровая визитка с QR-кодом. Данные шифруются.",
+          "tagline": "Личный помощник: деньги, планы, здоровье и машина",
+          "description": "SELF помогает держать порядок в повседневных делах. Баланс, расходы и долги без привязки к банку, задачи и тренировки, обслуживание машины. Вход и визитка — через ваш AMR ID. Данные шифруются.",
           "steps": [
-            "Откройте приложение и придумайте ник — это ваш AMR ID, например murad.amr.",
+            "Откройте приложение и войдите через AMR ID — например murad.amr.",
             "Записывайте доходы и расходы — баланс считается сам, в пяти валютах.",
             "Планируйте задачи и тренировки, отмечайте обслуживание машины.",
-            "Делитесь визиткой: QR-код, ссылка или контакт прямо в телефон."
+            "Визитка — в AMR ID: ссылка, QR или контакт прямо в телефон."
           ],
           "features": [
             "Финансы и отчёты",
             "Планер и тренировки",
             "Автомобиль",
-            "Визитка AMR ID с QR",
+            "Вход через AMR ID",
             "Шифрование данных",
             "5 языков, светлая и тёмная тема"
           ]
         },
         "en": {
-          "tagline": "Personal assistant: money, plans, health, car and the AMR ID card",
-          "description": "SELF keeps everyday life in order. Balance, expenses and debts without a bank link, tasks and workouts, car service and a digital business card with a QR code. Your data is encrypted.",
+          "tagline": "Personal assistant: money, plans, health and car",
+          "description": "SELF keeps everyday life in order. Balance, expenses and debts without a bank link, tasks and workouts, car service. Sign-in and business card come from your AMR ID. Your data is encrypted.",
           "steps": [
-            "Open the app and choose a nickname — your AMR ID, for example murad.amr.",
+            "Open the app and sign in with AMR ID — for example murad.amr.",
             "Record income and expenses — the balance updates itself, in five currencies.",
             "Plan tasks and workouts, log your car service.",
-            "Share your card: QR code, link or a contact straight to the phone."
+            "Your card lives in AMR ID: link, QR or a contact straight to the phone."
           ],
           "features": [
             "Finance and reports",
             "Planner and workouts",
             "Car",
-            "AMR ID card with QR",
+            "Sign in with AMR ID",
             "Data encryption",
             "5 languages, light and dark theme"
           ]
         },
         "ar": {
-          "tagline": "مساعد شخصي: المال، الخطط، الصحة، السيارة وبطاقة AMR ID",
-          "description": "يساعدك SELF على تنظيم شؤونك اليومية. الرصيد والمصروفات والديون دون ربط بالبنك، المهام والتمارين، صيانة السيارة وبطاقة أعمال رقمية برمز QR. بياناتك مشفّرة.",
+          "tagline": "مساعد شخصي: المال، الخطط، الصحة والسيارة",
+          "description": "يساعدك SELF على تنظيم شؤونك اليومية. الرصيد والمصروفات والديون دون ربط بالبنك، المهام والتمارين، صيانة السيارة. الدخول والبطاقة عبر AMR ID الخاص بك. بياناتك مشفّرة.",
           "steps": [
-            "افتح التطبيق واختر اسم مستخدم — هذا هو AMR ID الخاص بك، مثل murad.amr.",
+            "افتح التطبيق وادخل عبر AMR ID — مثل murad.amr.",
             "سجّل الدخل والمصروفات — يُحسب الرصيد تلقائيًا وبخمس عملات.",
             "خطّط للمهام والتمارين وسجّل صيانة السيارة.",
-            "شارك بطاقتك: رمز QR أو رابط أو جهة اتصال مباشرة إلى الهاتف."
+            "بطاقتك في AMR ID: رابط أو رمز QR أو جهة اتصال مباشرة إلى الهاتف."
           ],
           "features": [
             "المالية والتقارير",
             "المخطِّط والتمارين",
             "السيارة",
-            "بطاقة AMR ID مع QR",
+            "الدخول عبر AMR ID",
             "تشفير البيانات",
             "5 لغات، وضع فاتح وداكن"
           ]
         },
         "uz": {
-          "tagline": "Shaxsiy yordamchi: pul, rejalar, salomatlik, mashina va AMR ID vizitkasi",
-          "description": "SELF kundalik ishlarni tartibda saqlaydi. Bankka bog‘lanmagan balans, xarajatlar va qarzlar, vazifalar va mashg‘ulotlar, mashina xizmati va QR-kodli raqamli vizitka. Ma’lumotlar shifrlanadi.",
+          "tagline": "Shaxsiy yordamchi: pul, rejalar, salomatlik va mashina",
+          "description": "SELF kundalik ishlarni tartibda saqlaydi. Bankka bog‘lanmagan balans, xarajatlar va qarzlar, vazifalar va mashg‘ulotlar, mashina xizmati. Kirish va vizitka — AMR ID orqali. Ma’lumotlar shifrlanadi.",
           "steps": [
-            "Ilovani oching va nik tanlang — bu sizning AMR ID, masalan murad.amr.",
+            "Ilovani oching va AMR ID orqali kiring — masalan murad.amr.",
             "Daromad va xarajatlarni yozing — balans o‘zi hisoblanadi, besh valyutada.",
             "Vazifa va mashg‘ulotlarni rejalang, mashina xizmatini belgilang.",
-            "Vizitkani ulashing: QR-kod, havola yoki telefonga kontakt."
+            "Vizitka AMR ID'da: havola, QR yoki telefonga kontakt."
           ],
           "features": [
             "Moliya va hisobotlar",
             "Reja va mashg‘ulotlar",
             "Avtomobil",
-            "QR bilan AMR ID vizitkasi",
+            "AMR ID orqali kirish",
             "Ma’lumotlarni shifrlash",
             "5 til, yorug‘ va qorong‘i mavzu"
           ]
         },
         "tg": {
-          "tagline": "Ёрдамчии шахсӣ: пул, нақшаҳо, саломатӣ, мошин ва визиткаи AMR ID",
-          "description": "SELF корҳои ҳаррӯзаро ба тартиб медарорад. Баланс, хароҷот ва қарзҳо бе пайваст ба бонк, вазифаҳо ва машқҳо, хизматрасонии мошин ва визиткаи рақамӣ бо QR-код. Маълумот рамзгузорӣ мешавад.",
+          "tagline": "Ёрдамчии шахсӣ: пул, нақшаҳо, саломатӣ ва мошин",
+          "description": "SELF корҳои ҳаррӯзаро ба тартиб медарорад. Баланс, хароҷот ва қарзҳо бе пайваст ба бонк, вазифаҳо ва машқҳо, хизматрасонии мошин. Воридшавӣ ва визитка — тавассути AMR ID. Маълумот рамзгузорӣ мешавад.",
           "steps": [
-            "Барномаро кушоед ва ник интихоб кунед — ин AMR ID-и шумо, масалан murad.amr.",
+            "Барномаро кушоед ва тавассути AMR ID ворид шавед — масалан murad.amr.",
             "Даромад ва хароҷотро нависед — баланс худаш ҳисоб мешавад, бо панҷ асъор.",
             "Вазифаҳо ва машқҳоро ба нақша гиред, хизматрасонии мошинро қайд кунед.",
-            "Визиткаро фиристед: QR-код, пайванд ё контакт рост ба телефон."
+            "Визитка дар AMR ID: пайванд, QR ё контакт рост ба телефон."
           ],
           "features": [
             "Молия ва ҳисобот",
             "Нақша ва машқҳо",
             "Мошин",
-            "Визиткаи AMR ID бо QR",
+            "Воридшавӣ тавассути AMR ID",
             "Рамзгузории маълумот",
             "5 забон, мавзӯи равшан ва торик"
           ]

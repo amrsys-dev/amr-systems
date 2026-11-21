@@ -13,11 +13,11 @@
       "i18n": {
         "ru": {
           "tagline": "Цифровая визитка и единый контакт",
-          "description": "AMR ID — ваш постоянный контакт вместо десятка: телефон, WhatsApp, Telegram, соцсети и сайт собраны в одной ссылке и одном QR. Сменили номер или аккаунт — ссылка та же, люди вас не потеряют. Этим же AMR ID вы входите во все приложения AMR.",
+          "description": "AMR ID - ваш постоянный контакт вместо десятка: телефон, WhatsApp, Telegram, соцсети и сайт собраны в одной ссылке и одном QR. Сменили номер или аккаунт - ссылка та же, люди вас не потеряют. Этим же AMR ID вы входите во все приложения AMR.",
           "steps": [
-            "Придумайте ник — это ваш адрес навсегда, например murad.amr.",
+            "Придумайте ник - это ваш адрес навсегда, например murad.amr.",
             "Добавьте телефон, мессенджеры, соцсети и сайт.",
-            "Поделитесь ссылкой или QR — контакт сохраняется в телефон одним касанием.",
+            "Поделитесь ссылкой или QR - контакт сохраняется в телефон одним касанием.",
             "Входите в SELF, Safar, Bazar и AMR Cut кнопкой «Войти через AMR ID»."
           ],
           "features": [
@@ -31,11 +31,11 @@
         },
         "en": {
           "tagline": "Digital business card and one contact",
-          "description": "AMR ID is one permanent contact instead of dozens: phone, WhatsApp, Telegram, social networks and website in one link and one QR. Change your number or account — the link stays, people won't lose you. The same AMR ID signs you in to every AMR app.",
+          "description": "AMR ID is one permanent contact instead of dozens: phone, WhatsApp, Telegram, social networks and website in one link and one QR. Change your number or account - the link stays, people won't lose you. The same AMR ID signs you in to every AMR app.",
           "steps": [
-            "Choose a nickname — your address for good, for example murad.amr.",
+            "Choose a nickname - your address for good, for example murad.amr.",
             "Add your phone, messengers, social networks and website.",
-            "Share the link or QR — your contact is saved to a phone in one tap.",
+            "Share the link or QR - your contact is saved to a phone in one tap.",
             "Sign in to SELF, Safar, Bazar and AMR Cut with «Sign in with AMR ID»."
           ],
           "features": [
@@ -49,11 +49,11 @@
         },
         "ar": {
           "tagline": "بطاقة أعمال رقمية وجهة اتصال موحّدة",
-          "description": "AMR ID جهة اتصال ثابتة واحدة بدل العشرات: الهاتف وواتساب وتيليجرام والشبكات الاجتماعية والموقع في رابط واحد ورمز QR واحد. غيّرت رقمك أو حسابك — يبقى الرابط نفسه ولن يفقدك أحد. وبنفس AMR ID تدخل كل تطبيقات AMR.",
+          "description": "AMR ID جهة اتصال ثابتة واحدة بدل العشرات: الهاتف وواتساب وتيليجرام والشبكات الاجتماعية والموقع في رابط واحد ورمز QR واحد. غيّرت رقمك أو حسابك - يبقى الرابط نفسه ولن يفقدك أحد. وبنفس AMR ID تدخل كل تطبيقات AMR.",
           "steps": [
-            "اختر اسم مستخدم — عنوانك الدائم، مثل murad.amr.",
+            "اختر اسم مستخدم - عنوانك الدائم، مثل murad.amr.",
             "أضف الهاتف والمراسلة والشبكات الاجتماعية والموقع.",
-            "شارك الرابط أو رمز QR — تُحفظ جهة اتصالك في الهاتف بلمسة.",
+            "شارك الرابط أو رمز QR - تُحفظ جهة اتصالك في الهاتف بلمسة.",
             "ادخل SELF وSafar وBazar وAMR Cut بزر «الدخول عبر AMR ID»."
           ],
           "features": [
@@ -67,11 +67,11 @@
         },
         "uz": {
           "tagline": "Raqamli vizitka va yagona kontakt",
-          "description": "AMR ID — o'nlab kontakt o'rniga bitta doimiy kontakt: telefon, WhatsApp, Telegram, ijtimoiy tarmoqlar va sayt bitta havola va bitta QR'da. Raqam yoki akkaunt o'zgarsa ham havola o'sha, odamlar sizni yo'qotmaydi. Shu AMR ID bilan barcha AMR ilovalariga kirasiz.",
+          "description": "AMR ID - o'nlab kontakt o'rniga bitta doimiy kontakt: telefon, WhatsApp, Telegram, ijtimoiy tarmoqlar va sayt bitta havola va bitta QR'da. Raqam yoki akkaunt o'zgarsa ham havola o'sha, odamlar sizni yo'qotmaydi. Shu AMR ID bilan barcha AMR ilovalariga kirasiz.",
           "steps": [
-            "Nik tanlang — bu doimiy manzilingiz, masalan murad.amr.",
+            "Nik tanlang - bu doimiy manzilingiz, masalan murad.amr.",
             "Telefon, messenjerlar, ijtimoiy tarmoqlar va saytni qo'shing.",
-            "Havola yoki QR'ni ulashing — kontaktingiz telefonga bir bosishda saqlanadi.",
+            "Havola yoki QR'ni ulashing - kontaktingiz telefonga bir bosishda saqlanadi.",
             "SELF, Safar, Bazar va AMR Cut'ga «AMR ID orqali kirish» bilan kiring."
           ],
           "features": [
@@ -85,11 +85,11 @@
         },
         "tg": {
           "tagline": "Визиткаи рақамӣ ва тамоси ягона",
-          "description": "AMR ID — ба ҷои даҳҳо тамос як тамоси доимӣ: телефон, WhatsApp, Telegram, шабакаҳои иҷтимоӣ ва сайт дар як пайванд ва як QR. Рақам ё аккаунт иваз шавад — пайванд ҳамон аст, одамон шуморо гум намекунанд. Бо ҳамин AMR ID ба ҳамаи барномаҳои AMR ворид мешавед.",
+          "description": "AMR ID - ба ҷои даҳҳо тамос як тамоси доимӣ: телефон, WhatsApp, Telegram, шабакаҳои иҷтимоӣ ва сайт дар як пайванд ва як QR. Рақам ё аккаунт иваз шавад - пайванд ҳамон аст, одамон шуморо гум намекунанд. Бо ҳамин AMR ID ба ҳамаи барномаҳои AMR ворид мешавед.",
           "steps": [
-            "Ник интихоб кунед — суроғаи доимии шумо, масалан murad.amr.",
+            "Ник интихоб кунед - суроғаи доимии шумо, масалан murad.amr.",
             "Телефон, мессенҷерҳо, шабакаҳои иҷтимоӣ ва сайтро илова кунед.",
-            "Пайванд ё QR-ро фиристед — тамоси шумо бо як ламс дар телефон сабт мешавад.",
+            "Пайванд ё QR-ро фиристед - тамоси шумо бо як ламс дар телефон сабт мешавад.",
             "Ба SELF, Safar, Bazar ва AMR Cut бо «Ворид шудан тавассути AMR ID» ворид шавед."
           ],
           "features": [
@@ -115,12 +115,12 @@
       "i18n": {
         "ru": {
           "tagline": "Личный помощник: деньги, планы, здоровье и машина",
-          "description": "SELF помогает держать порядок в повседневных делах. Баланс, расходы и долги без привязки к банку, задачи и тренировки, обслуживание машины. Вход и визитка — через ваш AMR ID. Данные шифруются.",
+          "description": "SELF помогает держать порядок в повседневных делах. Баланс, расходы и долги без привязки к банку, задачи и тренировки, обслуживание машины. Вход и визитка - через ваш AMR ID. Данные шифруются.",
           "steps": [
-            "Откройте приложение и войдите через AMR ID — например murad.amr.",
-            "Записывайте доходы и расходы — баланс считается сам, в пяти валютах.",
+            "Откройте приложение и войдите через AMR ID - например murad.amr.",
+            "Записывайте доходы и расходы - баланс считается сам, в пяти валютах.",
             "Планируйте задачи и тренировки, отмечайте обслуживание машины.",
-            "Визитка — в AMR ID: ссылка, QR или контакт прямо в телефон."
+            "Визитка - в AMR ID: ссылка, QR или контакт прямо в телефон."
           ],
           "features": [
             "Финансы и отчёты",
@@ -135,8 +135,8 @@
           "tagline": "Personal assistant: money, plans, health and car",
           "description": "SELF keeps everyday life in order. Balance, expenses and debts without a bank link, tasks and workouts, car service. Sign-in and business card come from your AMR ID. Your data is encrypted.",
           "steps": [
-            "Open the app and sign in with AMR ID — for example murad.amr.",
-            "Record income and expenses — the balance updates itself, in five currencies.",
+            "Open the app and sign in with AMR ID - for example murad.amr.",
+            "Record income and expenses - the balance updates itself, in five currencies.",
             "Plan tasks and workouts, log your car service.",
             "Your card lives in AMR ID: link, QR or a contact straight to the phone."
           ],
@@ -153,8 +153,8 @@
           "tagline": "مساعد شخصي: المال، الخطط، الصحة والسيارة",
           "description": "يساعدك SELF على تنظيم شؤونك اليومية. الرصيد والمصروفات والديون دون ربط بالبنك، المهام والتمارين، صيانة السيارة. الدخول والبطاقة عبر AMR ID الخاص بك. بياناتك مشفّرة.",
           "steps": [
-            "افتح التطبيق وادخل عبر AMR ID — مثل murad.amr.",
-            "سجّل الدخل والمصروفات — يُحسب الرصيد تلقائيًا وبخمس عملات.",
+            "افتح التطبيق وادخل عبر AMR ID - مثل murad.amr.",
+            "سجّل الدخل والمصروفات - يُحسب الرصيد تلقائيًا وبخمس عملات.",
             "خطّط للمهام والتمارين وسجّل صيانة السيارة.",
             "بطاقتك في AMR ID: رابط أو رمز QR أو جهة اتصال مباشرة إلى الهاتف."
           ],
@@ -169,10 +169,10 @@
         },
         "uz": {
           "tagline": "Shaxsiy yordamchi: pul, rejalar, salomatlik va mashina",
-          "description": "SELF kundalik ishlarni tartibda saqlaydi. Bankka bog‘lanmagan balans, xarajatlar va qarzlar, vazifalar va mashg‘ulotlar, mashina xizmati. Kirish va vizitka — AMR ID orqali. Ma’lumotlar shifrlanadi.",
+          "description": "SELF kundalik ishlarni tartibda saqlaydi. Bankka bog‘lanmagan balans, xarajatlar va qarzlar, vazifalar va mashg‘ulotlar, mashina xizmati. Kirish va vizitka - AMR ID orqali. Ma’lumotlar shifrlanadi.",
           "steps": [
-            "Ilovani oching va AMR ID orqali kiring — masalan murad.amr.",
-            "Daromad va xarajatlarni yozing — balans o‘zi hisoblanadi, besh valyutada.",
+            "Ilovani oching va AMR ID orqali kiring - masalan murad.amr.",
+            "Daromad va xarajatlarni yozing - balans o‘zi hisoblanadi, besh valyutada.",
             "Vazifa va mashg‘ulotlarni rejalang, mashina xizmatini belgilang.",
             "Vizitka AMR ID'da: havola, QR yoki telefonga kontakt."
           ],
@@ -187,10 +187,10 @@
         },
         "tg": {
           "tagline": "Ёрдамчии шахсӣ: пул, нақшаҳо, саломатӣ ва мошин",
-          "description": "SELF корҳои ҳаррӯзаро ба тартиб медарорад. Баланс, хароҷот ва қарзҳо бе пайваст ба бонк, вазифаҳо ва машқҳо, хизматрасонии мошин. Воридшавӣ ва визитка — тавассути AMR ID. Маълумот рамзгузорӣ мешавад.",
+          "description": "SELF корҳои ҳаррӯзаро ба тартиб медарорад. Баланс, хароҷот ва қарзҳо бе пайваст ба бонк, вазифаҳо ва машқҳо, хизматрасонии мошин. Воридшавӣ ва визитка - тавассути AMR ID. Маълумот рамзгузорӣ мешавад.",
           "steps": [
-            "Барномаро кушоед ва тавассути AMR ID ворид шавед — масалан murad.amr.",
-            "Даромад ва хароҷотро нависед — баланс худаш ҳисоб мешавад, бо панҷ асъор.",
+            "Барномаро кушоед ва тавассути AMR ID ворид шавед - масалан murad.amr.",
+            "Даромад ва хароҷотро нависед - баланс худаш ҳисоб мешавад, бо панҷ асъор.",
             "Вазифаҳо ва машқҳоро ба нақша гиред, хизматрасонии мошинро қайд кунед.",
             "Визитка дар AMR ID: пайванд, QR ё контакт рост ба телефон."
           ],
@@ -309,10 +309,10 @@
       "i18n": {
         "ru": {
           "tagline": "Раскрой листов и профиля с минимумом отходов",
-          "description": "Cutting строит карты раскроя для ЛДСП, МДФ и других листов, а также линейный раскрой профиля. Меньше отходов, быстрее подготовка к производству.",
+          "description": "AMR Cut строит карты раскроя для ЛДСП, МДФ и других листов, а также линейный раскрой профиля. Меньше отходов, быстрее подготовка к производству.",
           "steps": [
             "Введите размеры листа и список деталей.",
-            "Нажмите «Рассчитать» — программа разложит детали на листах.",
+            "Нажмите «Рассчитать» - программа разложит детали на листах.",
             "Проверьте карту раскроя и отправьте её в цех."
           ],
           "features": [
@@ -324,10 +324,10 @@
         },
         "en": {
           "tagline": "Sheet and profile cutting with minimum waste",
-          "description": "Cutting builds cutting maps for chipboard, MDF and other sheets, plus linear cutting of profiles. Less waste, faster preparation for production.",
+          "description": "AMR Cut builds cutting maps for chipboard, MDF and other sheets, plus linear cutting of profiles. Less waste, faster preparation for production.",
           "steps": [
             "Enter the sheet size and the list of parts.",
-            "Press “Calculate” — the program lays the parts out on sheets.",
+            "Press “Calculate” - the program lays the parts out on sheets.",
             "Check the cutting map and send it to the workshop."
           ],
           "features": [
@@ -339,10 +339,10 @@
         },
         "ar": {
           "tagline": "تقطيع الألواح والبروفيلات بأقل هدر",
-          "description": "يُعدّ Cutting خرائط تقطيع لألواح الخشب المضغوط وMDF وغيرها، إضافة إلى التقطيع الطولي للبروفيلات. هدر أقل وتحضير أسرع للإنتاج.",
+          "description": "يُعدّ AMR Cut خرائط تقطيع لألواح الخشب المضغوط وMDF وغيرها، إضافة إلى التقطيع الطولي للبروفيلات. هدر أقل وتحضير أسرع للإنتاج.",
           "steps": [
             "أدخل مقاس اللوح وقائمة القطع.",
-            "اضغط «احسب» — يوزّع البرنامج القطع على الألواح.",
+            "اضغط «احسب» - يوزّع البرنامج القطع على الألواح.",
             "راجع خريطة التقطيع وأرسلها إلى الورشة."
           ],
           "features": [
@@ -354,10 +354,10 @@
         },
         "uz": {
           "tagline": "List va profilni minimal chiqindi bilan kesish",
-          "description": "Cutting LDSP, MDF va boshqa listlar uchun kesish xaritalarini, shuningdek profilni chiziqli kesishni tuzadi. Kamroq chiqindi, ishlab chiqarishga tezroq tayyorgarlik.",
+          "description": "AMR Cut LDSP, MDF va boshqa listlar uchun kesish xaritalarini, shuningdek profilni chiziqli kesishni tuzadi. Kamroq chiqindi, ishlab chiqarishga tezroq tayyorgarlik.",
           "steps": [
             "List o‘lchami va detallar ro‘yxatini kiriting.",
-            "«Hisoblash»ni bosing — dastur detallarni listlarga joylaydi.",
+            "«Hisoblash»ni bosing - dastur detallarni listlarga joylaydi.",
             "Kesish xaritasini tekshiring va sexga yuboring."
           ],
           "features": [
@@ -369,10 +369,10 @@
         },
         "tg": {
           "tagline": "Буриши варақ ва профил бо камтарин партов",
-          "description": "Cutting харитаҳои буришро барои ЛДСП, МДФ ва дигар варақҳо, инчунин буриши хаттии профил месозад. Партови камтар, тайёрии тезтар ба истеҳсолот.",
+          "description": "AMR Cut харитаҳои буришро барои ЛДСП, МДФ ва дигар варақҳо, инчунин буриши хаттии профил месозад. Партови камтар, тайёрии тезтар ба истеҳсолот.",
           "steps": [
             "Андозаи варақ ва рӯйхати қисмҳоро ворид кунед.",
-            "«Ҳисоб кардан»-ро пахш кунед — барнома қисмҳоро дар варақҳо ҷой медиҳад.",
+            "«Ҳисоб кардан»-ро пахш кунед - барнома қисмҳоро дар варақҳо ҷой медиҳад.",
             "Харитаи буришро санҷед ва ба сех фиристед."
           ],
           "features": [

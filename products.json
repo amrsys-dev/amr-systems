@@ -309,7 +309,7 @@
       "i18n": {
         "ru": {
           "tagline": "Раскрой листов и профиля с минимумом отходов",
-          "description": "Cutting строит карты раскроя для ЛДСП, МДФ и других листов, а также линейный раскрой профиля. Меньше отходов, быстрее подготовка к производству.",
+          "description": "AMR Cut строит карты раскроя для ЛДСП, МДФ и других листов, а также линейный раскрой профиля. Меньше отходов, быстрее подготовка к производству.",
           "steps": [
             "Введите размеры листа и список деталей.",
             "Нажмите «Рассчитать» — программа разложит детали на листах.",
@@ -324,7 +324,7 @@
         },
         "en": {
           "tagline": "Sheet and profile cutting with minimum waste",
-          "description": "Cutting builds cutting maps for chipboard, MDF and other sheets, plus linear cutting of profiles. Less waste, faster preparation for production.",
+          "description": "AMR Cut builds cutting maps for chipboard, MDF and other sheets, plus linear cutting of profiles. Less waste, faster preparation for production.",
           "steps": [
             "Enter the sheet size and the list of parts.",
             "Press “Calculate” — the program lays the parts out on sheets.",
@@ -339,7 +339,7 @@
         },
         "ar": {
           "tagline": "تقطيع الألواح والبروفيلات بأقل هدر",
-          "description": "يُعدّ Cutting خرائط تقطيع لألواح الخشب المضغوط وMDF وغيرها، إضافة إلى التقطيع الطولي للبروفيلات. هدر أقل وتحضير أسرع للإنتاج.",
+          "description": "يُعدّ AMR Cut خرائط تقطيع لألواح الخشب المضغوط وMDF وغيرها، إضافة إلى التقطيع الطولي للبروفيلات. هدر أقل وتحضير أسرع للإنتاج.",
           "steps": [
             "أدخل مقاس اللوح وقائمة القطع.",
             "اضغط «احسب» — يوزّع البرنامج القطع على الألواح.",
@@ -354,7 +354,7 @@
         },
         "uz": {
           "tagline": "List va profilni minimal chiqindi bilan kesish",
-          "description": "Cutting LDSP, MDF va boshqa listlar uchun kesish xaritalarini, shuningdek profilni chiziqli kesishni tuzadi. Kamroq chiqindi, ishlab chiqarishga tezroq tayyorgarlik.",
+          "description": "AMR Cut LDSP, MDF va boshqa listlar uchun kesish xaritalarini, shuningdek profilni chiziqli kesishni tuzadi. Kamroq chiqindi, ishlab chiqarishga tezroq tayyorgarlik.",
           "steps": [
             "List o‘lchami va detallar ro‘yxatini kiriting.",
             "«Hisoblash»ni bosing — dastur detallarni listlarga joylaydi.",
@@ -369,7 +369,7 @@
         },
         "tg": {
           "tagline": "Буриши варақ ва профил бо камтарин партов",
-          "description": "Cutting харитаҳои буришро барои ЛДСП, МДФ ва дигар варақҳо, инчунин буриши хаттии профил месозад. Партови камтар, тайёрии тезтар ба истеҳсолот.",
+          "description": "AMR Cut харитаҳои буришро барои ЛДСП, МДФ ва дигар варақҳо, инчунин буриши хаттии профил месозад. Партови камтар, тайёрии тезтар ба истеҳсолот.",
           "steps": [
             "Андозаи варақ ва рӯйхати қисмҳоро ворид кунед.",
             "«Ҳисоб кардан»-ро пахш кунед — барнома қисмҳоро дар варақҳо ҷой медиҳад.",

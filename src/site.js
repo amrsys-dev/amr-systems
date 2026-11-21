@@ -10,7 +10,7 @@
     if (t === "light" || t === "dark") root.setAttribute("data-theme", t); else root.removeAttribute("data-theme");
     var dark = t === "dark" || (t !== "light" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
     var m = document.querySelector('meta[name="theme-color"]');
-    if (m) m.setAttribute("content", dark ? "#0D1713" : "#F4F7F3");
+    if (m && !root.classList.contains("home")) m.setAttribute("content", dark ? "#0D1713" : "#F4F7F3");
     document.querySelectorAll("[data-theme-set]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-theme-set") === (t || "auto"))); });
   }
   applyTheme(store("amr-theme") || "auto");

@@ -55,16 +55,16 @@ function text(p, l) {
 
 function head({ l, title, desc, canonical, alternates, icon, home = false }) {
   const t = T[l];
+  // One look for the whole site: the dark AMR showcase (home) also on product pages.
   return `<!doctype html>
-<html lang="${HTML_LANG[l]}" dir="${t.dir}"${home ? ' class="home"' : ""}${l === "ru" ? " data-root" : ""}>
+<html lang="${HTML_LANG[l]}" dir="${t.dir}" class="home${home ? "" : " prod"}"${l === "ru" ? " data-root" : ""}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-${home ? '<meta name="theme-color" content="#050A10">' : `<meta name="theme-color" content="#F4F7F3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0D1713" media="(prefers-color-scheme: dark)">`}
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#050A10">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="${canonical}">
 ${alternates.map(([hl, href]) => `<link rel="alternate" hreflang="${hl}" href="${href}">`).join("\n")}
 <meta property="og:type" content="website">
@@ -91,14 +91,13 @@ function header(l, langHrefs, home, isHome = false) {
 ${isHome ? `<a class="nav-link" href="#eco">${esc(t.nav_eco)}</a><a class="nav-link" href="#id">${esc(t.nav_id)}</a><a class="nav-link" href="#show">${esc(t.nav_how)}</a>` : ""}<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
 <details class="dd"><summary aria-label="${esc(t.language)}"><span class="flag" aria-hidden="true">${FLAGS[l]}</span>${l.toUpperCase()}</summary>
 <div class="dd-menu">${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
-${isHome ? `<a class="login" href="https://id.amrsys.net" rel="noopener">${esc(t.login)}</a>` : `<details class="dd"><summary aria-label="${esc(t.theme)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></summary>
-<div class="dd-menu">${["auto", "light", "dark"].map((x) => `<button type="button" data-theme-set="${x}">${esc(t["theme_" + x])}</button>`).join("")}</div></details>`}
+<a class="login" href="https://id.amrsys.net" rel="noopener">${esc(t.login)}</a>
 </div></header>`;
 }
 
 function footer(l) {
   const t = T[l];
-  return `<footer class="ftr"><div class="wrap">${mono("", false)}<span>© ${new Date().getUTCFullYear()} AMR Systems. ${esc(t.footer)}</span>
+  return `<footer class="ftr"><div class="wrap">${mono("", false)}<span>© ${new Date().getUTCFullYear()} AMR Systems</span>
 <nav aria-label="${esc(t.nav_all)}">${products.map((p) => `<a href="${productPath(p.slug, l)}">${esc(p.name)}</a>`).join("")}</nav>
 </div></footer>
 </body></html>
@@ -109,6 +108,8 @@ const badge = (s, l) => `<span class="badge ${esc(s)}">${esc(T[l]["status_" + s]
 const iconImg = (p, size, cls = "") => `<img${cls ? ` class="${cls}"` : ""} src="${esc(p.icon)}" alt="" width="${size}" height="${size}" decoding="async">`;
 
 const LIVE = ["self", "safar", "cutting", "bazar"];
+// Product colours, the same as on the home page cards.
+const ACCENT = { id: "#F28A32", self: "#19D18F", safar: "#22C55E", cutting: "#3B82F6", bazar: "#A855F7", constructor: "#F28A32", vision: "#00BFFF", hub: "#9B7BFF" };
 const bySlug = (slug) => products.find((p) => p.slug === slug);
 
 // Схема экосистемы: в центре AMR ID, слева производство, справа личное. Только SVG + CSS.
@@ -231,17 +232,20 @@ ${demo ? `<a class="btn btn-g" href="${esc(demo)}" rel="noopener">${esc(t.demo)}
     : `<p class="note">${esc(p.status === "dev" ? t.not_ready_dev : t.not_ready_soon)}</p>`;
   const steps = (x.steps || []).filter(Boolean);
   const imgs = (p.steps_images || []);
+  const shot = existsSync(join(ROOT, "public/assets/home", `${p.slug}-phone.webp`)) ? `/assets/home/${p.slug}-phone.webp` : "";
   return (
     head({ l, title: `${p.name} — ${x.tagline}`, desc: x.description, canonical: productUrl(p.slug, l), alternates, icon: p.icon }) +
     header(l, langHrefs, portalPath(l)) +
     `<main id="main">
-<section class="phero"><div class="wrap"><div class="anchor">
-${mono("wm", false)}
-<div class="top">${iconImg(p, 88, "ic")}<div><h1>${esc(p.name)}</h1>${badge(p.status, l)}</div></div>
+<section class="phero" style="--a:${ACCENT[p.slug] || "#F28A32"}"><div class="wrap"><div class="anchor${shot ? " has-shot" : ""}">
+<div class="pt">
+<div class="top">${iconImg(p, 72, "ic")}<div><h1>${esc(p.name)}</h1>${badge(p.status, l)}</div></div>
 <p class="tag">${esc(x.tagline)}</p>
 <p class="desc">${esc(x.description)}</p>
 ${acts}
 ${x.note ? `<p class="note" data-mt>${esc(x.note)}</p>` : ""}
+</div>
+${shot ? `<div class="pshot"><div class="phn phn-s"><div class="scr"><img class="on" src="${shot}" alt="${esc(t.shot_alt || "")} ${esc(p.name)}" width="540" height="1170" decoding="async"></div></div></div>` : ""}
 </div></div></section>
 ${
   steps.length

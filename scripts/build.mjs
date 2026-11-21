@@ -107,39 +107,72 @@ function footer(l) {
 const badge = (s, l) => `<span class="badge ${esc(s)}">${esc(T[l]["status_" + s] || s)}</span>`;
 const iconImg = (p, size, cls = "") => `<img${cls ? ` class="${cls}"` : ""} src="${esc(p.icon)}" alt="" width="${size}" height="${size}" decoding="async">`;
 
-const LIVE = ["self", "safar", "cutting", "bazar"];
+const LIVE = ["id", "self", "safar", "cutting", "bazar"];
 // Product colours, the same as on the home page cards.
-const ACCENT = { id: "#F28A32", self: "#19D18F", safar: "#22C55E", cutting: "#3B82F6", bazar: "#A855F7", constructor: "#F28A32", vision: "#00BFFF", hub: "#9B7BFF" };
 const bySlug = (slug) => products.find((p) => p.slug === slug);
 
-// Схема экосистемы: в центре AMR ID, слева производство, справа личное. Только SVG + CSS.
+// Схема экосистемы: в центре AMR, сверху AMR ID, слева производство, справа личное.
+// Связи как дорожки на плате: прямые углы, точки-контакты, по ним бегут сигналы туда и обратно.
 function ecoSvg(t) {
-  const C = [320, 240];
-  const ind = [["vision", 110, 92], ["constructor", 66, 240], ["cutting", 110, 388], [null, 262, 444]];
-  const per = [["self", 530, 92], ["bazar", 574, 240], ["safar", 530, 388]];
-  const link = (x, y, cls) => {
-    const dx = x - C[0], dy = y - C[1], d = Math.hypot(dx, dy), ux = dx / d, uy = dy / d;
-    return `<path class="ln ${cls}" d="M${Math.round(C[0] + ux * 104)} ${Math.round(C[1] + uy * 104)}L${Math.round(x - ux * 44)} ${Math.round(y - uy * 44)}"/>`;
+  const C = [320, 290], R = 96, NR = 48;
+  // [slug, x, y, side]  side: cu = production (copper), bl = personal (blue)
+  const nodes = [
+    ["id", 320, 66, "cu"],
+    ["vision", 92, 120, "cu"], ["constructor", 92, 290, "cu"], ["cutting", 92, 460, "cu"],
+    ["self", 548, 120, "bl"], ["bazar", 548, 290, "bl"], ["safar", 548, 460, "bl"],
+    [null, 320, 514, "cu"],
+  ];
+  // rounded orthogonal path through points
+  const trace = (pts, r = 12) => {
+    let d = `M${pts[0][0]} ${pts[0][1]}`;
+    for (let i = 1; i < pts.length; i++) {
+      const [x, y] = pts[i];
+      if (i < pts.length - 1) {
+        const [px, py] = pts[i - 1], [nx, ny] = pts[i + 1];
+        const a = Math.min(r, Math.hypot(x - px, y - py) / 2), b = Math.min(r, Math.hypot(nx - x, ny - y) / 2);
+        const ux = Math.sign(x - px), uy = Math.sign(y - py), vx = Math.sign(nx - x), vy = Math.sign(ny - y);
+        d += `L${x - ux * a} ${y - uy * a}Q${x} ${y} ${x + vx * b} ${y + vy * b}`;
+      } else d += `L${x} ${y}`;
+    }
+    return d;
   };
-  const node = (slug, x, y, cls) => {
+  const onCircle = (dy) => Math.round(Math.sqrt(R * R - dy * dy));
+  const route = (x, y) => {
+    if (x === C[0]) return y < C[1] ? [[C[0], C[1] - R], [x, y + NR]] : [[C[0], C[1] + R], [x, y - NR]];
+    const left = x < C[0];
+    const sgn = left ? -1 : 1;
+    if (y === C[1]) return [[C[0] + sgn * R, C[1]], [x - sgn * NR, y]];
+    const sy = y < C[1] ? -46 : 46; // port on the centre circle
+    const sx = C[0] + sgn * onCircle(sy);
+    const bus = left ? 186 : 454;
+    return [[sx, C[1] + sy], [bus, C[1] + sy], [bus, y], [x - sgn * NR, y]];
+  };
+  const lines = nodes
+    .map(([slug, x, y, cls], i) => {
+      const pts = route(x, y);
+      const d = trace(pts);
+      const [s0, e0] = [pts[0], pts[pts.length - 1]];
+      return `<path class="tr ${cls}" d="${d}"/><path class="pl ${cls} d${i}" d="${d}" pathLength="100"/><circle class="via ${cls}" cx="${s0[0]}" cy="${s0[1]}" r="4"/><circle class="via ${cls}" cx="${e0[0]}" cy="${e0[1]}" r="4"/>`;
+    })
+    .join("");
+  const node = ([slug, x, y, cls]) => {
     const p = slug && bySlug(slug);
     const name = p ? p.name : t.eco_reports;
+    const I = 66;
     const inner = p
-      ? `<clipPath id="c-${slug}"><rect x="${x - 28}" y="${y - 28}" width="56" height="56" rx="14"/></clipPath><image href="${esc(p.icon)}" x="${x - 28}" y="${y - 28}" width="56" height="56" clip-path="url(#c-${slug})"/>`
-      : `<g class="doc" transform="translate(${x - 16} ${y - 20})"><path d="M0 0h22l10 10v30H0z"/><path d="M22 0v10h10M7 18h18M7 26h18M7 33h11"/></g>`;
-    const body = `<circle cx="${x}" cy="${y}" r="40"/>${inner}<text x="${x}" y="${y + 60}" text-anchor="middle">${esc(name)}</text>`;
+      ? `<clipPath id="c-${slug}"><rect x="${x - I / 2}" y="${y - I / 2}" width="${I}" height="${I}" rx="16"/></clipPath><image href="${esc(p.icon)}" x="${x - I / 2}" y="${y - I / 2}" width="${I}" height="${I}" clip-path="url(#c-${slug})"/>`
+      : `<g class="doc" transform="translate(${x - 19} ${y - 24}) scale(1.2)"><path d="M0 0h22l10 10v30H0z"/><path d="M22 0v10h10M7 18h18M7 26h18M7 33h11"/></g>`;
+    const body = `<circle cx="${x}" cy="${y}" r="${NR}"/>${inner}<text x="${x}" y="${y + NR + 22}" text-anchor="middle">${esc(name)}</text>`;
     return p ? `<a class="nd ${cls}" href="${productPath(slug, t.__l)}">${body}</a>` : `<g class="nd ${cls}">${body}</g>`;
   };
-  return `<svg class="eco" viewBox="0 0 640 520" role="img" aria-label="${esc(t.eco_aria)}">
-<defs><linearGradient id="idg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F28A32"/><stop offset=".5" stop-color="#FFD29A"/><stop offset="1" stop-color="#00BFFF"/></linearGradient></defs>
-<text class="grp" x="110" y="26" text-anchor="middle" fill="#F28A32">${esc(t.eco_prod)}</text><text class="grp" x="530" y="26" text-anchor="middle" fill="#00BFFF">${esc(t.eco_pers)}</text>
-<path class="ln cu" d="M110 92C40 140 40 190 66 240"/><path class="ln cu" d="M66 240C40 300 60 350 110 388"/><path class="ln cu" d="M110 388C150 440 200 450 262 444"/>
-<path class="ln bl" d="M530 92C600 140 600 190 574 240"/><path class="ln bl" d="M574 240C600 300 580 350 530 388"/>
-${ind.map(([s, x, y]) => link(x, y, "cu")).join("")}${per.map(([s, x, y]) => link(x, y, "bl")).join("")}
-<circle class="core" cx="320" cy="240" r="100"/><circle class="idr" cx="320" cy="240" r="100" stroke="url(#idg)"/>
-<image href="/assets/home/amr-512.webp" x="226" y="205" width="188" height="69"/>
-<text class="idl" x="320" y="306" text-anchor="middle">${esc(t.eco_id)}</text>
-${ind.map(([s, x, y]) => node(s, x, y, "cu")).join("")}${per.map(([s, x, y]) => node(s, x, y, "bl")).join("")}
+  return `<svg class="eco" viewBox="0 0 640 600" role="img" aria-label="${esc(t.eco_aria)}">
+<defs><linearGradient id="idg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F28A32"/><stop offset=".5" stop-color="#FFD29A"/><stop offset="1" stop-color="#00BFFF"/></linearGradient>
+<radialGradient id="cg"><stop offset=".6" stop-color="#0A1826"/><stop offset="1" stop-color="#0F2436"/></radialGradient></defs>
+<text class="grp" x="92" y="30" text-anchor="middle" fill="#F28A32">${esc(t.eco_prod)}</text><text class="grp" x="548" y="30" text-anchor="middle" fill="#00BFFF">${esc(t.eco_pers)}</text>
+${lines}
+<circle class="core" cx="${C[0]}" cy="${C[1]}" r="${R}" fill="url(#cg)"/><circle class="idr" cx="${C[0]}" cy="${C[1]}" r="${R}" stroke="url(#idg)"/>
+<image href="/assets/home/amr-512.webp" x="${C[0] - 84}" y="${C[1] - 31}" width="168" height="62"/>
+${nodes.map(node).join("")}
 </svg>`;
 }
 
@@ -191,9 +224,11 @@ ${[1, 2, 3, 4].map((i) => `<div class="hbn"><svg viewBox="0 0 48 48" fill="none"
 </div></section>
 <section class="h-sec h-show" id="show"><div class="wrap">
 <div class="h-sh"><span class="kick">${esc(t.show_kicker)}</span><h2>${esc(t.show_title)}</h2><p>${esc(t.show_sub)}</p></div>
-<div class="dev" data-anim><div class="lap"><div class="scr">${live.map((p, i) => `<img src="/assets/home/${p.slug}-desk.webp" alt="${esc(t.screen_of)}: ${esc(p.name)}" width="1280" height="800" decoding="async"${i ? ' loading="lazy"' : ""}>`).join("")}</div></div>
-<div class="phn"><div class="scr">${live.map((p, i) => `<img src="/assets/home/${p.slug}-phone.webp" alt="" width="540" height="1170" decoding="async"${i ? ' loading="lazy"' : ""}>`).join("")}</div></div></div>
-<div class="h-tabs" aria-hidden="true">${live.map((p) => `<span><img src="${esc(p.icon)}" alt="" width="28" height="28">${esc(p.name)}</span>`).join("")}</div>
+<div class="sc" data-sc>
+<div class="sc-track">${live.filter((p) => p.slug !== "id").map((p, i) => `<a class="sc-slide" href="${productPath(p.slug, l)}" aria-label="${esc(p.name)}"><div class="dev"><div class="lap"><div class="scr"><img src="/assets/home/${p.slug}-desk.webp" alt="${esc(t.screen_of)}: ${esc(p.name)}" width="1280" height="800" decoding="async"${i ? ' loading="lazy"' : ""}></div></div>
+<div class="phn"><div class="scr"><img src="/assets/home/${p.slug}-phone.webp" alt="" width="540" height="1170" decoding="async"${i ? ' loading="lazy"' : ""}></div></div></div><p class="sc-cap"><b>${esc(p.name)}</b> ${esc(text(p, l).tagline)}</p></a>`).join("")}</div>
+<div class="sc-tabs" role="tablist">${live.filter((p) => p.slug !== "id").map((p, i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}"><img src="${esc(p.icon)}" alt="" width="28" height="28">${esc(p.name)}</button>`).join("")}</div>
+</div>
 </div></section>
 <section class="h-sec" id="products"><div class="wrap">
 <div class="h-sh"><span class="kick">${esc(t.prod_kicker)}</span><h2>${esc(t.prod_title)}</h2><p>${esc(t.prod_sub)}</p></div>
@@ -201,12 +236,13 @@ ${[1, 2, 3, 4].map((i) => `<div class="hbn"><svg viewBox="0 0 48 48" fill="none"
 ${live
   .map((p) => {
     const x = text(p, l);
-    return `<a class="pc pc-${p.slug}" href="${productPath(p.slug, l)}"><div class="shot"><img src="/assets/home/${p.slug}-phone.webp" alt="${esc(t.screen_of)}: ${esc(p.name)}" width="540" height="1170" loading="lazy" decoding="async"></div><div class="cb"><div class="ct">${iconImg(p, 34)}<b>${esc(p.name)}</b></div><p>${esc(x.tagline)}</p><span class="go">${esc(t.more)} →</span></div></a>`;
+    const app = safeUrl(p.app_url);
+    return `<div class="pc pc-${p.slug}"><a class="pc-link" href="${productPath(p.slug, l)}" aria-label="${esc(p.name)}"></a><div class="shot"><img src="/assets/home/${p.slug}-phone.webp" alt="${esc(t.screen_of)}: ${esc(p.name)}" width="540" height="1170" loading="lazy" decoding="async"></div><div class="cb"><div class="ct">${iconImg(p, 34)}<b>${esc(p.name)}</b></div><p>${esc(x.tagline)}</p><div class="pc-acts"><a class="go-open" href="${esc(app || productPath(p.slug, l))}" rel="noopener">${esc(t.open)} <span aria-hidden="true">→</span></a><span class="go">${esc(t.more)}</span></div></div></div>`;
   })
   .join("\n")}
 </div>
 <div class="h-soon">
-${soon.map((p) => `<a class="sn" href="${productPath(p.slug, l)}">${iconImg(p, 42)}<div><b>${esc(p.name)}</b><small>${esc(text(p, l).tagline)}</small></div><em>${esc(t["status_" + p.status] || p.status)}</em></a>`).join("\n")}
+${soon.map((p) => `<a class="sn" href="${productPath(p.slug, l)}">${iconImg(p, 42)}<div><b>${esc(p.name)}</b><small>${esc(text(p, l).tagline)}</small></div><span class="go-off" aria-disabled="true">${esc(t.open)}</span></a>`).join("\n")}
 </div>
 <div class="h-band"><div><b>${esc(t.band_title)}</b><p>${esc(t.band_text)}</p></div><a class="hb hb-p" href="https://id.amrsys.net" rel="noopener">${esc(t.band_cta)}</a></div>
 </div></section>
@@ -234,10 +270,10 @@ ${demo ? `<a class="btn btn-g" href="${esc(demo)}" rel="noopener">${esc(t.demo)}
   const imgs = (p.steps_images || []);
   const shot = existsSync(join(ROOT, "public/assets/home", `${p.slug}-phone.webp`)) ? `/assets/home/${p.slug}-phone.webp` : "";
   return (
-    head({ l, title: `${p.name} — ${x.tagline}`, desc: x.description, canonical: productUrl(p.slug, l), alternates, icon: p.icon }) +
+    head({ l, title: `${p.name} - ${x.tagline}`, desc: x.description, canonical: productUrl(p.slug, l), alternates, icon: p.icon }) +
     header(l, langHrefs, portalPath(l)) +
     `<main id="main">
-<section class="phero" style="--a:${ACCENT[p.slug] || "#F28A32"}"><div class="wrap"><div class="anchor${shot ? " has-shot" : ""}">
+<section class="phero acc-${p.slug}"><div class="wrap"><div class="anchor${shot ? " has-shot" : ""}">
 <div class="pt">
 <div class="top">${iconImg(p, 72, "ic")}<div><h1>${esc(p.name)}</h1>${badge(p.status, l)}</div></div>
 <p class="tag">${esc(x.tagline)}</p>

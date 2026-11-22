@@ -96,7 +96,7 @@ function header(l, langHrefs, home, isHome = false) {
 <span class="sp"></span>
 ${isHome ? `<a class="nav-link" href="#eco">${esc(t.nav_eco)}</a><a class="nav-link" href="#id">${esc(t.nav_id)}</a><a class="nav-link" href="#show">${esc(t.nav_how)}</a>` : ""}<a class="nav-link" href="${home}#products">${esc(t.nav_products)}</a>
 <details class="dd"><summary aria-label="${esc(t.language)}"><span class="flag" aria-hidden="true">${FLAGS[l]}</span>${l.toUpperCase()}</summary>
-<div class="dd-menu">${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
+<div class="dd-menu"><a href="${langHrefs.ru}" data-lang-set="auto"><span class="flag" aria-hidden="true">🌐</span>${esc({ ru: "Авто", en: "Auto", ar: "تلقائي", uz: "Avto", tg: "Худкор" }[l])}</a>${LANGS.map((x) => `<a href="${langHrefs[x]}" hreflang="${x}" lang="${x}" data-lang-set="${x}"${x === l ? ' aria-current="true"' : ""}><span class="flag" aria-hidden="true">${FLAGS[x]}</span>${esc(T[x].lang_name)}</a>`).join("")}</div></details>
 <a class="login" href="https://id.amrsys.net" rel="noopener">${esc(t.login)}</a>
 </div></header>`;
 }

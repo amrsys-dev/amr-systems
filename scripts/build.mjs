@@ -53,7 +53,7 @@ function text(p, l) {
   return t;
 }
 
-function head({ l, title, desc, canonical, alternates, icon, home = false }) {
+function head({ l, title, desc, canonical, alternates, icon, og = "home", home = false }) {
   const t = T[l];
   // One look for the whole site: the dark AMR showcase (home) also on product pages.
   return `<!doctype html>
@@ -71,8 +71,14 @@ ${alternates.map(([hl, href]) => `<link rel="alternate" hreflang="${hl}" href="$
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
-<meta property="og:image" content="https://${DOMAIN}/assets/og.png">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:image" content="https://${DOMAIN}/assets/og/${og}-${l}.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AMR Systems">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://${DOMAIN}/assets/og/${og}-${l}.jpg">
+<link rel="icon" href="/assets/icon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="/assets/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="${icon || "/assets/apple-touch-icon.png"}">
 <script>${THEME_BOOT}</script>
 <link rel="stylesheet" href="${CSS_URL}">
@@ -270,7 +276,7 @@ ${demo ? `<a class="btn btn-g" href="${esc(demo)}" rel="noopener">${esc(t.demo)}
   const imgs = (p.steps_images || []);
   const shot = existsSync(join(ROOT, "public/assets/home", `${p.slug}-phone.webp`)) ? `/assets/home/${p.slug}-phone.webp` : "";
   return (
-    head({ l, title: `${p.name} - ${x.tagline}`, desc: x.description, canonical: productUrl(p.slug, l), alternates, icon: p.icon }) +
+    head({ l, title: `${p.name} - ${x.tagline}`, desc: x.description, canonical: productUrl(p.slug, l), alternates, icon: p.icon, og: p.slug }) +
     header(l, langHrefs, portalPath(l)) +
     `<main id="main">
 <section class="phero acc-${p.slug}"><div class="wrap"><div class="anchor${shot ? " has-shot" : ""}">

@@ -31,17 +31,21 @@
     document.querySelectorAll("details.dd[open]").forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
   });
 
-  // Корень сайта: если язык сохранён или браузер на другом языке — перейти
+  // Язык как тема: «Авто» - язык телефона (все языки телефона по порядку), иначе выбранный вручную.
+  // Незнакомый язык: для языков СНГ - русский, для остальных - английский.
+  function systemLang() {
+    var CIS = ["ru", "uk", "be", "kk", "ky", "az", "hy", "ka", "tk", "mo", "ro"];
+    var list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "ru"]);
+    var codes = [];
+    for (var i = 0; i < list.length; i++) { var c = String(list[i] || "").toLowerCase().split(/[-_]/)[0]; codes.push(c === "tj" ? "tg" : c); }
+    for (var j = 0; j < codes.length; j++) if (LANGS.indexOf(codes[j]) >= 0) return codes[j];
+    return CIS.indexOf(codes[0]) >= 0 ? "ru" : "en";
+  }
   var lang = root.getAttribute("lang");
   if (root.hasAttribute("data-root") && lang === "ru") {
     var saved = store("amr-lang");
-    var want = saved;
-    if (!want) {
-      var nav = (navigator.language || "ru").slice(0, 2).toLowerCase();
-      if (nav === "tj") nav = "tg";
-      want = LANGS.indexOf(nav) > 0 ? nav : null;
-    }
-    if (want && want !== "ru" && LANGS.indexOf(want) > 0) location.replace("/" + want + location.pathname);
+    var want = LANGS.indexOf(saved) >= 0 ? saved : systemLang();
+    if (want !== "ru") location.replace("/" + want + location.pathname);
   }
 })();
 

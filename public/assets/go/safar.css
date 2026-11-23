@@ -1,0 +1,38 @@
+/* Визитка Safar: amrsys.net/go/safar/ (23.11.2026). Без JS и без inline-стилей (CSP сайта). */
+*{box-sizing:border-box;margin:0}
+html{background:#F4FBFC;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#0B2230;min-height:100vh;
+ background:radial-gradient(80% 40% at 90% 0%,#9EEBF2,transparent 65%),radial-gradient(70% 35% at 0% 100%,#FFD7A8,transparent 65%),linear-gradient(180deg,#fff,#EAF8FA)}
+main{max-width:480px;margin:0 auto;padding:22px 18px 30px}
+.lang{display:flex;justify-content:flex-end;gap:6px}
+.lang a{font-weight:700;font-size:13px;color:#0E8C99;text-decoration:none;padding:5px 11px;border-radius:999px;border:1.5px solid #BFE6EA;background:#fff}
+.lang a[aria-current]{background:#0E8C99;color:#fff;border-color:#0E8C99}
+.hd{display:flex;align-items:center;gap:14px;margin-top:10px}
+.hd img{width:72px;height:72px;border-radius:18px;box-shadow:0 10px 24px -10px rgba(20,140,160,.6),0 0 0 3px #fff}
+.hd b{display:block;font-size:26px;font-weight:900;letter-spacing:-.01em}
+.hd span{font-size:14px;color:#3F5F6C;font-weight:600}
+h1{margin-top:20px;font-size:34px;line-height:1.08;font-weight:900;letter-spacing:-.02em}
+h1 em{display:inline-block;margin-top:8px;font-style:normal;color:#fff;padding:2px 14px 5px;border-radius:12px;background:linear-gradient(90deg,#FF8A1F,#FFB627);transform:rotate(-2deg);box-shadow:0 10px 22px -10px rgba(255,138,31,.8)}
+.lead{margin-top:14px;font-size:16px;line-height:1.45;color:#30505E;font-weight:500}
+.btns{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.btn{display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:18px;text-decoration:none;font-weight:800;font-size:17px;color:#0B2230;background:#fff;border:2px solid #D3EEF1;box-shadow:0 8px 18px -14px rgba(11,34,48,.4)}
+.btn i{font-style:normal;font-size:24px;width:30px;text-align:center}
+.btn small{display:block;font-weight:600;font-size:13px;color:#4C6B78;margin-top:2px}
+.btn.main{background:linear-gradient(90deg,#FF8A1F,#FFB627);border-color:transparent;color:#fff;box-shadow:0 14px 28px -12px rgba(255,138,31,.85)}
+.btn.main small{color:#FFF3E2}
+.btn.tg{background:linear-gradient(90deg,#14B8C6,#38D3DF);border-color:transparent;color:#fff}
+.btn.tg small{color:#E3FBFD}
+h2{margin-top:28px;font-size:19px;font-weight:900}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 2px 16px;margin:0 -18px;padding-inline:18px;scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.shot{flex:0 0 74%;scroll-snap-align:center}
+.shot img{width:100%;height:auto;border-radius:26px;display:block;border:6px solid #0B2230;box-shadow:0 22px 40px -22px rgba(11,34,48,.6);background:#fff}
+.shot p{margin-top:10px;font-size:14.5px;line-height:1.35;font-weight:700;color:#0B2230}
+.hint{font-size:12.5px;color:#5E7C88;text-align:center}
+.feat{display:grid;gap:8px;margin-top:12px}
+.feat div{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:16px;background:#fff;border:1.5px solid #D9F0F2;font-size:15px;line-height:1.35;font-weight:600}
+.feat i{font-style:normal;font-size:20px}
+.drv{margin-top:14px;padding:14px 16px;border-radius:18px;background:#0B2230;color:#E6F4F6;font-size:15px;line-height:1.4}
+.drv b{color:#FFC46B}
+footer{margin-top:28px;text-align:center;font-size:13px;color:#5E7C88}
+footer a{color:#0E8C99;font-weight:700;text-decoration:none}

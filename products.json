@@ -216,83 +216,83 @@
       "pwa": true,
       "i18n": {
         "ru": {
-          "tagline": "Помощник в поездках по Саудовской Аравии: попутки, жильё, виза",
-          "description": "Safar помогает тем, кто живёт и работает в Саудовской Аравии. Найти попутчика или водителя, жильё, посчитать маршрут и топливо, не пропустить срок визы.",
+          "tagline": "Такси межгород и до границы за секунды, виза и автомобиль - для приезжих в Саудовской Аравии",
+          "description": "Safar помогает тем, кто живёт и работает в Саудовской Аравии. Пассажиры и водители по всей Саудии и до границ Иордании, Бахрейна и Катара: заявка пассажира попадает к водителю за секунды. Плюс срок визы и мукыма и ваш автомобиль.",
           "steps": [
-            "Откройте Safar в браузере или через Telegram.",
-            "Выберите, что нужно: поездка, жильё или визовый счётчик.",
-            "Найдите подходящее предложение и свяжитесь напрямую."
+            "Откройте Safar в Telegram или установите на телефон.",
+            "Пассажир: напишите, откуда и куда едете. Водитель: опубликуйте рейс.",
+            "Safar сам сводит пассажиров и водителей по направлению."
           ],
           "features": [
-            "Попутки: пассажиры и водители",
-            "Жильё",
-            "Счётчик срока визы",
-            "Маршрут и расход топлива",
-            "Работает в Telegram"
+            "Диспетчер за 2-3 секунды",
+            "Вся Саудия и границы",
+            "Экипаж до 7 человек",
+            "Виза и мукым",
+            "Автомобиль: замены по пробегу"
           ]
         },
         "en": {
-          "tagline": "Travel helper for Saudi Arabia: rides, housing, visa",
-          "description": "Safar helps people who live and work in Saudi Arabia. Find a ride or a driver, housing, calculate route and fuel, and never miss a visa deadline.",
+          "tagline": "Intercity and border taxi in seconds, visa and car - for expats in Saudi Arabia",
+          "description": "Safar helps people who live and work in Saudi Arabia. Passengers and drivers across Saudi Arabia and to the Jordan, Bahrain and Qatar borders: a passenger request reaches a driver in seconds. Plus visa and iqama deadlines and your car.",
           "steps": [
-            "Open Safar in the browser or in Telegram.",
-            "Choose what you need: a ride, housing or the visa counter.",
-            "Find a suitable offer and contact the person directly."
+            "Open Safar in Telegram or install it on your phone.",
+            "Passenger: say where from and where to. Driver: publish a trip.",
+            "Safar matches passengers and drivers by route."
           ],
           "features": [
-            "Rides: passengers and drivers",
-            "Housing",
-            "Visa deadline counter",
-            "Route and fuel use",
-            "Works in Telegram"
+            "Dispatch in 2-3 seconds",
+            "All of Saudi Arabia and borders",
+            "Crew of up to 7",
+            "Visa and iqama",
+            "Car: service by mileage"
           ]
         },
         "ar": {
-          "tagline": "مساعد السفر في السعودية: مشاوير، سكن، تأشيرة",
-          "description": "يساعد Safar من يعيشون ويعملون في المملكة العربية السعودية. اعثر على راكب أو سائق أو سكن، واحسب المسار والوقود، ولا تفوّت موعد التأشيرة.",
+          "tagline": "تاكسي بين المدن وإلى الحدود خلال ثوانٍ، التأشيرة والسيارة - للمقيمين في السعودية",
+          "description": "يساعد Safar من يعيشون ويعملون في السعودية. ركاب وسائقون في كل المملكة وإلى حدود الأردن والبحرين وقطر: يصل طلب الراكب إلى السائق خلال ثوانٍ. إضافة إلى مدة التأشيرة والإقامة وسيارتك.",
           "steps": [
-            "افتح Safar في المتصفح أو عبر تيليجرام.",
-            "اختر ما تحتاجه: مشوار أو سكن أو عدّاد التأشيرة.",
-            "اعثر على العرض المناسب وتواصل مباشرة."
+            "افتح Safar في تيليجرام أو ثبّته على هاتفك.",
+            "الراكب: اكتب من أين وإلى أين. السائق: انشر رحلتك.",
+            "يجمع Safar الركاب والسائقين حسب الاتجاه."
           ],
           "features": [
-            "مشاوير: ركاب وسائقون",
-            "سكن",
-            "عدّاد مدة التأشيرة",
-            "المسار واستهلاك الوقود",
-            "يعمل في تيليجرام"
+            "توزيع خلال 2-3 ثوانٍ",
+            "كل السعودية والحدود",
+            "طاقم حتى 7 أشخاص",
+            "التأشيرة والإقامة",
+            "السيارة: الصيانة حسب العداد"
           ]
         },
         "uz": {
-          "tagline": "Saudiya Arabistonida safar yordamchisi: yo‘ldosh, uy-joy, viza",
-          "description": "Safar Saudiya Arabistonida yashab, ishlayotganlarga yordam beradi. Yo‘ldosh yoki haydovchi, uy-joy toping, yo‘l va yoqilg‘ini hisoblang, viza muddatini o‘tkazib yubormang.",
+          "tagline": "Shaharlararo va chegaragacha taksi soniyalarda, viza va avtomobil - Saudiyadagi musofirlar uchun",
+          "description": "Safar Saudiya Arabistonida yashab, ishlayotganlarga yordam beradi. Butun Saudiya va Iordaniya, Bahrayn, Qatar chegaralarigacha yo‘lovchi va haydovchilar: yo‘lovchi arizasi haydovchiga soniyalarda yetadi. Yana viza va muqim muddati hamda avtomobilingiz.",
           "steps": [
-            "Safar’ni brauzerda yoki Telegram’da oching.",
-            "Keraklisini tanlang: safar, uy-joy yoki viza hisoblagichi.",
-            "Mos taklifni toping va to‘g‘ridan-to‘g‘ri bog‘laning."
+            "Safarni Telegramda oching yoki telefonga o‘rnating.",
+            "Yo‘lovchi: qayerdan va qayerga ketishingizni yozing. Haydovchi: reys e’lon qiling.",
+            "Safar yo‘nalish bo‘yicha yo‘lovchi va haydovchilarni o‘zi bog‘laydi."
           ],
           "features": [
-            "Yo‘ldoshlar: yo‘lovchi va haydovchi",
-            "Uy-joy",
-            "Viza muddati hisoblagichi",
-            "Yo‘l va yoqilg‘i sarfi",
-            "Telegram’da ishlaydi"
+            "2-3 soniyada dispetcher",
+            "Butun Saudiya va chegaralar",
+            "7 kishigacha ekipaj",
+            "Viza va muqim",
+            "Avtomobil: probeg bo‘yicha almashtirish"
           ]
         },
         "tg": {
-          "tagline": "Ёрдамчии сафар дар Арабистони Саудӣ: ҳамроҳ, манзил, виза",
-          "description": "Safar ба онҳое, ки дар Арабистони Саудӣ зиндагӣ ва кор мекунанд, кӯмак мекунад. Ҳамроҳ ё ронанда, манзил ёбед, роҳ ва сӯзишвориро ҳисоб кунед, мӯҳлати визаро аз даст надиҳед.",
+          "tagline": "Таксии байнишаҳрӣ ва то сарҳад дар чанд сония, раводид ва мошин - барои муҳоҷирон дар Арабистони Саудӣ",
+          "description": "Safar ба онҳое, ки дар Арабистони Саудӣ зиндагӣ ва кор мекунанд, кӯмак мекунад. Мусофирон ва ронандагон дар тамоми Саудия ва то сарҳади Урдун, Баҳрайн ва Қатар: дархости мусофир дар чанд сония ба ронанда мерасад. Инчунин мӯҳлати раводид ва иқома ва мошини шумо.",
           "steps": [
-            "Safar-ро дар браузер ё дар Telegram кушоед.",
-            "Лозимиро интихоб кунед: сафар, манзил ё ҳисобкунаки виза.",
-            "Пешниҳоди мувофиқро ёбед ва бевосита тамос гиред."
+            "Safar-ро дар Telegram кушоед ё ба телефон насб кунед.",
+            "Мусофир: нависед аз куҷо ба куҷо. Ронанда: рейс нашр кунед.",
+            "Safar мусофирон ва ронандагонро аз рӯи самт пайваст мекунад."
           ],
           "features": [
-            "Ҳамроҳон: мусофир ва ронанда",
-            "Манзил",
-            "Ҳисобкунаки мӯҳлати виза",
-            "Роҳ ва сарфи сӯзишворӣ",
-            "Дар Telegram кор мекунад"
+            "Диспетчер дар 2-3 сония",
+            "Тамоми Саудия ва сарҳадҳо",
+            "Экипаж то 7 нафар",
+            "Раводид ва иқома",
+            "Мошин: ивазкунӣ аз рӯи масофа"
           ]
         }
       }

@@ -386,7 +386,7 @@
     },
     {
       "slug": "constructor",
-      "name": "3D Constructor",
+      "name": "AMR 3Design",
       "status": "soon",
       "app_url": "",
       "demo_url": "",
@@ -463,7 +463,7 @@
       "i18n": {
         "ru": {
           "tagline": "Разбор 3D-модели мебели на детали и порядок сборки",
-          "description": "Vision анализирует готовую 3D-модель, раскладывает её на детали и восстанавливает порядок сборки. Работает отдельно или вместе с 3D Constructor.",
+          "description": "Vision анализирует готовую 3D-модель, раскладывает её на детали и восстанавливает порядок сборки. Работает отдельно или вместе с AMR 3Design.",
           "steps": [],
           "features": [
             "Детали из 3D-модели",
@@ -474,7 +474,7 @@
         },
         "en": {
           "tagline": "Breaks a furniture 3D model into parts and assembly order",
-          "description": "Vision analyses a finished 3D model, splits it into parts and rebuilds the assembly order. Works on its own or together with 3D Constructor.",
+          "description": "Vision analyses a finished 3D model, splits it into parts and rebuilds the assembly order. Works on its own or together with AMR 3Design.",
           "steps": [],
           "features": [
             "Parts from a 3D model",
@@ -485,7 +485,7 @@
         },
         "ar": {
           "tagline": "تفكيك نموذج الأثاث ثلاثي الأبعاد إلى قطع وترتيب التجميع",
-          "description": "يحلّل Vision النموذج ثلاثي الأبعاد الجاهز، ويقسّمه إلى قطع، ويعيد بناء ترتيب التجميع. يعمل منفردًا أو مع 3D Constructor.",
+          "description": "يحلّل Vision النموذج ثلاثي الأبعاد الجاهز، ويقسّمه إلى قطع، ويعيد بناء ترتيب التجميع. يعمل منفردًا أو مع AMR 3Design.",
           "steps": [],
           "features": [
             "قطع من النموذج ثلاثي الأبعاد",
@@ -496,7 +496,7 @@
         },
         "uz": {
           "tagline": "Mebelning 3D modelini detallarga va yig‘ish tartibiga ajratish",
-          "description": "Vision tayyor 3D modelni tahlil qiladi, uni detallarga ajratadi va yig‘ish tartibini tiklaydi. Alohida yoki 3D Constructor bilan ishlaydi.",
+          "description": "Vision tayyor 3D modelni tahlil qiladi, uni detallarga ajratadi va yig‘ish tartibini tiklaydi. Alohida yoki AMR 3Design bilan ishlaydi.",
           "steps": [],
           "features": [
             "3D modeldan detallar",
@@ -507,7 +507,7 @@
         },
         "tg": {
           "tagline": "Ҷудо кардани модели 3D-и мебел ба қисмҳо ва тартиби васл",
-          "description": "Vision модели тайёри 3D-ро таҳлил мекунад, онро ба қисмҳо ҷудо мекунад ва тартиби васлро барқарор менамояд. Алоҳида ё якҷоя бо 3D Constructor кор мекунад.",
+          "description": "Vision модели тайёри 3D-ро таҳлил мекунад, онро ба қисмҳо ҷудо мекунад ва тартиби васлро барқарор менамояд. Алоҳида ё якҷоя бо AMR 3Design кор мекунад.",
           "steps": [],
           "features": [
             "Қисмҳо аз модели 3D",
@@ -616,6 +616,108 @@
             "Фурӯшандагони шаҳри шумо",
             "Ҳолати фармоишҳо барои фурӯшанда",
             "Бе миёнаравӣ дар пардохт"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "hostel",
+      "name": "Hostel",
+      "status": "live",
+      "app_url": "https://hostel.amrsys.net",
+      "demo_url": "",
+      "icon": "/assets/icons/hostel.webp",
+      "accent": "#E0412A",
+      "pwa": true,
+      "i18n": {
+        "ru": {
+          "tagline": "Свободные места в хостелах Мекки и Медины - в реальном времени",
+          "description": "Выберите город и район - и сразу видно, где есть свободные места: мужские, женские и семейные. Цена за сутки и за месяц, фото, точка на карте. Бронь в пару нажатий уходит владельцу в Telegram. Гостям бесплатно.",
+          "steps": [
+            "Выберите Мекку или Медину и район.",
+            "Посмотрите фото, цену и свободные места.",
+            "Выберите раздел и количество мест - «Забронировать».",
+            "Владелец подтверждает бронь, вы заселяетесь."
+          ],
+          "features": [
+            "Свободные места сразу",
+            "♂ / ♀ / семейные",
+            "Цена за сутки и месяц",
+            "Фото и точка на карте",
+            "Бронь владельцу в Telegram",
+            "Отчёты для владельца"
+          ]
+        },
+        "en": {
+          "tagline": "Free beds in Makkah and Madinah hostels - in real time",
+          "description": "Pick a city and district and see at once where beds are free: men, women and family. Price per day and per month, photos, map pin. A booking in a couple of taps goes to the owner in Telegram. Free for guests.",
+          "steps": [
+            "Choose Makkah or Madinah and a district.",
+            "See photos, price and free beds.",
+            "Pick a section and number of beds - «Book».",
+            "The owner confirms, you check in."
+          ],
+          "features": [
+            "Free beds at a glance",
+            "Men / women / family",
+            "Price per day and month",
+            "Photos and map pin",
+            "Booking to the owner in Telegram",
+            "Reports for owners"
+          ]
+        },
+        "ar": {
+          "tagline": "الأسرّة المتاحة في سكنات مكة والمدينة - لحظة بلحظة",
+          "description": "اختر المدينة والحي وسترى فوراً أين توجد أسرّة متاحة: رجال ونساء وعائلات. السعر لليوم وللشهر، صور، وموقع على الخريطة. الحجز بنقرتين يصل إلى المالك في تيليجرام. مجاني للضيوف.",
+          "steps": [
+            "اختر مكة أو المدينة والحي.",
+            "شاهد الصور والسعر والأسرّة المتاحة.",
+            "اختر القسم وعدد الأسرّة - «احجز».",
+            "يؤكد المالك وتسكن."
+          ],
+          "features": [
+            "الأسرّة المتاحة فوراً",
+            "رجال / نساء / عائلات",
+            "السعر لليوم والشهر",
+            "صور وموقع على الخريطة",
+            "الحجز للمالك في تيليجرام",
+            "تقارير للمالك"
+          ]
+        },
+        "uz": {
+          "tagline": "Makka va Madinadagi hostellarda boʻsh joylar - real vaqtda",
+          "description": "Shahar va tumanni tanlang - qayerda boʻsh joy borligi darhol koʻrinadi: erkaklar, ayollar va oilaviy. Sutkalik va oylik narx, rasmlar, xaritadagi nuqta. Bron bir-ikki bosishda egasiga Telegramda boradi. Mehmonlar uchun bepul.",
+          "steps": [
+            "Makka yoki Madinani va tumanni tanlang.",
+            "Rasmlar, narx va boʻsh joylarni koʻring.",
+            "Boʻlim va joylar sonini tanlang - «Bron qilish».",
+            "Egasi tasdiqlaydi, siz joylashasiz."
+          ],
+          "features": [
+            "Boʻsh joylar darhol",
+            "Erkak / ayol / oilaviy",
+            "Sutkalik va oylik narx",
+            "Rasmlar va xarita",
+            "Bron egasiga Telegramda",
+            "Egasi uchun hisobotlar"
+          ]
+        },
+        "tg": {
+          "tagline": "Ҷойҳои холӣ дар хостелҳои Макка ва Мадина - дар вақти воқеӣ",
+          "description": "Шаҳр ва ноҳияро интихоб кунед - фавран дида мешавад, ки куҷо ҷойи холӣ ҳаст: мардона, занона ва оилавӣ. Нарх барои шабонарӯз ва моҳ, аксҳо, нуқта дар харита. Брон бо ду ангушт ба соҳиб дар Telegram меравад. Барои меҳмонон ройгон.",
+          "steps": [
+            "Макка ё Мадина ва ноҳияро интихоб кунед.",
+            "Аксҳо, нарх ва ҷойҳои холиро бинед.",
+            "Бахш ва шумораи ҷойҳоро интихоб кунед - «Брон кардан».",
+            "Соҳиб тасдиқ мекунад, шумо ҷойгир мешавед."
+          ],
+          "features": [
+            "Ҷойҳои холӣ фавран",
+            "Мардона / занона / оилавӣ",
+            "Нарх барои шабонарӯз ва моҳ",
+            "Аксҳо ва харита",
+            "Брон ба соҳиб дар Telegram",
+            "Ҳисобот барои соҳиб"
           ]
         }
       }

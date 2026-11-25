@@ -126,7 +126,7 @@ function ecoSvg(t) {
     ["id", 320, 66, "cu"],
     ["vision", 92, 120, "cu"], ["constructor", 92, 290, "cu"], ["cutting", 92, 460, "cu"],
     ["self", 548, 120, "bl"], ["bazar", 548, 290, "bl"], ["safar", 548, 460, "bl"],
-    [null, 320, 514, "cu"],
+    ["hostel", 320, 514, "bl"],
   ];
   // rounded orthogonal path through points
   const trace = (pts, r = 12) => {

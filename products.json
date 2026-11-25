@@ -304,7 +304,7 @@
       "app_url": "https://cut.amrsys.net",
       "demo_url": "",
       "icon": "/assets/icons/cutting.webp",
-      "accent": "#C9A44C",
+      "accent": "#3AA0FF",
       "pwa": true,
       "i18n": {
         "ru": {

@@ -113,7 +113,7 @@ function footer(l) {
 const badge = (s, l) => `<span class="badge ${esc(s)}">${esc(T[l]["status_" + s] || s)}</span>`;
 const iconImg = (p, size, cls = "") => `<img${cls ? ` class="${cls}"` : ""} src="${esc(p.icon)}" alt="" width="${size}" height="${size}" decoding="async">`;
 
-const LIVE = ["id", "self", "safar", "cutting", "bazar"];
+const LIVE = ["id", "self", "safar", "hostel", "bazar", "cutting"];
 // Product colours, the same as on the home page cards.
 const bySlug = (slug) => products.find((p) => p.slug === slug);
 

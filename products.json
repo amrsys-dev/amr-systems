@@ -18,7 +18,7 @@
             "Придумайте ник - это ваш адрес навсегда, например murad.amr.",
             "Добавьте телефон, мессенджеры, соцсети и сайт.",
             "Поделитесь ссылкой или QR - контакт сохраняется в телефон одним касанием.",
-            "Входите в SELF, Safar, Bazar и AMR Cut кнопкой «Войти через AMR ID»."
+            "Входите в SELF, Safar, AMR Market и AMR Cut кнопкой «Войти через AMR ID»."
           ],
           "features": [
             "Цифровая визитка с QR",
@@ -36,7 +36,7 @@
             "Choose a nickname - your address for good, for example murad.amr.",
             "Add your phone, messengers, social networks and website.",
             "Share the link or QR - your contact is saved to a phone in one tap.",
-            "Sign in to SELF, Safar, Bazar and AMR Cut with «Sign in with AMR ID»."
+            "Sign in to SELF, Safar, AMR Market and AMR Cut with «Sign in with AMR ID»."
           ],
           "features": [
             "Digital card with QR",
@@ -54,7 +54,7 @@
             "اختر اسم مستخدم - عنوانك الدائم، مثل murad.amr.",
             "أضف الهاتف والمراسلة والشبكات الاجتماعية والموقع.",
             "شارك الرابط أو رمز QR - تُحفظ جهة اتصالك في الهاتف بلمسة.",
-            "ادخل SELF وSafar وBazar وAMR Cut بزر «الدخول عبر AMR ID»."
+            "ادخل SELF وSafar وAMR Market وAMR Cut بزر «الدخول عبر AMR ID»."
           ],
           "features": [
             "بطاقة رقمية مع QR",
@@ -72,7 +72,7 @@
             "Nik tanlang - bu doimiy manzilingiz, masalan murad.amr.",
             "Telefon, messenjerlar, ijtimoiy tarmoqlar va saytni qo'shing.",
             "Havola yoki QR'ni ulashing - kontaktingiz telefonga bir bosishda saqlanadi.",
-            "SELF, Safar, Bazar va AMR Cut'ga «AMR ID orqali kirish» bilan kiring."
+            "SELF, Safar, AMR Market va AMR Cut'ga «AMR ID orqali kirish» bilan kiring."
           ],
           "features": [
             "QR bilan raqamli vizitka",
@@ -90,7 +90,7 @@
             "Ник интихоб кунед - суроғаи доимии шумо, масалан murad.amr.",
             "Телефон, мессенҷерҳо, шабакаҳои иҷтимоӣ ва сайтро илова кунед.",
             "Пайванд ё QR-ро фиристед - тамоси шумо бо як ламс дар телефон сабт мешавад.",
-            "Ба SELF, Safar, Bazar ва AMR Cut бо «Ворид шудан тавассути AMR ID» ворид шавед."
+            "Ба SELF, Safar, AMR Market ва AMR Cut бо «Ворид шудан тавассути AMR ID» ворид шавед."
           ],
           "features": [
             "Визиткаи рақамӣ бо QR",
@@ -520,7 +520,7 @@
     },
     {
       "slug": "bazar",
-      "name": "Bazar",
+      "name": "AMR Market",
       "status": "live",
       "app_url": "https://bazar.amrsys.net",
       "demo_url": "",
